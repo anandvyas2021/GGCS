@@ -30,8 +30,8 @@ function Contact(props) {
                                 Just tell us your requirements and we will help you!
                             </h6>
                             <div>
-                                <h5 className="text-3xl text-red-500 mb-1">+(800) 2563 123</h5>
-                                <h6 className="text-grey2">info@company.com</h6>
+                                <h5 className="text-3xl text-red-500 mb-1"> +91 6354917511</h5>
+                                <h6 className="text-grey2">ggcs@globalgarner.com</h6>
                             </div>
                             <div className="mt-5">
                                 <PrimaryBtn
@@ -39,7 +39,11 @@ function Contact(props) {
                                     bgColor="bg-primaryBtn"
                                     className="border-2 rounded-full border-primaryBtn bg-0"
                                 >
-                                    Call Us Now
+                                    <a
+                                        href={"tel:+91 6354917511"}
+                                        data-rel="external">
+                                        Call Us Now
+                                    </a>
                                 </PrimaryBtn>
                             </div>
                         </div>
