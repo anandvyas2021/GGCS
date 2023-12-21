@@ -1,9 +1,10 @@
 import React from "react";
-import { privacyPolicy } from "../../../db/dummy";
-import Container from "../../../components/Layout/Layout";
-import { H1Animate } from "../../../components/Animation/H1Animate";
 
-function PrivacyPolicy(props) {
+import { privacyPolicy } from "../../db/dummy";
+import Container from "../../components/Layout/Layout";
+import { H1Animate } from "../../components/Animation/H1Animate";
+
+export default function PrivacyPolicy(props) {
     return (
         <main>
             <Container>
@@ -16,10 +17,10 @@ function PrivacyPolicy(props) {
                     {privacyPolicy?.list?.map((item) => {
                         return (
                             <div key={item?.id} className="mb-6">
-                                <h3 className="text-xl font-semibold mb-2">
+                                <h3 className="mb-2 text-xl font-semibold">
                                     {item?.title}
                                 </h3>
-                                <p className="text-lg mb-2">{item?.info}</p>
+                                <p className="mb-2 text-lg">{item?.info}</p>
                                 <ul className="list-disc">
                                     {item?.data?.map((data, i) => {
                                         return (
@@ -40,5 +41,3 @@ function PrivacyPolicy(props) {
         </main>
     );
 }
-
-export default PrivacyPolicy;
