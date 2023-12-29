@@ -1,15 +1,15 @@
 import React from "react";
 
-import list1 from "../../../assets/home/process/list1.svg";
-import list2 from "../../../assets/home/process/list2.svg";
-import list3 from "../../../assets/home/process/list3.svg";
-import image1 from "../../../assets/home/process/image1.webp";
-import shape1 from "../../../assets/home/process/shape1.webp";
-import shape2 from "../../../assets/home/process/shape2.webp";
-import shape3 from "../../../assets/home/process/shape3.webp";
+import list1 from "../../../../assets/home/process/list1.svg";
+import list2 from "../../../../assets/home/process/list2.svg";
+import list3 from "../../../../assets/home/process/list3.svg";
+import image1 from "../../../../assets/home/process/image1.webp";
+import shape1 from "../../../../assets/home/process/shape1.webp";
+import shape2 from "../../../../assets/home/process/shape2.webp";
+import shape3 from "../../../../assets/home/process/shape3.webp";
 
-import { Line1, Line2 } from "../../../components/UI/ProcessDash";
-import { H1Animate, TextAnimate } from "../../../components/Typography";
+import { Line1, Line2 } from "../../../../components/UI/ProcessDash";
+import { H1Animate, TextAnimate } from "../../../../components/Typography";
 
 export default function Process(props) {
     const processData = [

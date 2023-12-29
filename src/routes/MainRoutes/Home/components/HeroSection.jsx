@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
-import shape1 from "../../../assets/home/heroSection/shape1.webp";
-import shape2 from "../../../assets/home/heroSection/shape2.webp";
-import shape3 from "../../../assets/home/heroSection/shape3.webp";
-import shape4 from "../../../assets/home/heroSection/shape4.webp";
-import banner1 from "../../../assets/home/heroSection/banner1.webp";
-import banner2 from "../../../assets/home/heroSection/banner2.webp";
-import banner3 from "../../../assets/home/heroSection/banner3.webp";
-import ITBanner from "../../../assets/home/heroSection/ITBanner.png";
-import socialMediaBanner from "../../../assets/home/heroSection/socialMediaBanner.png";
-import digitalMarketingBanner from "../../../assets/home/heroSection/digitalMarketingBanner.png";
+import shape1 from "../../../../assets/home/heroSection/shape1.webp";
+import shape2 from "../../../../assets/home/heroSection/shape2.webp";
+import shape3 from "../../../../assets/home/heroSection/shape3.webp";
+import shape4 from "../../../../assets/home/heroSection/shape4.webp";
+import banner1 from "../../../../assets/home/heroSection/banner1.webp";
+import banner2 from "../../../../assets/home/heroSection/banner2.webp";
+import banner3 from "../../../../assets/home/heroSection/banner3.webp";
+import ITBanner from "../../../../assets/home/heroSection/ITBanner.png";
+import socialMediaBanner from "../../../../assets/home/heroSection/socialMediaBanner.png";
+import digitalMarketingBanner from "../../../../assets/home/heroSection/digitalMarketingBanner.png";
 
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-import { H4, H5 } from "../../../components/Typography";
-import { PrimaryBtn } from "../../../components/Button";
+import { H4, H5 } from "../../../../components/Typography";
+import { PrimaryBtn } from "../../../../components/Button";
 
 const services = ["Digital Marketing", "Social Media", "IT Service"];
 
@@ -53,12 +53,13 @@ export default function HeroSection() {
     }, [state?.currentTab]);
 
     return (
-        <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px]  md:pb-[100px] lg:pb-[150px]">
-            <div className="container">
+        <div className="bg-gradient-to-r from-[#0D0A0B] to-[#009FC2] !text-white">
+            <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
+                {/* <div className="container"> */}
                 <div className="sm:w-4/6">
                     <div className="">
                         <motion.div
-                            className="text-6xl font-bold md:text-8xl"
+                            className="text-5xl font-bold md:text-7xl"
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
@@ -76,24 +77,24 @@ export default function HeroSection() {
                             <div className="">
                                 <div className="text-animate">
                                     <div>
-                                        <H4>agency</H4>
+                                        <h4>agency</h4>
                                     </div>
                                     <div>
-                                        <H4>analysis</H4>
+                                        <h4>analysis</h4>
                                     </div>
                                     <div>
-                                        <H4>value</H4>
+                                        <h4>value</h4>
                                     </div>
                                     <div>
-                                        <H4>Services</H4>
+                                        <h4>Services</h4>
                                     </div>
                                 </div>
-                                <H5>from India</H5>
+                                <h5>from India</h5>
                             </div>
                         </motion.div>
-                        <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
+                        {/* <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
                             Igniting Digital Growth
-                        </p>
+                        </p> */}
                         <div className="mt-2 mb-5 sm:mb-7 sm:mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
@@ -106,7 +107,7 @@ export default function HeroSection() {
                                 Get Started Now
                             </PrimaryBtn>
                         </div>
-                        <div className="flex items-center gap-4">
+                        {/* <div className="flex items-center gap-4">
                             <div className="">
                                 <PhoneArrowUpRightIcon className="w-7 h-7 text-primary" />
                             </div>
@@ -116,11 +117,11 @@ export default function HeroSection() {
                                 </p>
                                 <H5>+91 6354917511</H5>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="">
-                    <div className="absolute top-0 right-0 w-[700px] -z-[1]">
+                    <div className="absolute top-0 right-0 w-[700px] z-[5]">
                         <Slider {...settings}>
                             {[
                                 digitalMarketingBanner,
@@ -136,13 +137,13 @@ export default function HeroSection() {
                             ))}
                         </Slider>
                     </div>
-                    <div className="absolute top-0 right-0 -z-[2]">
+                    <div className="absolute top-0 right-0 z-[4]">
                         <img src={banner1} alt="" className="w-[700px]" />
                     </div>
-                    <div className="absolute top-0 right-0 -z-[3]">
+                    <div className="absolute top-0 right-0 z-[3]">
                         <img src={banner2} alt="" className="w-[700px]" />
                     </div>
-                    <div className="absolute top-0 left-0 -z-[1]">
+                    <div className="absolute top-0 left-0 z-[1]">
                         <img src={banner3} alt="" />
                     </div>
                     <div className="absolute left-40 bottom-9 -z-[1] animate-upslide">
@@ -158,6 +159,7 @@ export default function HeroSection() {
                         <img src={shape4} alt="" />
                     </div>
                 </div>
+                {/* </div> */}
             </div>
         </div>
     );

@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { servicesData } from "../../../db/dummy";
-import { rocket, services } from "../../../db/assets";
+import { servicesData } from "../../../../db/dummy";
+import { rocket, services } from "../../../../db/assets";
 
-import SwiperCarousel from "../../../components/Carousel/Swiper";
-import { H1Animate, TextAnimate } from "../../../components/Typography";
+import SwiperCarousel from "../../../../components/Carousel/Swiper";
+import { H1Animate, TextAnimate } from "../../../../components/Typography";
 
 export default function Services(props) {
     return (
         <section className="bg-[#f5f5f5] md:py-14 py-8 ">
             <div className="max-w-screen-xl px-3 pb-10 mx-auto sm:px-8 md:px-12">
                 <div className="flex flex-col items-center justify-center">
-                    <TextAnimate>
+                    <TextAnimate className="!text-[33px]">
                         Smart Digital Marketing Solutions for your business
                     </TextAnimate>
                     <H1Animate>Our services</H1Animate>
