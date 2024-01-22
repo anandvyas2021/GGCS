@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useRoutes } from "react-router-dom";
+import { Outlet, useRoutes } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
-import Services from "./Services";
-// import Blog from "./Blog";
 import Contact from "./Contact";
 import Gallery from "./Gallery";
-import WhyGGCS from "./WhyGGCS";
+// import WhyGGCS from "./WhyGGCS";
+import Services from "./Services";
+import Training from "./Training";
+import UposPackage from "./UposPackage/UposPackage";
+import CoursesDetails from "./Training/CoursesDetails";
 
-import BackNavigate from "../../components/UI/BackNavigate";
 import { navMenu } from "../../db/dummy";
+import BackNavigate from "../../components/UI/BackNavigate";
 
 export default function MainRoutes(props) {
     const [state, setState] = useState({ title: "" });
@@ -30,10 +32,17 @@ export default function MainRoutes(props) {
         { path: "/", element: <Home {...props} /> },
         { path: "/about", element: <About {...props} /> },
         { path: "/services", element: <Services {...props} /> },
-        { path: "/why-ggcs", element: <WhyGGCS {...props} /> },
+        {
+            path: "/training",
+            children: [
+                { path: "", element: <Training {...props} /> },
+                { path: "*", element: <CoursesDetails /> },
+            ],
+        },
         { path: "/gallery", element: <Gallery {...props} /> },
-        // { path: "/blog", element: <Blog {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
+        { path: "/upos-details", element: <UposPackage {...props} /> },
+        Outlet,
     ]);
     return (
         <div>

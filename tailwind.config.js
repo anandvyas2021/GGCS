@@ -9,6 +9,11 @@ export default {
         extend: {
             colors: {
                 primary: "#775AFC",
+                mainLight: "#94d2bd",
+                mainDark: "#0a9396",
+                mainHeading: "#4ade80",
+                mainHeading2: "#2dc653",
+                main3: "#2d6a4f",
                 white1: "#ffffff",
                 white2: "#DDE2FF",
                 black1: "#271D3A",
@@ -22,29 +27,64 @@ export default {
                 grey5: "#F5F5F5",
                 grey6: "#565764",
                 grey7: "#F1F2F6",
+                grey8: "#544D4F",
                 blue1: "#4260FF",
-                primaryBtn: "#775AFC",
+                blue2: "#1A9FBD",
+                blue3: "#3470E4",
+                // primaryBtn: "#775AFC",
+                primaryBtn: "#3ecd5e",
                 darkBlue: "#1E2B8A",
                 card1: "#4c49ea",
                 card2: "#3ecd5e",
                 card3: "#e44002",
                 card4: "#952aff",
                 card5: "#cd3e94",
-                g1: "#501E9C",
-                g2: "#A44CEE",
+                g1: "#0a9396",
+                g2: "#94d2bd",
                 g3: "#FF847F",
+                course1: "#B7B8E5",
+                course2: "#E5C9B7",
+                course3: "#B7DEE6",
+                course4: "#B7E6CF",
+                course5: "#AEC6F4",
+                skin1: "#CC926E",
+                skin2: "#FFDB66",
+                purple1: "#6E71CC",
+                green1: "#6FCD9E",
+                color1: "#ededed",
+                color2: "#64c1cf",
+                color3: "#b1c3c1",
+                color4: "#bd9ac8",
+                color5: "#6d87b5",
+                color6: "#00acb5",
+                color7: "#dbd3b1",
+                color8: "#ffffff",
+                color9: "#edf2f2",
+                color10: "#4d5972",
+                silverPlan: "",
             },
             fontFamily: {
-                jakarta: " Plus Jakarta Sans, sans-serif",
-                serif: "DM Serif Display, serif",
-                sans: '"DM Sans",sans-serif',
-                agbalumo: "Agbalumo, serif",
-                tangerine: "Tangerine, cursive",
-                neuton: '"Neuton", serif',
-                roboto: '"Roboto", sans-serif',
-                Ubuntu: "'Ubuntu', sans-serif",
+                axiforma: "Axiforma",
+                primary: "axiformaRegular",
+                secondary: "axiformaSemiBold",
+                tertiary: "axiformaBold",
+                fourth: "proximaRegular",
+                fifth: "proximaSemiBold",
+                sixth: "proximaBold",
+                poet: "poet",
+                // jakarta: "Plus Jakarta Sans, sans-serif",
+                // serif: "DM Serif Display, serif",
+                // sans: '"DM Sans",sans-serif',
+                // agbalumo: "Agbalumo, serif",
+                // tangerine: "Tangerine, cursive",
+                // neuton: '"Neuton", serif',
+                // roboto: '"Roboto", sans-serif',
+                // Ubuntu: "'Ubuntu', sans-serif",
             },
             backgroundImage: (theme) => ({
+                silverPlan: "linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%)",
+                goldPlan: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)",
+                platinumPlan: "",
                 blogBanner: "url('assets/blog/banner.webp')",
                 grad: `linear-gradient(to right, 90deg ${theme(
                     "colors.g1"
@@ -55,7 +95,7 @@ export default {
                 header: "0px 10px 30px rgba(1,15,28,0.1)",
                 services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
                 contact:
-                    "linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%);",
+                    "linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%)",
                 shadow1: "rgba(1, 15, 28, 0.14)",
                 business1: "0px 1px 1px rgba(1, 15, 28, 0.2)",
                 business2: "0px 20px 30px rgba(1, 15, 28, 0.1)",
@@ -64,6 +104,7 @@ export default {
                 blogCard: "0px 1px 1px rgba(12, 19, 56, 0.06)",
             },
             animation: {
+                gradientBg: "gradientBg 2s ease-in-out infinite",
                 fadeInDown:
                     "fadeInDown 500ms ease-in-out 0s normal none 1 running",
                 upslide: "upslide 4s forwards infinite alternate",
@@ -86,8 +127,34 @@ export default {
                 blogShape: "blogShape 2.5s linear 0s infinite alternate",
                 whyGGCSCard: "all .5s ease-in-out",
                 flipArrow: "flipArrow 2s linear 0s infinite",
+                animation: "fadeIn 3s",
+                arrowFadeIn: "arrowFadeIn 0.4s",
+                heroBgChange: "heroBgChange 2.5s ease-in-out infinite",
             },
             keyframes: {
+                gradientBg: {
+                    "0%": {
+                        "background-position": "0% 50%",
+                    },
+                    "50%": {
+                        "background-position": "100% 50%",
+                    },
+                    "100%": {
+                        "background-position": "0% 50%",
+                    },
+                },
+                arrowFadeIn: {
+                    "0%": {
+                        // "padding-left": "-20px",
+                        transform: "translateX(-50%)",
+                        opacity: 0,
+                    },
+                    "100%": {
+                        // "padding-left": "0px",
+                        transform: "translateX(0%)",
+                        opacity: 1,
+                    },
+                },
                 fadeInDown: {
                     "0%": {
                         opacity: 0,
@@ -188,13 +255,39 @@ export default {
                 },
                 flipArrow: {
                     "0%": {
-                        transform: "rotateY(0deg)",
+                        transform: "rotateZ(90deg) rotateY(0deg)",
                     },
                     "50%": {
-                        transform: "rotateY(90deg)",
+                        transform: "rotateZ(90deg) rotateY(90deg)",
                     },
                     "100%": {
-                        transform: "rotateY(0deg)",
+                        transform: "rotateZ(90deg) rotateY(0deg)",
+                    },
+                },
+                fadeIn: {
+                    "0%": {
+                        opacity: "0",
+                    },
+                    "100%": {
+                        opacity: "1",
+                    },
+                },
+                heroBgChange: {
+                    "0%": {
+                        "background-image":
+                            "linear-gradient(315deg, #005f73, #94d2bd, rgb(224,210,199,0.3) )",
+                    },
+                    "25%": {
+                        "background-image":
+                            "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
+                    },
+                    "50%": {
+                        "background-image":
+                            "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
+                    },
+                    "100%": {
+                        "background-image":
+                            "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
                     },
                 },
             },
@@ -205,3 +298,5 @@ export default {
     },
     plugins: [require("flowbite/plugin")],
 };
+
+// linear-gradient(to bottom, #4b90a3, #305966)

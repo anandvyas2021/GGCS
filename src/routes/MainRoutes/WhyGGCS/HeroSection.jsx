@@ -1,38 +1,43 @@
 import React, { useEffect } from "react";
+
 import { whyGGCSData } from "../../../db/dummy";
+import { H1Animate } from "../../../components/Typography";
 
 function HeroSection() {
     useEffect(() => {
         // window.scrollTo(0, 0);
     }, []);
     return (
-        // <section className="max-w-screen-lg lg:max-w-screen-xl px-10 md:px-14 lg:mx-auto  lg:my-10">
+        // <section className="max-w-screen-lg px-10 lg:max-w-screen-xl md:px-14 lg:mx-auto lg:my-10">
         <div className="py-10 ">
-            <h1 className="text-4xl text-center font-bold">
-                {whyGGCSData?.title}
-            </h1>
-            <div className="py-8 grid grid-clos-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {whyGGCSData?.desc?.map(
-                    (item, i) => (
-                        <div className="relative bg-gray-900 text-white px-10 text-center py-5 rounded-3xl overflow-hidden cursor-pointer group transition-all duration-[0.5s] ease-[ease]">
-                            <div
-                                className={`absolute -top-[70px] -right-[70px] rounded-full w-32 h-32 ${item?.bg} group-hover:scale-[10] z-[1] transition-all duration-[0.5s] ease-[ease]`}
-                            />
-                            <p className="relative text-lg text-gray-200 z-[2] transition-all duration-[0.5s] ease-[ease]">
+            <H1Animate className="text-center">{whyGGCSData?.title}</H1Animate>
+            <div className="grid grid-cols-1 gap- py-8">
+                {whyGGCSData?.desc?.map((item, i) => (
+                    <div
+                        key={item?.id}
+                        className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center gap-9`}
+                        dir={item?.id % 2 ? "ltr" : "rtl"}
+                    >
+                        <section className="text-left p-5">
+                            <h3
+                                className={`!text-4xl mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
+                            >
                                 {item?.label}
-                            </p>
-                        </div>
-                    )
-
-                    // <div key={i} className='bg-white rounded border p-5 shadow-sm transform overflow-hidden duration-200 hover:scale-105 hover:bg-slate-50 cursor-pointer'>
-                    //     <div className='flex justify-center items-center mb-3'>
-                    //         <span className={`flex justify-center items-center shadow-sm border-2 font-bold border-gray-500 h-10 w-10 rounded-full ${i === 0 ? " bg-blue-300" : i === 1 ? " bg-yellow-200" : i === 2 ? " bg-orange-300" : i === 3 ? "  bg-pink-300" : i === 4 ? " bg-blue-300" : ''}`}>{i + 1}</span>
-                    //     </div>
-                    //     <p className='text-base text-gray-500'>
-                    //         {item?.label}
-                    //     </p>
-                    // </div>
-                )}
+                            </h3>
+                            {/* <hr className={` ${item?.bg}`} /> */}
+                            <p className="text-xl">{item?.desc}</p>
+                        </section>
+                        <section className="relative">
+                            <div
+                                className={`absolute w-96 h-[400px] ${item?.bg} rounded-full -z-10`}
+                            />
+                            <img
+                                src={item?.image}
+                                className={`relative h-[400px] object-cover rounded-full border-2 border-blue-100 z-10`}
+                            />
+                        </section>
+                    </div>
+                ))}
             </div>
         </div>
         // </section>
@@ -40,3 +45,16 @@ function HeroSection() {
 }
 
 export default HeroSection;
+
+// {whyGGCSData?.desc?.map(
+//     (item, i) => (
+//         <div className="relative bg-gray-900 text-white px-10 text-center py-5 rounded-3xl overflow-hidden cursor-pointer group transition-all duration-[0.5s] ease-[ease]">
+//             <div
+//                 className={`absolute -top-[70px] -right-[70px] rounded-full w-32 h-32 ${item?.bg} group-hover:scale-[10] z-[1] transition-all duration-[0.5s] ease-[ease]`}
+//             />
+//             <p className="relative text-lg text-gray-200 z-[2] transition-all duration-[0.5s] ease-[ease]">
+//                 {item?.label}
+//             </p>
+//         </div>
+//     )
+// )}

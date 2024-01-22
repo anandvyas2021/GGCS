@@ -1,90 +1,193 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import { Modal } from "flowbite-react";
+import { Modal } from "antd";
 
-import {
-    socialTree,
-    serFB,
-    serLinkedin,
-    serInsta,
-    serPint,
-    videoBanner,
-    play,
-    GradientBgImg,
-    ClientImg,
-    InputImg,
-    StatImg,
-    serviceVideo
-} from "../../../db/assets";
+import banner from "../../../assets/services/banner1.gif";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-    Price,
     servicesData,
     serviceSocial,
     processData,
-    businessData,
+    otherServices,
 } from "../../../db/dummy";
-
 import Pricing from "../../../components/Pricing";
-import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
+import SwiperCarousel from "../../../components/Carousel/Swiper";
+import { Desc, H1Animate, H4, H5, H6 } from "../../../components/Typography";
 
 export default function Services(props) {
-    const [activeItem, setActiveItem] = useState({
+    const [state, setState] = useState({
         0: false,
         openDialog: false,
         dialogData: {},
     });
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const settings = {
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        speed: 500,
-        arrows: false,
-        // adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                },
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 625,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
+    const readMoreModal = (open, data) => {
+        console.log(open, data);
+        setState((prev) => {
+            return { ...prev, openDialog: open, dialogData: data };
+        });
     };
+
     return (
         <div className="font-roboto">
-            <section className='w-full bg-black md:py-32'>
-                <section className='hidden lg:flex relative'>
-                    <video className="w-full h-[350px]" autoPlay muted loop>
-                        <source src={serviceVideo} type="video/mp4" />
-                    </video>
-                </section>
+            {/* /pricing section */}
+            <section className="py-10 sm:py-20 bg-grey5">
+                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
+                    <div className="flex mb-16 md:justify-center">
+                        <div className="text-center md:w-8/12">
+                            <H1Animate className="mb-3 text-black2">
+                                {/* How can a perth social media help grow my
+                                business? */}
+                                Packages for everyone
+                            </H1Animate>
+                            <Desc>
+                                Here at GGCS we focus on markets where
+                                technology, innovation, and capital can unlock
+                                long-term value and drive economic growth.
+                            </Desc>
+                        </div>
+                    </div>
+                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <Pricing />
+                    </div>
+                </div>
             </section>
+            <section className="max-w-screen-xl px-3 pt-12 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-20">
+                <div className="grid md:grid-cols-2">
+                    <div className="lg:pl-16">
+                        <ul>
+                            {processData?.map((item) => (
+                                <li className="mb-8" key={item?.id}>
+                                    <div
+                                        className={`flex relative ${
+                                            [
+                                                "justify-start",
+                                                "justify-center",
+                                                "justify-end",
+                                                "justify-center",
+                                                "justify-start",
+                                            ][item?.id - 1]
+                                        }`}
+                                    >
+                                        <div className="mr-5">
+                                            <div className="relative">
+                                                <img
+                                                    src={item?.icon}
+                                                    alt={item?.label}
+                                                />
+                                                <b className="absolute left-0 right-0 font-medium text-center -translate-y-1/2 top-1/2 text-white1">
+                                                    0{item?.id}
+                                                </b>
+                                                <span className="absolute top-0 left-0 h-2 w-2 border rounded-full border-[#021d3580]" />
+                                                <span className="absolute top-1 left-3 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
+                                                <span className="absolute bottom-1.5 -right-1.5 h-1.5 w-1.5 rounded-full bg-[#021d3580]" />
+                                                <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
+                                            </div>
+                                        </div>
+                                        <div className="w-10/12">
+                                            <H5>{item?.label}</H5>
+                                            <p className="text-grey4">
+                                                {item?.desc}
+                                                {/* {item?.desc?.slice(0, 60)}... */}
+                                            </p>
+                                            {/* <p
+                                                className="font-semibold text-pink-500 cursor-pointer"
+                                                onClick={() =>
+                                                    readMoreModal(true, item)
+                                                }
+                                            >
+                                                {"Read More..."}
+                                            </p> */}
+                                        </div>
+                                        {/* {item?.id < processData?.length ? (
+                                            <>
+                                                <div
+                                                    className={`absolute ${
+                                                        [
+                                                            "top-0 right-[10%] -rotate-[30deg]",
+                                                            "top-16 left-16 -rotate-[37deg]",
+                                                            "top-28 -right-6 rotate-[35deg]",
+                                                            "-top-10 -left-4 rotate-[45deg]",
+                                                        ][item?.id - 1]
+                                                    } `}
+                                                >
+                                                    {item?.id % 2 !== 0 ? (
+                                                        <Line1 />
+                                                    ) : (
+                                                        <Line2 />
+                                                    )}
+                                                </div>
+                                            </>
+                                        ) : null} */}
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    {/* <div className="relative"> */}
+                    <section className="w-full md:py-0">
+                        {/* <section className="relative hidden lg:flex"> */}
+                        <img src={banner} className="w-full h-full" />
+                        {/* </section> */}
+                    </section>
+                    {/* <img src={socialTree} alt="services" className="" />
+                        <div className="">
+                            <div
+                                className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1"
+                                onClick={() =>
+                                    window.open(
+                                        "https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/"
+                                    )
+                                }
+                            >
+                                <img src={serPint} alt="shape1" />
+                            </div>
+                            <div
+                                className="absolute top-[5%] left-[45%] z-[1] animate-blinkTransform2"
+                                onClick={() =>
+                                    window.open(
+                                        "#",
+                                        "_blank",
+                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                    )
+                                }
+                            >
+                                <img src={serFB} alt="shape2" />
+                            </div>
+                            <div
+                                className="absolute -top-[15%] right-[13%] z-[1] animate-blinkTransform1"
+                                onClick={() =>
+                                    window.open(
+                                        "#",
+                                        "_blank",
+                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                    )
+                                }
+                            >
+                                <img src={serInsta} alt="shape3" />
+                            </div>
+                            <div
+                                className="absolute top-[19%] right-[1%] z-[1] animate-blinkTransform2"
+                                onClick={() =>
+                                    window.open(
+                                        "#",
+                                        "_blank",
+                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                    )
+                                }
+                            >
+                                <img src={serLinkedin} alt="shape3" />
+                            </div>
+                        </div> */}
+                    {/* </div> */}
+                </div>
+            </section>
+
             {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
                 <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
                     <img
@@ -135,8 +238,8 @@ export default function Services(props) {
                         </h1>
                     </div>
                 </div>
-            </section>
-            <div className="flex justify-center max-w-screen-xl mx-auto">
+            </section> */}
+            {/* <div className="flex justify-center max-w-screen-xl mx-auto">
                 <div className="relative z-10 -mt-64">
                     <img
                         src={banner}
@@ -146,310 +249,33 @@ export default function Services(props) {
                 </div>
             </div> */}
 
-            <section className="py-10 sm:py-20 bg-grey5">
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                    <div className="flex mb-16 md:justify-center">
-                        <div className="text-center md:w-8/12">
-                            <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
-                                How can a perth social media help grow my
-                                business?
-                            </H1Animate>
-                        </div>
-                    </div>
-                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <Pricing Price={Price} />
-                    </div>
-                </div>
+            <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 mt-20 mb-40">
+                <SwiperCarousel carouselData={servicesData} />
             </section>
 
-            {/* <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
-                <div className="grid md:grid-cols-2">
-                    <div className="lg:pl-16">
-                        <ul>
-                            {processData?.map((item) => (
-                                <li className="mb-8" key={item?.id}>
-                                    <div
-                                        className={`flex relative ${
-                                            [
-                                                "justify-start",
-                                                "justify-center",
-                                                "justify-end",
-                                                "justify-center",
-                                                "justify-start",
-                                            ][item?.id - 1]
-                                        }`}
-                                    >
-                                        <div className="mr-7">
-                                            <div className="relative">
-                                                <img
-                                                    src={item?.icon}
-                                                    alt={item?.label}
-                                                />
-                                                <b className="absolute left-0 right-0 font-medium text-center -translate-y-1/2 top-1/2 text-white1">
-                                                    0{item?.id}
-                                                </b>
-                                                <span className="absolute top-0 left-0 h-2 w-2 border rounded-full border-[#021d3580]" />
-                                                <span className="absolute top-1 left-3 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
-                                                <span className="absolute bottom-1.5 -right-1.5 h-1.5 w-1.5 rounded-full bg-[#021d3580]" />
-                                                <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
-                                            </div>
-                                        </div>
-                                        <div className="w-6/12">
-                                            <h4 className="text-xl font-semibold">
-                                                {item?.label}
-                                            </h4>
-                                            <p className="text-grey4">
-                                                {item?.desc?.slice(0, 60)}...
-                                            </p>
-                                            <p
-                                                className="font-semibold text-pink-500 cursor-pointer"
-                                                onClick={() =>
-                                                    readMoreModal(
-                                                        item?.label,
-                                                        item?.desc
-                                                    )
-                                                }
-                                            >
-                                                {"Read More ->"}
-                                            </p>
-                                        </div>
-                                        {item?.id < processData?.length ? (
-                                            <>
-                                                <div
-                                                    className={`absolute ${
-                                                        [
-                                                            "top-5 right-[10%] -rotate-[37deg]",
-                                                            "top-24 left-20 -rotate-[37deg]",
-                                                            "top-48 -right-10 rotate-[15deg]",
-                                                            "top-6 left-0 rotate-[20deg]",
-                                                        ][item?.id - 1]
-                                                    } `}
-                                                >
-                                                    {item?.id % 2 !== 0 ? (
-                                                        <Line1 />
-                                                    ) : (
-                                                        <Line2 />
-                                                    )}
-                                                </div>
-                                            </>
-                                        ) : null}
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="relative">
-                        <img src={socialTree} alt="services" className="" />
-                        <div className="">
-                            <div
-                                className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1"
-                                onClick={() =>
-                                    window.open(
-                                        "https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/"
-                                    )
-                                }
-                            >
-                                <img src={serPint} alt="shape1" />
-                            </div>
-                            <div
-                                className="absolute top-[5%] left-[45%] z-[1] animate-blinkTransform2"
-                                onClick={() =>
-                                    window.open(
-                                        "#",
-                                        "_blank",
-                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                    )
-                                }
-                            >
-                                <img src={serFB} alt="shape2" />
-                            </div>
-                            <div
-                                className="absolute -top-[15%] right-[13%] z-[1] animate-blinkTransform1"
-                                onClick={() =>
-                                    window.open(
-                                        "#",
-                                        "_blank",
-                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                    )
-                                }
-                            >
-                                <img src={serInsta} alt="shape3" />
-                            </div>
-                            <div
-                                className="absolute top-[19%] right-[1%] z-[1] animate-blinkTransform2"
-                                onClick={() =>
-                                    window.open(
-                                        "#",
-                                        "_blank",
-                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                    )
-                                }
-                            >
-                                <img src={serLinkedin} alt="shape3" />
-                            </div>
+            <section className="max-w-screen-xl px-3 mx-auto">
+                <div className="text-center mb-12">
+                    <H1Animate className="mb-3 text-black2">
+                        Our Other Services
+                    </H1Animate>
+                    <H4 className="!text-gray-400 !font-bold">
+                        * Price on Request
+                    </H4>
+                </div>
+                <div className="grid grid-cols-3 lg:grid-cols-5 gap-5 mb-8">
+                    {otherServices?.map((item) => (
+                        <div
+                            key={item?.id}
+                            className="flex items-center justify-center text-center p-2 h-16 rounded-xl shadow-inner bg-green-400 hover:scale-105 transition-all "
+                        >
+                            <H6 className="text-white">{item?.label}</H6>
                         </div>
-                    </div>
+                    ))}
                 </div>
-            </section> */}
-
-            <section className="max-w-screen-xl pb-0 mx-auto mt-10 sm:pb-14 md:pb-28">
-                <div className="py-10 md:flex">
-                    <div className="w-full px-10 py-10 md:w-1/2 sm:mx-3">
-                        <div className="relative">
-                            <div>
-                                <img
-                                    src={GradientBgImg}
-                                    alt="GradientBgImg"
-                                    className="-scale-x-[1]"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    src={ClientImg}
-                                    alt=""
-                                    className="absolute bottom-0 right-0 -scale-x-[1]"
-                                />
-                                <img
-                                    src={InputImg}
-                                    alt=""
-                                    className="absolute top-32 sm:-left-10"
-                                />
-                                <img
-                                    src={StatImg}
-                                    alt=""
-                                    className="absolute shadow-2xl top-20 sm:-right-10 "
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2 sm:ms-20 sm:mx-3">
-                        <div className="px-3 my-10 sm:px-0">
-                            <TextAnimate className="!text-3xl font-tangerine mb-5  font-semibold text-blue1">
-                                Get the best
-                            </TextAnimate>
-                            <H1Animate className="mb-4 text-4xl font-semibold sm:text-5xl">
-                                Social Media is the
-                                <br />
-                                Fastest growing trend
-                            </H1Animate>
-
-                            <div className="my-10">
-                                <div>
-                                    <h5 className="mb-1 text-base">
-                                        Market Research
-                                    </h5>
-                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
-                                        <div
-                                            className="h-3 bg-green-600 rounded-full dark:bg-green-500"
-                                            style={{ width: "74%" }}
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5 className="mb-1 text-base">
-                                        SEO Consultancy
-                                    </h5>
-                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
-                                        <div
-                                            className="h-3 bg-yellow-600 rounded-full dark:bg-yellow-500"
-                                            style={{ width: "92%" }}
-                                        ></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5 className="mb-1 text-base">
-                                        SEO Consultancy
-                                    </h5>
-                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
-                                        <div
-                                            className="bg-[#9666FE] h-3 rounded-full dark:bg-[#9666FE]"
-                                            style={{ width: "54%" }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                <div className="relative border-4 border-black2 shadow-serviceVideo">
-                    <img
-                        src={videoBanner}
-                        alt="social-marketing"
-                        className="w-full"
-                    />
-                    <div className="absolute left-4 sm:left-14 bottom-4 sm:bottom-10">
-                        <h4 className="text-xl font-bold md:text-3xl text-white1">
-                            Social <br />
-                            Media Marketing
-                        </h4>
-                    </div>
-                    <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
-                        <img src={play} alt="seo video" />
-                    </div>
-                </div>
-
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14"> */}
-                <div className="mt-14">
-                    <Slider {...settings}>
-                        {servicesData?.map((item) => (
-                            <div
-                                className={`group transition-all duration-300 bg-white px-3 ${activeItem[item?.id]
-                                    ? "bg-slate-100 rounded-lg"
-                                    : ""
-                                    }`}
-                                key={item?.id}
-                            >
-                                <div className="text-center">
-                                    <h4 className="mt-5 mb-3 text-2xl font-semibold text-black2">
-                                        {item?.heading}
-                                    </h4>
-                                    <p className="mb-1 text-grey1">
-                                        {item?.desc}
-                                    </p>
-                                    {
-                                        <p
-                                            className={`text-left mt-1 text-grey1 ${activeItem[item?.id]
-                                                ? "h-fit"
-                                                : ""
-                                                }`}
-                                        >
-                                            {activeItem[item?.id] &&
-                                                item?.desc2}
-                                        </p>
-                                    }
-                                </div>
-                                <div className="flex justify-center my-5">
-                                    <span
-                                        onClick={() => {
-                                            setActiveItem({
-                                                [item?.id]:
-                                                    !activeItem[item?.id],
-                                            });
-                                        }}
-                                        className="flex items-center justify-center border-b-2 cursor-pointer text-black2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services"
-                                    >
-                                        <p
-                                            className={`${activeItem[item?.id]
-                                                } ?"!mr-3":""`}
-                                        >
-                                            {activeItem[item?.id]
-                                                ? "View Less"
-                                                : "Learn More"}
-                                        </p>
-                                        {activeItem[item?.id] ? null : (
-                                            <span>
-                                                <ArrowRightIcon className="w-4 h-4 font-extrabold " />
-                                            </span>
-                                        )}
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+                <H6>
+                    *Budget Charges Extra(Add-on charges as per applicable or
+                    the discretion of the company)
+                </H6>
             </section>
 
             <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 my-14 sm:my-28">
@@ -484,6 +310,20 @@ export default function Services(props) {
                     ))}
                 </div>
             </section>
+            <Modal
+                title={
+                    <h2 className="text-xl font-bold text-center">
+                        {state?.dialogData?.label}
+                        <hr className="my-1 border-gray-300 border-1" />
+                    </h2>
+                }
+                open={state?.openDialog}
+                onOk={() => readMoreModal(false, {})}
+                onCancel={() => readMoreModal(false, {})}
+                footer={false}
+            >
+                <h3 className="p-4 text-lg">{state?.dialogData?.desc}</h3>
+            </Modal>
         </div>
     );
 }
