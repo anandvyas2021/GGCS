@@ -10,36 +10,29 @@ const hosData = [
         id: 0,
         label: (
             <H6>
-                Brainstorming and Creative <br />
-                ideas & Research
+                Creative Ideation and Research for Innovative IT and Software
+                Solutions
             </H6>
         ),
     },
     {
         id: 1,
         label: (
-            <H6>
-                Fully-Automated Keyword <br />
-                Grouping
-            </H6>
+            <H6>Automated Keyword Grouping for Enhanced Search Performance</H6>
         ),
     },
     {
         id: 2,
         label: (
             <H6>
-                Building the strategy to <br /> boost Your Sales
+                Strategic Planning to Amplify Your Sales Efforts in the digital
+                domain
             </H6>
         ),
     },
     {
         id: 3,
-        label: (
-            <H6>
-                Helping to achieve <br />
-                more People
-            </H6>
-        ),
+        label: <H6>Assistance in Broadening Audience Engagement and Reach</H6>,
     },
 ];
 function HOS() {
@@ -61,10 +54,10 @@ function HOS() {
                 </div>
                 <div className="sm:mb-12">
                     <div className="relative pb-12 border-b-2 border-gray-100">
-                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+                        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
                             {hosData?.map((d, i) => {
                                 return (
-                                    <div key={i} className="relative w-full ">
+                                    <div key={i} className="relative w-full">
                                         <div
                                             className={` ${
                                                 i === 0

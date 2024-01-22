@@ -82,9 +82,9 @@ export default function HeroSection() {
                                     <div>
                                         <h4>analysis</h4>
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <h4>value</h4>
-                                    </div>
+                                    </div> */}
                                     <div>
                                         <h4>Services</h4>
                                     </div>
@@ -98,8 +98,7 @@ export default function HeroSection() {
                         <div className="mt-5">
                             <PrimaryBtn
                                 size="px-8 py-3"
-                                bgColor="bg-primaryBtn"
-                                className="border-2 rounded-full border-primaryBtn"
+                                className="border-2 rounded-full bg-[#775AFC] border-[#775AFC]"
                                 onClick={() => {
                                     navigate("/services");
                                 }}

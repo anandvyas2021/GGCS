@@ -13,7 +13,7 @@ export default function Career() {
             <Hero />
             <ExploreOpportunities />
             {/* <BrowserCategory /> */}
-            <LatestJob />
+            {/* <LatestJob /> */}
         </main>
     );
 }

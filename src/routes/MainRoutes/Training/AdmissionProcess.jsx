@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { admissionProcess } from "./dummyData";
-import { H2, H5 } from "../../../components/Typography";
+import Modal from "../../../components/UI/Modal";
+import { H2, H3, H5 } from "../../../components/Typography";
 import Container from "../../../components/Layout/Layout";
+import UpdatingPage from "../../../components/Layout/UpdatingPage";
 
-function AdmissionProcess() {
+export default function AdmissionProcess() {
+    const [state, setState] = useState({ openModal: false });
+
     return (
         <section className="bg-red-50 py-14">
             <Container>
@@ -29,16 +33,34 @@ function AdmissionProcess() {
                     ))}
                 </div>
                 <div className="flex items-center justify-center gap-5 ">
-                    <button className="px-6 py-3 text-red-600 uppercase border-2 border-red-500 rounded-lg ">
+                    {/* <button className="px-6 py-3 text-red-600 uppercase border-2 border-red-500 rounded-lg ">
                         View Details
-                    </button>
-                    <button className="px-6 py-3 text-white uppercase bg-red-600 border-2 border-red-500 rounded-lg ">
+                    </button> */}
+                    <button
+                        className="px-6 py-3 text-white uppercase bg-red-600 border-2 border-red-500 rounded-lg"
+                        onClick={() =>
+                            setState((prev) => {
+                                return { ...prev, openModal: true };
+                            })
+                        }
+                    >
                         Send Inquiry
                     </button>
                 </div>
             </Container>
+            <Modal
+                open={state?.openModal}
+                size="md"
+                className="text-center"
+                onClose={() =>
+                    setState((prev) => {
+                        return { ...prev, openModal: false };
+                    })
+                }
+            >
+                {/* <UpdatingPage /> */}
+                <H3>Updating Soon</H3>
+            </Modal>
         </section>
     );
 }
-
-export default AdmissionProcess;

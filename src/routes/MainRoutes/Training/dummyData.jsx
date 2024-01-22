@@ -145,12 +145,12 @@ export const minCriteria = {
         },
         { id: 2, icon: account, title: "Age", desc: "20+ age" },
         { id: 3, icon: id, title: "ID", desc: "Valid Aadhaar Card" },
-        {
-            id: 4,
-            icon: internet,
-            title: "Internet",
-            desc: "A desktop or laptop with an uninterrupted service connection.",
-        },
+        // {
+        //     id: 4,
+        //     icon: internet,
+        //     title: "Internet",
+        //     desc: "A desktop or laptop with an uninterrupted service connection.",
+        // },
         {
             id: 5,
             icon: communication,

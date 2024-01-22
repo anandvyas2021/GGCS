@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import {
     GGCSPolicy,
@@ -92,11 +92,11 @@ export default function Footer() {
                                             navigate(item?.link);
                                         }}
                                     >
-                                        {item.label === "Home" ? (
+                                        {/* {item.label === "Home" ? (
                                             <a href="#">{item.label}</a>
-                                        ) : (
-                                            <>{item.label}</>
-                                        )}
+                                        ) : ( */}
+                                        <Link>{item.label}</Link>
+                                        {/* )} */}
                                     </li>
                                 ))}
                             </ul>
@@ -197,7 +197,7 @@ export default function Footer() {
                         <p className="text-gray-400">
                             <b>© 2023</b>
                             <a href="/" className="">
-                                <b>GGCS</b>
+                                <b className="mx-1">GGCS</b>
                             </a>
                             All Rights Reserved. A unit of
                             <a

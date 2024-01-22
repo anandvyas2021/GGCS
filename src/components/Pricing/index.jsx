@@ -176,7 +176,7 @@ function Pricing() {
                             }}
                             size="px-8 py-2"
                             // bgColor="bg-primaryBtn"
-                            className="w-full rounded-xl bg-white  !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
+                            className="w-full rounded-xl bg-white !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
                         >
                             {currentTab === "it_services"
                                 ? "Send Enquiry"

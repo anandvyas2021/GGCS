@@ -43,7 +43,6 @@ const Hero = () => {
                     </div>
                     <p className="text-[17px] font-semibold mt-3">
                         Get your dream job.
-                        {/* <a href='#' className="text-blue-500">Sign Up for free now</a> */}
                     </p>
                 </div>
             </div>

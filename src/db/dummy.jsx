@@ -545,7 +545,7 @@ export const serviceSocial = [
 
 // Why ggcs desc
 export const whyGGCSData = {
-    title: "Why GGCS is Your Ultimate Choice",
+    title: "Why GGCS is Your Ultimate Choice?",
     desc: [
         {
             id: 1,
@@ -612,7 +612,7 @@ export const socialMedias = [
 export const menuService = [
     {
         label: "Home",
-        link: "#",
+        link: "/",
     },
     {
         label: "About Us",
@@ -709,6 +709,30 @@ export const businessData = [
         desc: "With GGCS, you get everything you need for a fast website",
         image: business3,
     },
+];
+
+export const otherServices = [
+    { id: 1, label: "Flyer" },
+    { id: 2, label: "Poster" },
+    { id: 3, label: "Documents" },
+    { id: 4, label: "Certificates" },
+    { id: 5, label: "Resume" },
+    { id: 6, label: "Instagram Post" },
+    { id: 7, label: "Instagram Reels" },
+    { id: 8, label: "Instagram Story" },
+    { id: 9, label: "Facebook Post" },
+    { id: 10, label: "Youtube Story" },
+    { id: 11, label: "Youtube Thumbnail" },
+    { id: 12, label: "Documents A4 Portrait" },
+    { id: 13, label: "Photo Collage" },
+    { id: 14, label: "White Board" },
+    { id: 15, label: "Responsive Documents" },
+    { id: 16, label: "Presentation" },
+    { id: 17, label: "Website" },
+    { id: 18, label: "Logo" },
+    { id: 19, label: "Mobile Video" },
+    { id: 20, label: "Video" },
+    { id: 21, label: "E-commerce Portal" },
 ];
 
 export const galleryData = [
@@ -1315,7 +1339,7 @@ export const industryImpact = [
     {
         id: 2,
         label: "Banking and Finance",
-        desc: "Robust fintech solutions and online banking platforms.sss",
+        desc: "Robust fintech solutions and online banking platforms.",
         icon: financeBanking,
     },
     {

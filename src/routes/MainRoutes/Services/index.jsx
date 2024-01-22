@@ -1,47 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Modal } from "antd";
 
-import {
-    socialTree,
-    serFB,
-    serLinkedin,
-    serInsta,
-    serPint,
-    videoBanner,
-    play,
-    GradientBgImg,
-    ClientImg,
-    InputImg,
-    StatImg,
-    servicesBanner,
-} from "../../../db/assets";
-
 import banner from "../../../assets/services/banner1.gif";
-
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Line1, Line2 } from "../../../components/UI/ProcessDash";
-
-// import {
-//     bgMain,
-//     design1,
-//     design2,
-//     design3,
-//     design4,
-//     design5,
-//     design6,
-// } from "../../../db/assets";
 
 import {
     servicesData,
     serviceSocial,
     processData,
-    businessData,
+    otherServices,
 } from "../../../db/dummy";
-
 import Pricing from "../../../components/Pricing";
 import SwiperCarousel from "../../../components/Carousel/Swiper";
-import { Desc, H1Animate, H5 } from "../../../components/Typography";
+import { Desc, H1Animate, H4, H5, H6 } from "../../../components/Typography";
 
 export default function Services(props) {
     const [state, setState] = useState({
@@ -49,8 +21,9 @@ export default function Services(props) {
         openDialog: false,
         dialogData: {},
     });
+
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     const readMoreModal = (open, data) => {
@@ -69,14 +42,15 @@ export default function Services(props) {
                             {processData?.map((item) => (
                                 <li className="mb-8" key={item?.id}>
                                     <div
-                                        className={`flex relative ${[
+                                        className={`flex relative ${
+                                            [
                                                 "justify-start",
                                                 "justify-center",
                                                 "justify-end",
                                                 "justify-center",
                                                 "justify-start",
                                             ][item?.id - 1]
-                                            }`}
+                                        }`}
                                     >
                                         <div className="mr-5">
                                             <div className="relative">
@@ -94,9 +68,7 @@ export default function Services(props) {
                                             </div>
                                         </div>
                                         <div className="w-10/12">
-                                            <H5>
-                                                {item?.label}
-                                            </H5>
+                                            <H5>{item?.label}</H5>
                                             <p className="text-grey4">
                                                 {item?.desc}
                                                 {/* {item?.desc?.slice(0, 60)}... */}
@@ -266,7 +238,6 @@ export default function Services(props) {
                                 Packages for everyone
                             </H1Animate>
                             <Desc>
-                                {" "}
                                 Here at GGCS we focus on markets where
                                 technology, innovation, and capital can unlock
                                 long-term value and drive economic growth.
@@ -279,31 +250,33 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                {/* <div className="relative border-4 border-black2 shadow-serviceVideo">
-                    <img
-                        src={videoBanner}
-                        alt="social-marketing"
-                        className="w-full"
-                    />
-                    <div className="absolute left-4 sm:left-14 bottom-4 sm:bottom-10">
-                        <h4 className="text-xl font-bold md:text-3xl text-white1">
-                            Social <br />
-                            Media Marketing
-                        </h4>
-                    </div>
-                    // <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
-                    //    <img src={play} alt="seo video" />
-                    // </div> 
-                </div> */}
+            <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 mt-20 mb-40">
+                <SwiperCarousel carouselData={servicesData} />
+            </section>
 
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14"> */}
-                {/* <section className="relative hidden bg-blue-100 lg:flex">
-                    <img src={servicesBanner} className="w-full h-full" />
-                </section> */}
-                <div className="mt-14">
-                    <SwiperCarousel carouselData={servicesData} />
+            <section className="max-w-screen-xl px-3 mx-auto">
+                <div className="text-center mb-12">
+                    <H1Animate className="mb-3 text-black2">
+                        Our Other Services
+                    </H1Animate>
+                    <H4 className="!text-gray-400 !font-bold">
+                        * Price on Request
+                    </H4>
                 </div>
+                <div className="grid grid-cols-3 lg:grid-cols-5 gap-5 mb-8">
+                    {otherServices?.map((item) => (
+                        <div
+                            key={item?.id}
+                            className="flex items-center justify-center text-center p-2 h-16 rounded-xl shadow-inner bg-green-400 hover:scale-105 transition-all "
+                        >
+                            <H6 className="text-white">{item?.label}</H6>
+                        </div>
+                    ))}
+                </div>
+                <H6>
+                    *Budget Charges Extra(Add-on charges as per applicable or
+                    the discretion of the company)
+                </H6>
             </section>
 
             <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 my-14 sm:my-28">

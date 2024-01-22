@@ -5,7 +5,7 @@ import heroShape1 from "../../../assets/training/details/heroShape1.png";
 import { useLocation } from "react-router-dom";
 
 import FAQ from "./FAQ";
-import OurAlumni from "./OurAlumni";
+// import OurAlumni from "./OurAlumni";
 import MinCriteria from "./MinCriteria";
 import { courses, features } from "./dummyData";
 import AdmissionProcess from "./AdmissionProcess";
@@ -72,7 +72,7 @@ export default function CoursesDetails() {
             <section className="sticky top-100px"></section>
             <MinCriteria />
             <AdmissionProcess />
-            <OurAlumni />
+            {/* <OurAlumni /> */}
             <FAQ />
         </div>
     );
