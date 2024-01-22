@@ -554,7 +554,7 @@ export const whyGGCSData = {
             // bg: "bg-[#4c49ea]",
             image: dataPrecision,
             // bg: "bg-gradient-to-r from-[#43cea2] to-[#185a9d]",
-            bg: "bg-gradient-to-r from-[#ad5389] to-[#3c1053]",
+            // bg: "bg-gradient-to-r from-[#ad5389] to-[#3c1053]",
         },
         {
             id: 2,
@@ -562,7 +562,7 @@ export const whyGGCSData = {
             desc: "We know every business is different. That's why we create personalized plans that match your needs—no generic solutions here!",
             // bg: "bg-[#3ecd5e]",
             image: strategies,
-            bg: "bg-gradient-to-r from-[#02aab0] to-[#00cdac]",
+            // bg: "bg-gradient-to-r from-[#02aab0] to-[#00cdac]",
         },
         {
             id: 3,
@@ -570,7 +570,7 @@ export const whyGGCSData = {
             desc: "We believe in being open and honest. You'll get regular updates and detailed reports on how your campaign is doing, building a clear and trustworthy partnership",
             // bg: "bg-[#e44002]",
             image: partnership,
-            bg: "bg-gradient-to-r from-[#4e54c8] to-[#8f94fb]",
+            // bg: "bg-gradient-to-r from-[#4e54c8] to-[#8f94fb]",
         },
         {
             id: 4,
@@ -578,7 +578,7 @@ export const whyGGCSData = {
             desc: "Discover a range of services that cover everything you need. From start to finish, we've got you covered with our comprehensive offerings. Whether it's strategic planning, execution, or ongoing support, our services are designed to meet all your requirements in one place.",
             // bg: "bg-[#952aff]",
             image: ComprehensiveServices,
-            bg: "bg-gradient-to-r from-[#23074d] to-[#cc5333]",
+            // bg: "bg-gradient-to-r from-[#23074d] to-[#cc5333]",
             // bg: "bg-[#cd3e94]",
         },
     ],

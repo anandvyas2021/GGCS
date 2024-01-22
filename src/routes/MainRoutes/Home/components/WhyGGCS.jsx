@@ -25,7 +25,7 @@ export default function WhyGGCS() {
                             >
                                 <section className="text-left sm:p-5">
                                     <H2
-                                        className={`lg:!text-[38px] mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
+                                        className={`lg:!text-[38px] mb-5 font-bold ${item?.bg}`}
                                     >
                                         {item?.label}
                                     </H2>

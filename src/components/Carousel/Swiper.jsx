@@ -65,11 +65,11 @@ const SwiperCarousel = ({ carouselData }) => {
                                     className="slide_image h-40 md:h-64 !object-contain mb-14"
                                 />
 
-                                <H4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center bg-mainDrk text-white font-semibold mt-3 p-1">
+                                <H4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center text-white font-semibold mt-3 p-1">
                                     {item?.heading}
                                 </H4>
                             </div>
-                            <div className="h-[40%] card-desc !bg-mainLigh ">
+                            <div className="h-[40%] card-desc ">
                                 <ul className="text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
                                     {item?.list?.map((item, i) => {
                                         return (
