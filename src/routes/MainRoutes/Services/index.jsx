@@ -35,6 +35,28 @@ export default function Services(props) {
 
     return (
         <div className="font-roboto">
+            {/* /pricing section */}
+            <section className="py-10 sm:py-20 bg-grey5">
+                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
+                    <div className="flex mb-16 md:justify-center">
+                        <div className="text-center md:w-8/12">
+                            <H1Animate className="mb-3 text-black2">
+                                {/* How can a perth social media help grow my
+                                business? */}
+                                Packages for everyone
+                            </H1Animate>
+                            <Desc>
+                                Here at GGCS we focus on markets where
+                                technology, innovation, and capital can unlock
+                                long-term value and drive economic growth.
+                            </Desc>
+                        </div>
+                    </div>
+                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <Pricing />
+                    </div>
+                </div>
+            </section>
             <section className="max-w-screen-xl px-3 pt-12 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-20">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
@@ -226,29 +248,6 @@ export default function Services(props) {
                     />
                 </div>
             </div> */}
-
-            {/* /pricing section */}
-            <section className="py-10 sm:py-20 bg-grey5">
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                    <div className="flex mb-16 md:justify-center">
-                        <div className="text-center md:w-8/12">
-                            <H1Animate className="mb-3 text-black2">
-                                {/* How can a perth social media help grow my
-                                business? */}
-                                Packages for everyone
-                            </H1Animate>
-                            <Desc>
-                                Here at GGCS we focus on markets where
-                                technology, innovation, and capital can unlock
-                                long-term value and drive economic growth.
-                            </Desc>
-                        </div>
-                    </div>
-                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <Pricing />
-                    </div>
-                </div>
-            </section>
 
             <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 mt-20 mb-40">
                 <SwiperCarousel carouselData={servicesData} />

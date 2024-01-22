@@ -1,0 +1,75 @@
+import React, { useEffect } from "react";
+import "./style.css";
+
+import { useNavigate } from "react-router-dom";
+
+import Container from "../../../components/Layout/Layout";
+import { H1Animate } from "../../../components/Typography";
+import BackNavigate from "../../../components/UI/BackNavigate";
+import { RadientBtn } from "../../../components/Button";
+
+export default function OtherServices({ data, samePage }) {
+    let navigate = useNavigate();
+
+    useEffect(() => {
+        // window.scrollTo(0, 0);
+    });
+
+    return (
+        <div className="bg-green-50">
+            {samePage ? <BackNavigate backLabel={data?.heading} /> : null}
+            <div className={`py-20 sm:py-32 border-b border-green-200`}>
+                <Container>
+                    <H1Animate className="text-center">
+                        {data?.heading}
+                    </H1Animate>
+                </Container>
+            </div>
+            <section className="opacity-100 bg-gray-100">
+                <Container>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 ">
+                        {data?.list?.map((item, i) => {
+                            return (
+                                <div className="card w-full" key={i}>
+                                    <div
+                                        className={`relative flex flex-col items-center justify-center text-center text-black bg-gray-50 shadow-lg hover:shadow-xl transition-all duration-100 h-full w-full border-2 rounded-[45px] p-10 bg-box${
+                                            i + 1
+                                        }`}
+                                    >
+                                        <figure className="w-24 h-20 overflow-hidden rounded-xl mb-8">
+                                            <img
+                                                src={item?.icon}
+                                                className="object-cover w-full h-full"
+                                            />
+                                        </figure>
+                                        <p className="mt-5 text-3xl [letter-spacing:-0.02em] font-semibold pb-2">
+                                            {item?.subHeading}
+                                        </p>
+                                        <p className="text-lg font-semibold max-w-[470px] text-gray-600">
+                                            {item?.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </Container>
+
+                <div className="flex justify-center !py-4">
+                    <RadientBtn
+                        className="!px-10"
+                        onClick={() => navigate("/hire-us")}
+                    >
+                        Hire Us
+                    </RadientBtn>
+                    {/* <PrimaryBtn
+                        className="!px-14 !py-3 text-lg !bg-green-600 !border-0"
+                        onClick={() => navigate("/hire-us")}
+                    >
+                        Hire Us
+                    </PrimaryBtn> */}
+                </div>
+            </section>
+        </div>
+    );
+}
