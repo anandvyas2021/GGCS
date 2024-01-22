@@ -5,7 +5,7 @@ import { useRoutes } from "react-router-dom";
 
 import { servicesData } from "../../db/dummy";
 import CreatorPackages from "./CreatorPackages";
-import OtherServices from "../../components/OtherServices";
+import OtherServices from "./OtherServices";
 import PackageDetails from "./CreatorPackages/PackageDetails";
 import PricingDetails from "../../components/Pricing/PricingDetails";
 
