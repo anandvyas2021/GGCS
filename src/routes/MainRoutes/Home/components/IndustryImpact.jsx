@@ -17,7 +17,8 @@ export default function IndustryImpact(props) {
                 <SubHeading className="mt-4 lg:w-[900px]">
                     Our skilled team delivers top-notch IT services to diverse
                     industries, tailored to their unique challenges and
-                    requirements. Industries we proudly work with include.
+                    requirements. We work hand-in-hand with a range of
+                    industries, including:
                 </SubHeading>
             </section>
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">

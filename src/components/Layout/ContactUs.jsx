@@ -21,14 +21,14 @@ function ContactUs() {
                     <div className="mx-3 md:w-1/2">
                         <div className="my-10">
                             <SubHeading className="w-fit">
-                                Get In Touch
+                                Get In Touch with us !
                             </SubHeading>
                             <H1Animate className="mt-1 sm:!leading-[3.5rem] !justify-start">
-                                Lets Work Together
+                                Let's Work Together
                             </H1Animate>
                             <Desc className="mb-4">
-                                Just tell us your requirements and we will help
-                                you!
+                                Just tell us your requirements, and we will
+                                assist you!
                             </Desc>
                             <div>
                                 <h3 className="mb-1 text-3xl text-red-500">
@@ -45,7 +45,7 @@ function ContactUs() {
                                     className="border-2 rounded-full border-primaryBtn bg-0"
                                 >
                                     <a
-                                        href={"tel:+91 6354917511"}
+                                        href="tel:+91 6354917511"
                                         data-rel="external"
                                     >
                                         Call Us Now

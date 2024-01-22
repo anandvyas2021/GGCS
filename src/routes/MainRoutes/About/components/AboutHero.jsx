@@ -12,7 +12,7 @@ import innerShape2 from "../../../../assets/about/home/about-inner-shape-2.webp"
 import Slider from "react-slick";
 
 import Container from "../../../../components/Layout/Layout";
-import { H1Animate, H5, TextAnimate } from "../../../../components/Typography";
+import { H1Animate, H5 } from "../../../../components/Typography";
 
 const brandWrapper = [
     { image: brand1 },
@@ -85,17 +85,26 @@ function AboutHero() {
                     </div>
                     <div className="md:w-1/2">
                         <div>
-                            <TextAnimate className={`!text-blue1 ${dotStyle}`}>
+                            {/* <TextAnimate className={`!text-blue1 ${dotStyle}`}>
                                 Welcome
-                            </TextAnimate>
+                            </TextAnimate> */}
                             <H1Animate className="!text-5xl mb-3 !flex-wrap !justify-start">
                                 Working Hard to Make Digital World Easy Together
                             </H1Animate>
-                            <p className="my-3 md:my-0">
-                                Welcome to GGCS, where digital meets
+                            <p className="text-[17px] text-gray-600 font-semibold my-3 md:my-0">
+                                {/* Welcome to GGCS, where digital meets
                                 intelligence to achieve market excellence.
                                 <br />
-                                We are digital marketers.
+                                We are digital marketers. */}
+                                GGCS: Your go-to IT partner, comprising a
+                                close-knit family of skilled experts. From
+                                software and website development to
+                                comprehensive digital marketing strategies, we
+                                specialize in diverse custom solutions for
+                                brands, enterprises, and startups. Our expertise
+                                extends to custom enterprise applications,
+                                technology integration, digital commerce, SEO,
+                                and social media marketing.
                             </p>
                         </div>
                     </div>
