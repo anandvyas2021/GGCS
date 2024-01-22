@@ -3,7 +3,7 @@ import React from "react";
 import list1 from "../../../../assets/home/process/list1.svg";
 import list2 from "../../../../assets/home/process/list2.svg";
 import list3 from "../../../../assets/home/process/list3.svg";
-import image1 from "../../../../assets/home/process/image1.webp";
+import image1 from "../../../../assets/home/process/image1.svg";
 import shape1 from "../../../../assets/home/process/shape1.webp";
 import shape2 from "../../../../assets/home/process/shape2.webp";
 import shape3 from "../../../../assets/home/process/shape3.webp";
@@ -36,13 +36,13 @@ export default function Process(props) {
     return (
         <div className="max-w-screen-xl px-3 pt-10 pb-5 mx-auto sm:px-8 lg:px-12 sm:pb-40">
             <div className="grid md:grid-cols-2">
-                <div className="relative">
+                <div className="relative flex items-center">
                     <img
                         src={image1}
                         alt="process"
-                        className="opacity-1 animate-imgBorder rounded-processImg"
+                        // className="opacity-1 animate-imgBorder rounded-processImg"
                     />
-                    <div className="">
+                    {/* <div className="">
                         <div className="absolute bottom-14 -left-10 -z-[1]">
                             <img src={shape1} alt="shape1" />
                         </div>
@@ -52,7 +52,7 @@ export default function Process(props) {
                         <div className="absolute top-9 left-9 -z-[1]">
                             <img src={shape3} alt="shape3" />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="md:pl-16">
                     <div className="flex flex-col mb-10 items-left">

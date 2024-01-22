@@ -98,7 +98,7 @@ export default function HeroSection() {
                         <div className="mt-5">
                             <PrimaryBtn
                                 size="px-8 py-3"
-                                className="border-2 rounded-full bg-[#775AFC] border-[#775AFC]"
+                                className="border-2 rounded-full bg-[#775AFC] borer-[#775AFC]"
                                 onClick={() => {
                                     navigate("/services");
                                 }}
