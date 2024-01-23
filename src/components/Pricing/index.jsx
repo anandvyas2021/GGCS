@@ -1,0 +1,198 @@
+import React, { useState, useEffect } from "react";
+
+import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+
+import Tabs from "../UI/Tabs";
+import { pricing } from "./dummyData";
+import { PrimaryBtn } from "../Button";
+
+const fadeInAnimationVariants = {
+    initial: {
+        opacity: 0,
+        // y: 100,
+    },
+    animate: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.15 * index,
+        },
+    }),
+};
+
+function Pricing() {
+    const [state, setState] = useState({
+        currentTab: "social_media",
+        plans: pricing?.filter((obj) => {
+            return obj?.value === "social_media";
+        })[0]?.plans,
+    });
+    const navigate = useNavigate();
+    const settings = {
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        speed: 500,
+        arrows: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
+    useEffect(() => {
+        let plans = pricing?.filter((obj) => {
+            return obj?.value === state?.currentTab;
+        })[0]?.plans;
+
+        setState((prev) => {
+            return { ...prev, plans: plans };
+        });
+    }, [state?.currentTab]);
+
+    const currentTabHandler = (tab) => {
+        setState((prev) => {
+            return { ...prev, currentTab: tab };
+        });
+    };
+
+    const { currentTab } = state;
+    return (
+        <div>
+            <Tabs
+                options={pricing}
+                currentTab={state?.currentTab}
+                currentTabHandler={currentTabHandler}
+            />
+            <Slider {...settings}>
+                {state?.plans?.map((item, index) => (
+                    <div
+                        key={index}
+                        className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow"
+                    >
+                        <div>
+                            {item?.icon ? (
+                                <div className="flex items-center justify-center w-24 h-24 mx-auto mb-3 bg-gray-200 rounded-full ">
+                                    <img
+                                        src={item?.icon}
+                                        alt=""
+                                        className="w-20 h-20 p-3"
+                                    />
+                                </div>
+                            ) : null}
+                            <h3 className="mb-1 text-2xl font-semibold">
+                                {item?.title}
+                            </h3>
+                            <p className="text-gray-500">{item?.desc}</p>
+                            <hr className="my-2 border-2 border-[#caf0f8]" />
+                            {item?.price ? (
+                                <div className="flex items-baseline justify-center mt-8">
+                                    <span className="mr-1 text-4xl font-bold text-[#023e8a]">
+                                        {item?.price}
+                                    </span>
+                                    <span className="font-medium text-gray-500">
+                                        /month
+                                    </span>
+                                </div>
+                            ) : null}
+                            <ul
+                                role="list"
+                                className="my-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"
+                            >
+                                {item?.description?.map((desc, i) => (
+                                    <motion.li
+                                        variants={fadeInAnimationVariants}
+                                        initial="initial"
+                                        whileInView="animate"
+                                        viewport={{
+                                            once: true,
+                                        }}
+                                        custom={i}
+                                        key={i}
+                                        className="flex items-center space-x-3 fadeIn"
+                                    >
+                                        {/* Icon  */}
+                                        <svg
+                                            className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clipRule="evenodd"
+                                            ></path>
+                                        </svg>
+                                        <span className="text-[17px]">
+                                            {desc?.label}
+                                            <span className="font-semibold">
+                                                {desc?.time}
+                                            </span>
+                                        </span>
+                                    </motion.li>
+                                ))}
+                            </ul>
+                        </div>
+                        <PrimaryBtn
+                            onClick={() => {
+                                navigate("/plans", { state: item });
+                            }}
+                            size="px-8 py-2"
+                            bgColor="bg-card2"
+                            className="mb-4 w-full !rounded-xl !bg-card2 !border-2 hover:!border-card2 text-white"
+                        >
+                            View Details
+                        </PrimaryBtn>
+                        <PrimaryBtn
+                            onClick={() => {
+                                navigate("/contact");
+                            }}
+                            size="px-8 py-2"
+                            // bgColor="bg-primaryBtn"
+                            className="w-full rounded-xl bg-white !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
+                        >
+                            {currentTab === "it_services"
+                                ? "Send Enquiry"
+                                : "Join this Plan"}
+                        </PrimaryBtn>
+                        {/* <div
+
+                            className="text-white bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500"
+                        >
+                            Join this Plan
+                        </div> */}
+                    </div>
+                ))}
+            </Slider>
+        </div>
+    );
+}
+
+export default Pricing;

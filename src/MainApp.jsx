@@ -8,9 +8,15 @@ import Footer from "./container/Footer";
 const MainApp = (props) => {
     return (
         <Router>
-            <Navbar />
-            <Routes {...props} />
-            <Footer />
+            <div className="relative min-h-[100vh] flex flex-col">
+                <div>
+                    <Navbar {...props} />
+                </div>
+                <div className="flex-1">
+                    <Routes {...props} />
+                </div>
+                <Footer />
+            </div>
         </Router>
     );
 };
