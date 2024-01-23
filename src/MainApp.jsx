@@ -7,7 +7,7 @@ import Footer from "./container/Footer";
 
 const MainApp = (props) => {
     return (
-        <Router>
+        <Router basename={"/GGCS/"}>
             <div className="relative min-h-[100vh] flex flex-col">
                 <div>
                     <Navbar {...props} />
