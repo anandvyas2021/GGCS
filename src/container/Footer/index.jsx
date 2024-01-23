@@ -1,120 +1,217 @@
-import React from 'react'
-import logo from "../../assets/Footer/logo.svg";
-import Fb from "../../assets/Footer/facebook-f.svg"
-import Ig from "../../assets/Footer/instagram.svg"
-import Xt from "../../assets/Footer/x-twitter.svg"
-import In from "../../assets/Footer/linkedin.svg"
-import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import React from "react";
 
+import { Link, useNavigate } from "react-router-dom";
+import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import {
+    GGCSPolicy,
+    menuService,
+    services,
+    socialMedias,
+} from "../../db/dummy";
+
+import { H5, H6 } from "../../components/Typography";
 
 const Input = ({ text, placeholder, className }) => {
     return (
-        <div className='relative flex items-center rounded-full w-full bg-white py-2 px-2'>
-            <EnvelopeIcon className="h-6 w-6 mx-2" />
-            <div className=''>
-                <input type={text} placeholder={placeholder} className={`px-1 py-2 outline-none  ${className}`} />
+        <div className="relative flex items-center w-full px-2 py-2 bg-white rounded-full">
+            <EnvelopeIcon className="w-6 h-6 mx-2" />
+            <div className="">
+                <input
+                    type={text}
+                    placeholder={placeholder}
+                    className={`px-1 py-2 outline-none  ${className}`}
+                />
             </div>
-            <div className="p-2  absolute right-3 rounded-full bg-blue-600">
-                <ArrowUpRightIcon className="h-6 w-6 text-white" />
+            <div className="absolute p-2 bg-blue-600 rounded-full right-3">
+                <ArrowUpRightIcon className="w-6 h-6 text-white" />
             </div>
         </div>
-    )
-}
-const H5 = ({ children, className }) => {
-    return (
-        <h5 className={`text-xl font-semibold ${className}`}>
-            {children}
-        </h5>
-    )
-}
-const PrimaryBtn = ({ children, className }) => {
-    return (
-        <button className={`border-2 rounded-full py-2 px-10  text-white  bg-blue-600 hover:text-blue-600 hover:bg-white  hover:border-blue-600  ${className}`}>
-            {children}
-        </button>
-    )
-}
-const SocialIcons = ({ Icon, name, children, className }) => {
-    return (
-        <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-500 cursor-pointer ${className}`}>
-            <img src={Icon} alt={name} className={`w-3 hover:text-white ${children}`} />
-        </div>
-    )
-}
+    );
+};
+
 export default function Footer() {
+    const navigate = useNavigate();
     return (
-        <div className='bg-gray-100'>
-            <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-20 pb-20 px-6'>
-                <div className='flex  flex-wrap justify-between '>
-                    <div className='mb-3 lg:mb-0 lg:w-1/4 md:w-1/2'>
-                        <div className='mb-6'>
-                            <img src={logo} alt="logo" />
-                        </div>
-                        <div className='mb-6'>
-                            <p className='text-lg font-normal text-gray-500'>
-                                This SEO is most reputed firm
-                                which provides various online
-                                marketing
-                            </p>
-                        </div>
-                        <div className=''>
-                            <PrimaryBtn>Grow Traffic</PrimaryBtn>
-                        </div>
-                    </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
-                        <div className='lg:pl-10'>
-                            <H5 className="mb-5">Information</H5>
-                            <div className='pl-4'>
-                                <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Home</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>About Us </li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Project</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Plan & Pricing</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Blog</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Contact Us</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
-                        <div className='lg:pl-10'>
-                            <H5 className="mb-5">
-                                Services
+        <div className="bg-gray-100">
+            <div className="max-w-screen-md px-3 pb-20 mx-auto sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+                    <div className="mb-3 lg:mb-0 ">
+                        <div className="mb-4">
+                            <H5 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                                Global Garner Consultancy Services
                             </H5>
-                            <div div className='pl-4'>
-                                <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Audit</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Services</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Marketing</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Analysis</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Optimization</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Social Media</li>
-                                </ul>
+                            {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}
+                        </div>
+                        <div className="my-5">
+                            <div className="flex gap-8">
+                                {socialMedias?.map((item, i) => (
+                                    <div
+                                        className=""
+                                        key={i}
+                                        onClick={() =>
+                                            window.open(
+                                                item?.link,
+                                                "_blank",
+                                                "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                            )
+                                        }
+                                    >
+                                        <img
+                                            src={item?.icon}
+                                            alt={item?.name}
+                                            className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                        />
+                                    </div>
+                                ))}
                             </div>
+                            {/* <p className="font-normal text-gray-500 ">
+                                Empower Your Business With The Digital Marketing
+                                Landscape Through Innovative Strategies and
+                                Data-Driven Insights
+                            </p> */}
+                        </div>
+                        {/* <div className="">
+                            <PrimaryBtn
+                                size="px-8 py-2"
+                                bgColor="bg-primaryBtn"
+                                className="border-2 rounded-full border-primaryBtn"
+                            >
+                                Grow Traffic
+                            </PrimaryBtn>
+                        </div> */}
+                    </div>
+                    <div className="lg:pl-10">
+                        <H6 className="mb-5">Information Quick Links</H6>
+                        <div className="pl-4">
+                            <ul className="list-disc">
+                                {menuService?.map((item, i) => (
+                                    <li
+                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
+                                        key={i}
+                                        onClick={() => {
+                                            navigate(item?.link);
+                                        }}
+                                    >
+                                        {/* {item.label === "Home" ? (
+                                            <a href="#">{item.label}</a>
+                                        ) : ( */}
+                                        <Link>{item.label}</Link>
+                                        {/* )} */}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
-                        <H5 className="mb-2">Subscribe</H5>
-                        <p className='text-lg font-normal text-gray-500'>Only valuable resource no bullshit</p>
-                        <div className='my-8'>
+                    <div>
+                        <H6 className="mb-5">Services</H6>
+                        <div className="pl-4">
+                            <ul className="list-disc">
+                                {services?.map((item, i) => (
+                                    <li
+                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
+                                        key={i}
+                                        onClick={() =>
+                                            window.open(
+                                                `/service/${item?.slug}`,
+                                                "_blank"
+                                            )
+                                        }
+                                    >
+                                        {item?.label}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="">
+                        <ul className="pl-4 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
+                            {GGCSPolicy?.map((item, i) => {
+                                return (
+                                    <li
+                                        key={i}
+                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer"
+                                        onClick={() =>
+                                            window.open(
+                                                `${item?.slug}`,
+                                                "_blank"
+                                            )
+                                        }
+                                    >
+                                        {item?.label}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                        {/* <hr className='border-[1px]' /> */}
+                        <H5 className="mb-4">Subscribe</H5>
+                        {/* <p className='font-normal text-gray-500 '>Only valuable resource</p> */}
+                        <div className="mb-8">
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
-                        <div className='flex '>
-                            <SocialIcons name="facebook" Icon={Fb} className={"text-blue-500"} />
-                            <SocialIcons name="instagram" Icon={Ig} />
-                            <SocialIcons name="x-twitter" Icon={Xt} />
-                            <SocialIcons name="linkedin" Icon={In} />
-                        </div>
+                        {/* <div className="flex gap-8">
+                            {socialMedias?.map((item, i) => (
+                                <div
+                                    className=""
+                                    key={i}
+                                    onClick={() =>
+                                        window.open(
+                                            item?.link,
+                                            "_blank",
+                                            "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                        )
+                                    }
+                                >
+                                    <img
+                                        src={item?.icon}
+                                        alt={item?.name}
+                                        className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                    />
+                                </div>
+                            ))}
+                        </div> */}
                     </div>
                 </div>
-                <div className='pt-10'>
-                    <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center'>
-                        <p className='text-gray-400'>
-                            © 2023 <a className="text-blue-600">GGCS</a> All Rights Reserved.
+                <div className="pt-5 text-center">
+                    {/* <div className='flex items-center justify-center'>
+                        <ul className='flex items-center justify-center mb-3 '>
+                            {["Privacy Policy", "Terms and Condition", "Help", "Legal Info"]?.map((item, i) => {
+                                return (
+                                    <li
+                                        key={i}
+                                        className="px-4 py-2 mx-3 font-semibold bg-white border border-blue-500 rounded-full w-fit text-primaryBtn"
+                                    >
+                                        <p className="">{item}</p>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div> */}
+                    <address>
+                        <b>Global Garner </b>
+                        5th floor, Grand Emporio, Motera Stadium Road,
+                        Ahmedabad, Gujarat-380005
+                    </address>
+                </div>
+                <div className="pt-5">
+                    <div className="flex justify-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
+                        <p className="text-gray-400">
+                            <b>© 2023</b>
+                            <a href="/" className="">
+                                <b className="mx-1">GGCS</b>
+                            </a>
+                            All Rights Reserved. A unit of
+                            <a
+                                href="https://beta.globalgarner.com"
+                                target="_blank"
+                            >
+                                <b className="ml-2 text-transparent bg-gradient-to-r from-g1 to-g1 t-g3 bg-clip-text">
+                                    Global Garner.
+                                </b>
+                            </a>
                         </p>
                     </div>
                 </div>
             </div>
-        </div >
-    )
+        </div>
+    );
 }
