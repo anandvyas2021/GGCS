@@ -1,7 +1,7 @@
 import React from "react";
 
 import { disclaimer } from "../../db/dummy";
-import Container from "../../components/Layout/Layout";
+import { Container } from "../../components/Layout";
 import { H1Animate, H5, Desc } from "../../components/Typography";
 
 export default function Disclaimer(props) {
@@ -19,9 +19,11 @@ export default function Disclaimer(props) {
                         return (
                             <div key={item?.id} className="mb-8">
                                 <div className="bg-[#2f3e46] rounded-tl-lg rounded-tr-lg box-border px-5 py-3">
-                                    <H5 className="text-white">{item?.title}</H5>
+                                    <H5 className="text-white">
+                                        {item?.title}
+                                    </H5>
                                 </div>
-                                <p className="mb-2 bg-gray-100 p-5 h-full rounded-bl-lg rounded-br-lg text-lg text-gray-600 ">
+                                <p className="h-full p-5 mb-2 text-lg text-gray-600 bg-gray-100 rounded-bl-lg rounded-br-lg ">
                                     {item?.info}
                                 </p>
                             </div>

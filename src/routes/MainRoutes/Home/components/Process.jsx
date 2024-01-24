@@ -4,12 +4,15 @@ import list1 from "../../../../assets/home/process/list1.svg";
 import list2 from "../../../../assets/home/process/list2.svg";
 import list3 from "../../../../assets/home/process/list3.svg";
 import image1 from "../../../../assets/home/process/image1.svg";
-import shape1 from "../../../../assets/home/process/shape1.webp";
-import shape2 from "../../../../assets/home/process/shape2.webp";
-import shape3 from "../../../../assets/home/process/shape3.webp";
 
+import {
+    H1Animate,
+    SubHeading,
+    P,
+    H5,
+} from "../../../../components/Typography";
+import { Container } from "../../../../components/Layout";
 import { Line1, Line2 } from "../../../../components/UI/ProcessDash";
-import { H1Animate, SubHeading, H4 } from "../../../../components/Typography";
 
 export default function Process(props) {
     const processData = [
@@ -34,7 +37,7 @@ export default function Process(props) {
     ];
 
     return (
-        <div className="max-w-screen-xl px-3 pt-10 pb-5 mx-auto sm:px-8 lg:px-12 sm:pb-40">
+        <Container className="px-3 !py-40 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2">
                 <div className="relative flex items-center">
                     <img
@@ -90,31 +93,20 @@ export default function Process(props) {
                                         </div>
                                     </div>
                                     <div className="w-8/12">
-                                        <H4 className="text-2xl font-semibold">
-                                            {item?.label}
-                                        </H4>
-                                        <p className="text-grey4">
+                                        <H5 className="">{item?.label}</H5>
+                                        <P className="text-base">
                                             {item?.desc}
-                                        </p>
+                                        </P>
                                     </div>
                                     {item?.id < processData?.length ? (
                                         <>
                                             {item?.id === 1 ? (
                                                 <div className="absolute right-0 top-14">
                                                     <Line1 />
-                                                    {/* <img
-                                                        src={line1}
-                                                        alt="dash-shape"
-                                                    /> */}
                                                 </div>
                                             ) : (
                                                 <div className="absolute top-7 -left-16">
                                                     <Line2 />
-                                                    {/* <img
-                                                        src={line2}
-                                                        alt="dash-shape"
-                                                        // className="animate-dashShape"
-                                                    /> */}
                                                 </div>
                                             )}
                                         </>
@@ -125,6 +117,6 @@ export default function Process(props) {
                     </ul>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 }

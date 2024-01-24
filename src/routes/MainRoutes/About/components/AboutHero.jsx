@@ -11,7 +11,7 @@ import innerShape2 from "../../../../assets/about/home/about-inner-shape-2.webp"
 
 import Slider from "react-slick";
 
-import Container from "../../../../components/Layout/Layout";
+import { Container } from "../../../../components/Layout";
 import { H1Animate, H5 } from "../../../../components/Typography";
 
 const brandWrapper = [

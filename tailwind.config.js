@@ -9,8 +9,9 @@ export default {
         extend: {
             colors: {
                 primary: "#775AFC",
-                mainLight: "#94d2bd",
                 mainDark: "#0a9396",
+                mainLight: "#94d2bd",
+                mainLight2: "#F2F1FD",
                 mainHeading: "#4ade80",
                 mainHeading2: "#2dc653",
                 main3: "#2d6a4f",
@@ -31,8 +32,9 @@ export default {
                 blue1: "#4260FF",
                 blue2: "#1A9FBD",
                 blue3: "#3470E4",
-                // primaryBtn: "#775AFC",
-                primaryBtn: "#3ecd5e",
+                primaryBtn: "#775AFC",
+                // primaryBtn: "#FF847F",
+                // primaryBtn: "#3ecd5e",
                 darkBlue: "#1E2B8A",
                 card1: "#4c49ea",
                 card2: "#3ecd5e",
