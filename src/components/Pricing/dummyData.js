@@ -11,7 +11,7 @@ export const pricing = [
             {
                 title: "Silver",
                 price: "Rs. 43,000",
-                desc: "Social Media Handles (Plan, Create, Manage)",
+                desc: "Digital Marketing Handles (Plan, Create, Manage)",
                 description: [
                     {
                         label: "1 Digital Marketing Compliance Cost",
@@ -53,7 +53,7 @@ export const pricing = [
             {
                 title: "Gold",
                 price: "Rs. 72,000",
-                desc: "Social Media Handles (Plan, Create, Manage)",
+                desc: "Digital Marketing Handles (Plan, Create, Manage)",
                 description: [
                     {
                         label: "2 Digital Marketing Compliance Cost",
@@ -95,7 +95,7 @@ export const pricing = [
             {
                 title: "Platinum",
                 price: "Rs. 1,01,000",
-                desc: "Social Media Handles (Plan, Create & Manage)",
+                desc: "Digital Marketing Handles (Plan, Create & Manage)",
                 description: [
                     {
                         label: "1 Digital Marketing Compliance Cost",

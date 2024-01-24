@@ -3,10 +3,10 @@ import "./style.css";
 
 import { useNavigate } from "react-router-dom";
 
-import Container from "../../../components/Layout/Layout";
+import { Container } from "../../../components/Layout";
+import { RadientBtn } from "../../../components/Button";
 import { H1Animate } from "../../../components/Typography";
 import BackNavigate from "../../../components/UI/BackNavigate";
-import { RadientBtn } from "../../../components/Button";
 
 export default function OtherServices({ data, samePage }) {
     let navigate = useNavigate();
@@ -25,18 +25,18 @@ export default function OtherServices({ data, samePage }) {
                     </H1Animate>
                 </Container>
             </div>
-            <section className="opacity-100 bg-gray-100">
+            <section className="bg-gray-100 opacity-100">
                 <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 ">
+                    <div className="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 ">
                         {data?.list?.map((item, i) => {
                             return (
-                                <div className="card w-full" key={i}>
+                                <div className="w-full card" key={i}>
                                     <div
                                         className={`relative flex flex-col items-center justify-center text-center text-black bg-gray-50 shadow-lg hover:shadow-xl transition-all duration-100 h-full w-full border-2 rounded-[45px] p-10 bg-box${
                                             i + 1
                                         }`}
                                     >
-                                        <figure className="w-24 h-20 overflow-hidden rounded-xl mb-8">
+                                        <figure className="w-24 h-20 mb-8 overflow-hidden rounded-xl">
                                             <img
                                                 src={item?.icon}
                                                 className="object-cover w-full h-full"

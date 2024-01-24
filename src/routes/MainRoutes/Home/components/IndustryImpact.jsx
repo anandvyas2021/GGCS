@@ -1,17 +1,17 @@
 import React from "react";
 
 import {
-    Desc,
     H1Animate,
-    H4,
     H5,
+    P,
     SubHeading,
 } from "../../../../components/Typography";
 import { industryImpact } from "../../../../db/dummy";
+import { Container } from "../../../../components/Layout";
 
 export default function IndustryImpact(props) {
     return (
-        <div className="max-w-screen-xl px-3 pb-20 mx-auto sm:px-6 lg:px-0">
+        <Container className="px-3 py-20 sm:px-6 lg:px-0">
             <section className="flex flex-col items-center justify-center mb-16 text-center">
                 <H1Animate>Industry Impact</H1Animate>
                 <SubHeading className="mt-4 lg:w-[900px]">
@@ -25,7 +25,7 @@ export default function IndustryImpact(props) {
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}
-                        className="p-4 transition-all bg-[rgba(229_231_235_0.5)] duration-100 g-transparent shadow-header rounded-xl hover:shadow-2xl hover:scale-105  bg-gray-50 "
+                        className="p-4 flex flex-col items-center text-center transition-all bg-[rgba(229_231_235_0.5)] duration-200 g-transparent rounded-xl hover:shadow-header hover:scale-105 bg-mainLight2"
                     >
                         <img
                             src={item?.icon}
@@ -33,10 +33,10 @@ export default function IndustryImpact(props) {
                             className="w-12 h-12 mb-4"
                         />
                         <H5 className="mb-2">{item?.label}</H5>
-                        <Desc className="!text-lg">{item?.desc}</Desc>
+                        <P className="">{item?.desc}</P>
                     </div>
                 ))}
             </section>
-        </div>
+        </Container>
     );
 }

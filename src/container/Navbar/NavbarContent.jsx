@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import ppt from "../../assets/PDF/GGCS-PPT.pdf";
-import logo from "../../assets/Navbar/GGCSNew.svg";
+import logo from "../../assets/Navbar/logo.svg";
 import Menu from "../../assets/Navbar/menu.svg";
 
 import { navMenu } from "../../db/dummy";
@@ -71,7 +71,7 @@ export default function NavbarContent() {
                         <img
                             src={logo}
                             alt="ggcs"
-                            className="cursor-pointer h-1/2"
+                            className="cursor-pointer h-3/5"
                             onClick={() => navigate("/")}
                         />
                     </div>

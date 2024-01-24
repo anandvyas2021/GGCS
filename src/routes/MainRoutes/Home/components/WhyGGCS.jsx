@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 
 import { whyGGCSData } from "../../../../db/dummy";
-import Container from "../../../../components/Layout/Layout";
+import { Container } from "../../../../components/Layout";
 import { Desc, H1Animate, H2 } from "../../../../components/Typography";
 
 export default function WhyGGCS() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
 
     return (
@@ -29,7 +29,7 @@ export default function WhyGGCS() {
                                     >
                                         {item?.label}
                                     </H2>
-                                    <Desc className="lg:!text-[22px]">
+                                    <Desc className="lg:!text-[20px]">
                                         {item?.desc}
                                     </Desc>
                                 </section>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { uposDetails } from "../../../db/dummy";
-import Container from "../../../components/Layout/Layout";
+import { Container } from "../../../components/Layout";
 import BackNavigate from "../../../components/UI/BackNavigate";
 import { H1Animate, SubHeading } from "../../../components/Typography";
 

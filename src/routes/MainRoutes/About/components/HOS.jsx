@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../../../components/Layout/Layout";
+import { Container } from "../../../../components/Layout";
 import textBg from "../../../../assets/about/hoc/text-bg.svg";
 
 import { DashedLine } from "../../../../components/UI/ProcessDash";
@@ -42,7 +42,7 @@ function HOS() {
                 <div className="flex items-center justify-center">
                     <div className="mb-10 md:mb-20">
                         <div className="relative flex justify-center mb-2">
-                            <TextAnimate className="text-blue-500 absolute top-2">
+                            <TextAnimate className="absolute text-blue-500 top-2">
                                 How we do it
                             </TextAnimate>
                             <img src={textBg} alt="bg" />

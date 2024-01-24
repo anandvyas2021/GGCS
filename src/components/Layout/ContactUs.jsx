@@ -31,7 +31,7 @@ function ContactUs() {
                                 assist you!
                             </Desc>
                             <div>
-                                <h3 className="mb-1 text-3xl text-red-500">
+                                <h3 className="mb-1 text-3xl text-black">
                                     +91 6354917511
                                 </h3>
                                 <H6 className="text-grey2">
