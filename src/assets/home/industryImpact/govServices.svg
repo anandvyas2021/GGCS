@@ -1,62 +1,16 @@
-<svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="fi_5233649" clip-path="url(#clip0_363_948)">
-<g id="XMLID_961_">
-<path id="XMLID_2125_" d="M46.6765 12.1765H36.5294L35.1765 3.5627L36.5294 0H46.6765V12.1765Z" fill="#FF3D7D"/>
-<path id="XMLID_1283_" d="M32.4706 0V16.2353L33.4402 16.8329L34.5 16.2353L35.8529 12.5598L34.5 0H32.4706Z" fill="#FF9B53"/>
-<path id="XMLID_1285_" d="M36.5294 0H34.5V16.2353L35.5147 16.8329L36.5294 16.2353V0Z" fill="#DB7B3E"/>
-<g id="XMLID_2128_">
-<g id="Group">
-<path id="XMLID_201_" d="M59.597 66.9707L56.8235 64.9413L54.05 44.6472L56.8235 28.4119H64.9412V64.9413L59.597 66.9707Z" fill="#E7DFDD"/>
-</g>
-</g>
-<g id="XMLID_2126_">
-<g id="Group_2">
-<path id="XMLID_338_" d="M12.1765 64.9413L8.43327 66.1589L4.05881 64.9413V28.4119H12.1765L15.2544 44.0722L12.1765 64.9413Z" fill="#ECEAE7"/>
-</g>
-</g>
-<g id="XMLID_2131_">
-<g id="Group_3">
-<path id="XMLID_479_" d="M12.1765 69H0V64.9412H12.1765L13.5294 66.5196L12.1765 69Z" fill="#8EE26B"/>
-</g>
-</g>
-<g id="XMLID_2149_">
-<g id="Group_4">
-<path id="XMLID_415_" d="M56.8235 64.9412H69V69H56.8235V64.9412Z" fill="#00CB75"/>
-</g>
-</g>
-<path id="XMLID_1284_" d="M12.1765 16.2354V58.853L19.0765 60.2059L26.45 58.853L34.5 48.7059L35.853 33.9589L34.5 16.2354H12.1765Z" fill="#F4F1F1"/>
-<path id="XMLID_1308_" d="M56.8235 16.2354H34.5V48.7059L42.6853 58.853L49.7206 60.2059L56.8235 58.853V16.2354Z" fill="#ECEAE7"/>
-<path id="XMLID_1263_" d="M12.1765 58.853V69.0001H26.3824L28.8177 63.0922L26.45 58.853H12.1765Z" fill="#435E81"/>
-<path id="XMLID_1309_" d="M56.8235 58.853H42.6853L38.5588 64.4001L42.6177 69.0001H56.8235V58.853Z" fill="#374367"/>
-<path id="XMLID_2111_" d="M26.3824 48.7058V68.9999H34.5L35.8529 58.8529L34.5 48.7058H26.3824Z" fill="#ECEAE7"/>
-<path id="XMLID_2121_" d="M34.5 48.7058H42.6176V68.9999H34.5V48.7058Z" fill="#E7DFDD"/>
-<g id="XMLID_2108_">
-<g id="Group_5">
-<path id="XMLID_345_" d="M20.2941 40.5881H24.353V44.647H20.2941V40.5881Z" fill="#ECEAE7"/>
-</g>
-</g>
-<g id="XMLID_2106_">
-<g id="Group_6">
-<path id="XMLID_354_" d="M28.4118 40.5881H32.4706V44.647H28.4118V40.5881Z" fill="#ECEAE7"/>
-</g>
-</g>
-<g id="XMLID_2103_">
-<g id="Group_7">
-<path id="XMLID_200_" d="M36.5294 40.5881H40.5882V44.647H36.5294V40.5881Z" fill="#E7DFDD"/>
-</g>
-</g>
-<g id="XMLID_2101_">
-<g id="Group_8">
-<path id="XMLID_207_" d="M44.6471 40.5881H48.7059V44.647H44.6471V40.5881Z" fill="#E7DFDD"/>
-</g>
-</g>
-<path id="XMLID_1312_" d="M20.2941 26.3823V34.5H34.5L35.853 30.4411L34.5 26.3823H20.2941Z" fill="#ECEAE7"/>
-<path id="XMLID_1517_" d="M34.5 26.3823H48.7059V34.5H34.5V26.3823Z" fill="#E7DFDD"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_363_948">
-<rect width="69" height="69" fill="white"/>
-</clipPath>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="57.407" height="52" viewBox="0 0 57.407 52">
+  <g id="Government_and_Public_Services" data-name="Government and Public Services" transform="translate(-14 -37.517)">
+    <path id="Path_50013" data-name="Path 50013" d="M18.449,38.517h48.51a3.455,3.455,0,0,1,3.449,3.449v34.6a3.455,3.455,0,0,1-3.449,3.449H18.449A3.455,3.455,0,0,1,15,76.562v-34.6A3.455,3.455,0,0,1,18.449,38.517Z" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+    <line id="Line_793" data-name="Line 793" x2="25.749" transform="translate(29.829 88.517)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_794" data-name="Line 794" x2="54.372" transform="translate(15.115 73.113)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect id="Rectangle_45163" data-name="Rectangle 45163" width="19.542" height="8.506" transform="translate(32.932 80.011)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_795" data-name="Line 795" y2="5.748" transform="translate(42.703 45.41)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_50014" data-name="Path 50014" d="M256,97.485h7.357l-.347,2.529h5.98" transform="translate(-213.297 -52.19)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+    <path id="Path_50015" data-name="Path 50015" d="M173.1,170.565a9.541,9.541,0,0,1,19.06,0" transform="translate(-139.923 -108.832)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+    <rect id="Rectangle_45164" data-name="Rectangle 45164" width="34.485" height="11.38" transform="translate(25.461 61.733)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_796" data-name="Line 796" y2="3.793" transform="translate(32.358 68.745)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_797" data-name="Line 797" y2="3.793" transform="translate(39.255 68.745)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_798" data-name="Line 798" y2="3.793" transform="translate(46.152 68.745)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_799" data-name="Line 799" y2="3.793" transform="translate(53.049 68.745)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
 </svg>

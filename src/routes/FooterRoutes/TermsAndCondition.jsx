@@ -1,7 +1,7 @@
 import React from "react";
 
 import { termsAndConditions } from "../../db/dummy";
-import Container from "../../components/Layout/Layout";
+import { Container } from "../../components/Layout";
 import { H1Animate, TextAnimate, H5, Desc } from "../../components/Typography";
 
 export default function TermsAndCondition() {
@@ -11,7 +11,7 @@ export default function TermsAndCondition() {
                 {/* <img src={careerHero} alt="career" className='lg:h-[500px] h-96 w-full lg:pt-0 lg:pb-0 pb-10 pt-20' /> */}
             {/* </div> * /} */}
             <Container>
-                <section className="lg:py-28 pt-40 pb-14 text-center">
+                <section className="pt-40 text-center lg:py-28 pb-14">
                     <H1Animate>{termsAndConditions?.title}</H1Animate>
                     <Desc className="mt-3">{termsAndConditions?.desc}</Desc>
                 </section>
@@ -20,9 +20,11 @@ export default function TermsAndCondition() {
                         return (
                             <div key={item?.id} className="mb-8">
                                 <div className="bg-[#2f3e46] rounded-tl-lg rounded-tr-lg box-border px-5 py-3">
-                                    <H5 className="text-white">{item?.title}</H5>
+                                    <H5 className="text-white">
+                                        {item?.title}
+                                    </H5>
                                 </div>
-                                <div className="bg-gray-100 p-5 h-full rounded-bl-lg rounded-br-lg">
+                                <div className="h-full p-5 bg-gray-100 rounded-bl-lg rounded-br-lg">
                                     <p className="text-lg text-gray-600">
                                         {item?.info}
                                     </p>
@@ -32,6 +34,6 @@ export default function TermsAndCondition() {
                     })}
                 </section>
             </Container>
-        </main >
+        </main>
     );
 }

@@ -8,8 +8,8 @@ import business2 from "../../../../assets/about/vision/business2.svg";
 import business3 from "../../../../assets/about/vision/business3.webp";
 import floatIcon1 from "../../../../assets/about/vision/floatIcon1.png";
 
+import { Container } from "../../../../components/Layout";
 import { Desc, H5 } from "../../../../components/Typography";
-import Container from "../../../../components/Layout/Layout";
 
 const counterData = [
     {
@@ -90,7 +90,7 @@ function Vision() {
                                 <img
                                     src={journey}
                                     alt="floatIcon"
-                                    className="absolute -top-1 right-2 w-56 h-56"
+                                    className="absolute w-56 h-56 -top-1 right-2"
                                 />
                             </div>
                         </div>

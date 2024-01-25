@@ -1,7 +1,7 @@
 import React from "react";
 
 import { hireUs } from "./Json";
-import Container from "../../../components/Layout/Layout";
+import { Container } from "../../../components/Layout";
 import { Desc, H1Animate } from "../../../components/Typography";
 
 export const Card = ({ label, description, Icon, iconClassName = "" }) => {

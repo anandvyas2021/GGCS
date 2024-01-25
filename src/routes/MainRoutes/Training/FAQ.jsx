@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { faq } from "./dummyData";
-import Container from "../../../components/Layout/Layout";
+import { Container } from "../../../components/Layout";
 import { Desc, H2, H5 } from "../../../components/Typography";
 
 function FAQ() {
