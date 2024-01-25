@@ -18,3 +18,24 @@ export const H5 = ({ children, className }) => {
 export const H6 = ({ children, className }) => {
     return <h6 className={`text-lg font-semibold ${className}`}>{children}</h6>;
 };
+
+export const Mail = ({ children, className }) => {
+    return (
+        <a
+            className={`text-2xl font-semibold text-primary ${className}`}
+            href="mailto:ggcs@globalgarner.com"
+        >
+            {children}
+        </a>
+    );
+};
+export const Telephone = ({ children, className }) => {
+    return (
+        <a
+            className={`text-2xl font-semibold text-primar ${className}`}
+            href="tel:+916354917511"
+        >
+            {children}
+        </a>
+    );
+};

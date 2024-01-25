@@ -3,8 +3,18 @@ import React from "react";
 import { Input } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
 import { addresses } from "../../db/dummy";
-import { office, contactBg } from "../../db/assets";
-import { Desc, H1Animate, H6, SubHeading } from "../Typography";
+import { contactBg } from "../../db/assets";
+import {
+    Desc,
+    H1Animate,
+    H3,
+    H4,
+    H6,
+    Mail,
+    P,
+    SubHeading,
+    Telephone,
+} from "../Typography";
 
 function ContactUs() {
     return (
@@ -30,13 +40,9 @@ function ContactUs() {
                                 Just tell us your requirements, and we will
                                 assist you!
                             </Desc>
-                            <div>
-                                <h3 className="mb-1 text-3xl text-black">
-                                    +91 6354917511
-                                </h3>
-                                <H6 className="text-grey2">
-                                    ggcs@globalgarner.com
-                                </H6>
+                            <div className="flex flex-col gap-1">
+                                <Telephone>+91 6354917511</Telephone>
+                                <Mail>ggcs@globalgarner.com</Mail>
                             </div>
                             <div className="mt-5">
                                 <PrimaryBtn
@@ -85,8 +91,7 @@ function ContactUs() {
                                 cols="30"
                                 rows="10"
                                 className="w-full border-[1px] border-gray-200 relative rounded-xl  mx-4 h-40 px-5 my-3 outline-none  bg-gray-100"
-                            ></textarea>
-                            {/* </div> */}
+                            />
                         </div>
                         <div className="w-full mx-4 mt-3">
                             <PrimaryBtn
@@ -101,21 +106,14 @@ function ContactUs() {
                 <section className="grid grid-cols-1 gap-10 mb-10 sm:grid-cols-2 lg:gap-20 lg:mb-auto">
                     {addresses?.map((item) => (
                         <div key={item?.id} className="w-full">
-                            <address className="h-full w-fit flex gap-5 lg:px-10 px-3 py-4 not-italic rounded-3xl item-center bg-slate-200 !backdrop-blur-3xl">
-                                <figure className="relative w-24 md:w-32 md:h-24 h-14">
-                                    <div className="absolute top-3 -left-1 md:w-[70px] md:h-[65px] rounded-full bg-gradient-to-r from-g2 to-g1 -z-10" />
-                                    <img
-                                        src={office}
-                                        alt="address"
-                                        className="z-10 w-full h-full"
-                                    />
-                                </figure>
+                            <address className="h-full w-fit lg:px-10 px-3 py-4 not-italic rounded-3xl bg-slate-200 !backdrop-blur-3xl">
                                 <main>
-                                    <h3 className="text-xl font-semibold text-primary">
+                                    <H4 className="!text-2xl mb-3 !font-medium text-primary ">
                                         {item?.title}
-                                    </h3>
-                                    <br />
-                                    <b>{item?.address}</b>
+                                    </H4>
+                                    <P className="font-semibold">
+                                        {item?.address}
+                                    </P>
                                 </main>
                             </address>
                         </div>

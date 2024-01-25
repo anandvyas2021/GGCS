@@ -52,7 +52,6 @@ import rocket from "../assets/Navbar/rocket.webp";
 import services from "../assets/home/services/services.svg";
 import arrow from "../assets/home/services/carousel/arrow.png";
 import contactBg from "../assets/home/contact/contact-4-bg.webp";
-import office from "../assets/icons/office.png";
 
 //gallery
 import flyer from "../assets/gallery/flyer.png";
@@ -141,7 +140,6 @@ export {
     ClientImg,
     InputImg,
     StatImg,
-    office,
     contactBg,
 };
 export {
