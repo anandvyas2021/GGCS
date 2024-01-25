@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { admissionProcess } from "./dummyData";
 import Modal from "../../../components/UI/Modal";
+import { Container } from "../../../components/Layout";
 import { H2, H3, H5 } from "../../../components/Typography";
-import Container from "../../../components/Layout/Layout";
 import UpdatingPage from "../../../components/Layout/UpdatingPage";
 
 export default function AdmissionProcess() {

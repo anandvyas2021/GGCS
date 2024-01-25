@@ -53,9 +53,8 @@ export default function HeroSection() {
     }, [state?.currentTab]);
 
     return (
-        <div className="!max-h-fit !bg-gradient-to-b from-g1 via-g2 to-white bg-white !text-black">
+        <div className="!max-h-fit !bg-gradient-to-b fom-g1 va-g2 to-whte bg-white !text-black">
             <div className="max-w-screen-xl mx-auto px-3 sm:px-12 sm:pt-[250px] pt-[200px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
-                {/* <div className="container"> */}
                 <div className="sm:w-4/6 relative z-[200]">
                     <div className="">
                         <motion.div
@@ -158,7 +157,6 @@ export default function HeroSection() {
                         <img src={shape4} alt="" />
                     </div>
                 </div>
-                {/* </div> */}
             </div>
         </div>
     );

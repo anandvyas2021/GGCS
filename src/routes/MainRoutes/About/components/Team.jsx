@@ -15,7 +15,7 @@ import icon4 from "../../../assets/about/team/funfact-icon4.webp";
 import img1 from "../../../../assets/home/awards/award-shape-1.webp";
 
 import { PrimaryBtn } from "../../../../components/Button";
-import Container from "../../../../components/Layout/Layout";
+import { Container } from "../../../../components/Layout";
 
 const cards = [
     {

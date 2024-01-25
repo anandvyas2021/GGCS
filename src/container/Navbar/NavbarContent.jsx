@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import ppt from "../../assets/PDF/GGCS-PPT.pdf";
-import logo from "../../assets/Navbar/GGCSNew.svg";
+import logo from "../../assets/Navbar/logo.svg";
 import Menu from "../../assets/Navbar/menu.svg";
 
 import { navMenu } from "../../db/dummy";
@@ -71,7 +71,7 @@ export default function NavbarContent() {
                         <img
                             src={logo}
                             alt="ggcs"
-                            className="cursor-pointer h-1/2"
+                            className="cursor-pointer h-3/5"
                             onClick={() => navigate("/")}
                         />
                     </div>
@@ -79,9 +79,9 @@ export default function NavbarContent() {
                         <div className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
                                 <div
-                                    className={`relative flex items-center  mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent text-xl !font-semibold text-black1 hover:text-mainHeading2 transition-all duration-200 ${
+                                    className={`relative flex items-center  mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
                                         item?.slug === location?.pathname
-                                            ? "text-mainHeading2 !border-mainHeading2"
+                                            ? "text-primary !border-primary"
                                             : ""
                                     }`}
                                     key={item?.id}

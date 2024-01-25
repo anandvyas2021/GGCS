@@ -8,7 +8,7 @@ import Gallery from "./Gallery";
 // import WhyGGCS from "./WhyGGCS";
 import Services from "./Services";
 import Training from "./Training";
-import UposPackage from "./UposPackage/UposPackage";
+import UposPackage from "./UposPackage";
 import CoursesDetails from "./Training/CoursesDetails";
 
 import { navMenu } from "../../db/dummy";

@@ -27,17 +27,14 @@ export function H1Animate({ className, children, effect = true }) {
             viewport={{
                 once: true,
             }}
-        // custom={index}
+            // custom={index}
         >
             {/* {children} */}
             {res?.map((item, i) => (
                 <p
-                    className={`${i < res?.length / 2
-                        ? ""
-                        : !effect
-                            ? ""
-                            : "text-mainHeading"
-                        }`}
+                    className={`${
+                        i < res?.length / 2 ? "" : !effect ? "" : "text-g3"
+                    }`}
                 >
                     {item}
                 </p>
@@ -62,14 +59,14 @@ export function TextAnimate({ className, children }) {
     };
     return (
         <motion.p
-            className={`!text-2xl font-neutn font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r fro-g1 va-g2 t-g3 bg-clip-text !bg-[#7d7c83] ${className} `}
+            className={`!text-xl font-neutn font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r fro-g1 va-g2 t-g3 bg-clip-text !bg-[#7d7c83] ${className} `}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-        // custom={index}
+            // custom={index}
         >
             {children}
         </motion.p>
@@ -93,14 +90,14 @@ export function SubHeading({ className, children }) {
     };
     return (
         <motion.p
-            className={`lg:text-2xl sm:text-xl text-lg font-medium [letter-spacing:-0.3px] text-gray-500 ${className}`}
+            className={`sm:text-xl text-lg font-medium [letter-spacing:0.4px] text-zinc-600 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-        // custom={index}
+            // custom={index}
         >
             {children}
         </motion.p>
@@ -124,14 +121,44 @@ export function Desc({ className, children }) {
     };
     return (
         <motion.p
-            className={`lg:text-[19px] text-lg font-semibold [letter-spacing:-0.3px] text-grey2 ${className}`}
+            className={`lg:text-[22px] text-lg  [line-height:1.9rem] [letter-spacing:0.1px] text-gray-600 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-        // custom={index}
+            // custom={index}
+        >
+            {children}
+        </motion.p>
+    );
+}
+
+export function P({ className, children }) {
+    const fadeInAnimationVariants = {
+        initial: {
+            opacity: 0,
+            x: 100,
+        },
+        animate: (index) => ({
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: 0.025,
+                ease: "linear",
+            },
+        }),
+    };
+    return (
+        <motion.p
+            className={`lg:text-[17px] text-base [letter-spacing:0.1px] text-[#252525] ${className}`}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+                once: true,
+            }}
         >
             {children}
         </motion.p>
