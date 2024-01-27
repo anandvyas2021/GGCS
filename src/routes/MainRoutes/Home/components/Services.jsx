@@ -22,7 +22,7 @@ export default function Services(props) {
                 alt="dot-svg"
                 className="md:flex hidden absolute bottom-0 right-0"
             />
-            <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
                     <SubHeading>Smart Solutions for your business</SubHeading>
                     <H1Animate>Our Services</H1Animate>
@@ -34,16 +34,17 @@ export default function Services(props) {
                 <div className="flex justify-center mt-5">
                     <div className="w-full p-3 text-center rounded-full shadow-xl lg:w-1/2 bg-grey3 ">
                         <div className="flex justify-center gap-2">
-                            <span>
+                            <div className="flex items-center">
                                 <img
                                     src={rocket}
+                                    alt="rocket"
                                     className="flex w-4 h-4 align-middle animate-pulse"
                                 />
-                            </span>
-                            <p className="sm:flex">
-                                <span className="block">
+                            </div>
+                            <div className="sm:flex">
+                                <p className="block">
                                     You can also find our
-                                </span>
+                                </p>
                                 <Link
                                     to={"services"}
                                     className="relative block mx-2 text-primary"
@@ -55,10 +56,10 @@ export default function Services(props) {
                                         className="w-full h-full absolute left-0 right-0 -bottom-2.5"
                                     />
                                 </Link>
-                                <span className="block">
+                                <p className="block">
                                     to contact for the consulting.
-                                </span>
-                            </p>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

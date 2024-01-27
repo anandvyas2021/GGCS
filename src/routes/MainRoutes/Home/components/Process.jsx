@@ -37,13 +37,13 @@ export default function Process(props) {
     ];
 
     return (
-        <Container className="px-3 !py-40 sm:px-8 lg:px-12">
+        <Container className="px-3 md:!py-20 py-10 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2">
                 <div className="relative flex items-center">
                     <img
                         src={image1}
                         alt="process"
-                        // className="opacity-1 animate-imgBorder rounded-processImg"
+                    // className="opacity-1 animate-imgBorder rounded-processImg"
                     />
                     {/* <div className="">
                         <div className="absolute bottom-14 -left-10 -z-[1]">
@@ -71,11 +71,10 @@ export default function Process(props) {
                         {processData?.map((item) => (
                             <li className="mb-8" key={item?.id}>
                                 <div
-                                    className={`flex relative ${
-                                        item?.id % 2 === 0
+                                    className={`flex relative ${item?.id % 2 === 0
                                             ? "justify-center"
                                             : "justify-start"
-                                    }`}
+                                        }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">
