@@ -11,7 +11,7 @@ import { Container } from "../../../../components/Layout";
 
 export default function IndustryImpact(props) {
     return (
-        <Container className="px-3 py-20 sm:px-6 lg:px-0">
+        <Container className="px-3 md:py-20 py-10 sm:px-6 lg:px-0">
             <section className="flex flex-col items-center justify-center mb-16 text-center">
                 <H1Animate>Industry Impact</H1Animate>
                 <SubHeading className="mt-4 lg:w-[900px]">
@@ -21,7 +21,7 @@ export default function IndustryImpact(props) {
                     industries, including:
                 </SubHeading>
             </section>
-            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}

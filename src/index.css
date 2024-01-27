@@ -295,7 +295,7 @@ input {
 
 @media (max-width: 500px) {
     .swiper_container {
-        padding: 1rem 0 !important;
+        /* padding: 1rem 0 !important; */
         /* height: 480px !important; */
     }
     .swiper-slide {
