@@ -8,8 +8,8 @@ import business2 from "../../../../assets/about/vision/business2.svg";
 import business3 from "../../../../assets/about/vision/business3.webp";
 import floatIcon1 from "../../../../assets/about/vision/floatIcon1.png";
 
+import { H5, P } from "../../../../components/Typography";
 import { Container } from "../../../../components/Layout";
-import { Desc, H5 } from "../../../../components/Typography";
 
 const counterData = [
     {
@@ -57,7 +57,7 @@ function Vision() {
                                     GGCS: Your Go-To Tech Team for fuel your
                                     business growth !
                                 </H5>
-                                <Desc className="text-lg">
+                                <P className="!text-gray-700">
                                     {/* GGCS or Global Garner Consultancy Services,
                                     stands out as a leading digital marketing
                                     company utilizing advanced technology and a
@@ -73,7 +73,7 @@ function Vision() {
                                     and placement assurance, ensuring
                                     comprehensive support for your business's
                                     success.
-                                </Desc>
+                                </P>
                             </div>
                         </div>
                         <div className="hidden md:block">
@@ -97,7 +97,7 @@ function Vision() {
                         <div className="relative md:w-3/5">
                             <div className="px-3 py-8 bg-green-100 rounded-lg sm:px-6 md:px-14 md:py-14 ">
                                 <H5 className="mb-2">Our Journey</H5>
-                                <Desc className="text-lg">
+                                <P className="!text-gray-700">
                                     {/* The genesis of GGCS traces back to the
                                     firsthand challenges faced by Global Garner
                                     Sales Services Limited in 2016. They needed
@@ -122,7 +122,7 @@ function Vision() {
                                     effective and affordable IT solutions,
                                     making it the ideal choice for businesses
                                     navigating the online realm.
-                                </Desc>
+                                </P>
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ function Vision() {
                                 <H5 className="mb-2 text-xl">
                                     What Distinguishes Us
                                 </H5>
-                                <Desc className="text-lg">
+                                <P className="!text-gray-700">
                                     {/* At GGCS, our primary goal is to ensure
                                     brands and businesses appear on platforms
                                     like Google and experience significant
@@ -165,7 +165,7 @@ function Vision() {
                                     communication, prioritize your goals, and
                                     adapt our strategies to ensure your
                                     satisfaction.
-                                </Desc>
+                                </P>
                             </div>
                         </div>
                         <div className="hidden md:block">
@@ -184,7 +184,7 @@ function Vision() {
                         </div>
                         <div className="relative md:w-3/5">
                             <div className="px-3 py-8 bg-green-100 rounded-lg sm:px-6 md:px-14 md:py-14 ">
-                                <Desc className="text-lg">
+                                <P className="!text-gray-700">
                                     {/* However, GGCS is not merely a provider of
                                     digital marketing services. We consider
                                     ourselves a digital partner, taking the time
@@ -207,7 +207,7 @@ function Vision() {
                                     than a service; we strive to be a strategic
                                     collaborator committed to your digital
                                     success
-                                </Desc>
+                                </P>
                             </div>
                         </div>
                     </div>
