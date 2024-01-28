@@ -152,7 +152,7 @@ export function P({ className, children }) {
     };
     return (
         <motion.p
-            className={`lg:text-[17px] text-base [letter-spacing:0.1px] text-[#252525] ${className}`}
+            className={`lg:text-[17px] text-[15px] [letter-spacing:0.1px] text-[#252525] ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
