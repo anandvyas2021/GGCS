@@ -17,6 +17,7 @@ export default function Training(props) {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <div className="max-w-screen-xl py-4 mx-auto !font-roboto">
             <section className="text-center">

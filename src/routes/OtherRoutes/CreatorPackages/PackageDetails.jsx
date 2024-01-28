@@ -14,7 +14,7 @@ export default function PackageDetails(props) {
     let routeData = location?.state?.category;
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
         let data = packages?.filter((item) => {
             return item?.slug === routeData;
         })[0];
