@@ -100,7 +100,7 @@ import dataAnalytics from "../assets/training/courses/dataAnalytics.jpg";
 import mobileDev from "../assets/training/courses/mobileDev.jpg";
 import testingAutomation from "../assets/training/courses/testing.jpg";
 
-import dataPrecision from "../assets/home/whyGGCS/dataPrecision.svg";
+import dataPrecision from "../assets/home/whyGGCS/dataPrecision.jpg";
 import strategies from "../assets/home/whyGGCS/strategies.jpg";
 import partnership from "../assets/home/whyGGCS/partnership.jpg";
 import ComprehensiveServices from "../assets/home/whyGGCS/services.jpg";

@@ -53,7 +53,7 @@ export default function HeroSection() {
     }, [state?.currentTab]);
 
     return (
-        <div className="!max-h-fit !bg-gradient-to-b fom-g1 va-g2 to-whte bg-white !text-black">
+        <div className="!max-h-fit bg-white !text-black">
             <div className="max-w-screen-xl mx-auto px-3 sm:px-12 sm:pt-[250px] pt-[200px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
                 <div className="sm:w-4/6 relative z-[200]">
                     <div className="">
@@ -81,9 +81,6 @@ export default function HeroSection() {
                                     <div>
                                         <h4>analysis</h4>
                                     </div>
-                                    {/* <div>
-                                        <h4>value</h4>
-                                    </div> */}
                                     <div>
                                         <h4>Services</h4>
                                     </div>
@@ -91,7 +88,7 @@ export default function HeroSection() {
                                 <h5>from India</h5>
                             </div>
                         </motion.div>
-                        {/* <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
+                        {/* <p className="text-base mb-4 text-grey2 tracking-[1.2px]">
                             Igniting Digital Growth
                         </p> */}
                         <div className="mt-5">
@@ -142,7 +139,7 @@ export default function HeroSection() {
                         <img src={banner2} alt="" className="w-[700px]" />
                     </div>
                     <div className="lg:flex hidden absolute top-0 left-0 z-[1]">
-                        <img src={banner3} alt="" />
+                        <img src={banner3} alt="" className="invert-[0.2]" />
                     </div>
                     <div className="absolute left-40 bottom-9 z-[1] animate-upslide">
                         <img src={shape1} alt="" />
