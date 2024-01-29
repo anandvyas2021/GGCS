@@ -237,8 +237,9 @@ input {
 
 .swiper-slide {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px 3px;
-    width: 20rem !important;
-    height: 25rem !important;
+    width: 22rem !important;
+    height: 30rem !important;
+    margin: 0 10px;
     position: relative !important;
     background-color: white;
     border-radius: 20px;

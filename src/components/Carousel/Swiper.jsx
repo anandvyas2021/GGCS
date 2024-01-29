@@ -58,7 +58,7 @@ const SwiperCarousel = ({ carouselData }) => {
                             }
                             className="cursor-pointer"
                         >
-                            <div className="h-auto md:h-[65%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-lg">
+                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-lg">
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
@@ -76,14 +76,14 @@ const SwiperCarousel = ({ carouselData }) => {
                                         return (
                                             <li
                                                 key={i}
-                                                className="flex items-center gap-2 mb-3"
+                                                className="flex items-start gap-2 mb-2"
                                             >
                                                 <img
                                                     src={arrow}
                                                     alt="services"
                                                     className="w-5 h-5 animate-flipArrow"
                                                 />
-                                                <Desc>{item?.subHeading}</Desc>
+                                                <Desc className="!text-lg">{item?.subHeading}</Desc>
                                             </li>
                                         );
                                     })}
