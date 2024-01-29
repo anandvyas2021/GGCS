@@ -34,9 +34,9 @@ import business2 from "../assets/services/business2.webp";
 import business3 from "../assets/services/business3.webp";
 
 import seo from "../assets/home/services/carousel/seo.png";
-import smm from "../assets/home/services/carousel/smm.svg";
+import smm from "../assets/home/services/carousel/smm.png";
 import analytics from "../assets/home/services/carousel/analytics.svg";
-import chatBot from "../assets/home/services/carousel/chatBot.svg";
+import chatBot from "../assets/home/services/carousel/chatBot.png";
 import contentWriting from "../assets/home/services/carousel/contentWriting.svg";
 import cro from "../assets/home/services/carousel/cro.svg";
 import emailMarketing from "../assets/home/services/carousel/emailMarketing.svg";
