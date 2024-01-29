@@ -1,14 +1,15 @@
 import React from "react";
 
-import { minCriteria } from "./dummyData";
-import { Desc, H2, H5, SubHeading } from "../../../components/Typography";
+import { minCriteria } from "../dummyData";
+import { Container } from "../../../../components/Layout";
+import { Desc, H3, H5, H6 } from "../../../../components/Typography";
 
 function MinCriteria() {
     return (
-        <section className="max-w-screen-lg mx-auto my-14">
+        <Container className="py-12 md:py-20">
             <div className="mb-10 text-center">
-                <H2>{minCriteria?.title}</H2>
-                <SubHeading className="mt-1">{minCriteria?.desc}</SubHeading>
+                <H3>{minCriteria?.title}</H3>
+                <Desc className="mt-1">{minCriteria?.desc}</Desc>
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3 sm:grid-cols-2">
                 {minCriteria?.list?.map((item) => (
@@ -24,11 +25,11 @@ function MinCriteria() {
                             />
                         </div>
                         <H5 className="my-2">{item?.title}</H5>
-                        <Desc>{item?.desc}</Desc>
+                        <H6>{item?.desc}</H6>
                     </div>
                 ))}
             </div>
-        </section>
+        </Container>
     );
 }
 

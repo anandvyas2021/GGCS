@@ -18,7 +18,7 @@ const SwiperCarousel = ({ carouselData }) => {
     return (
         <div className="relative mt-5">
             <Swiper
-                effect="coverflow"
+                // effect="coverflow"
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
@@ -44,7 +44,7 @@ const SwiperCarousel = ({ carouselData }) => {
                     prevEl: ".swiper-button-prev ",
                     clickable: true,
                 }}
-                modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+                // modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
                 className="swiper_container"
             >
                 {carouselData?.map((item, i) => {
@@ -58,18 +58,19 @@ const SwiperCarousel = ({ carouselData }) => {
                             }
                             className="cursor-pointer"
                         >
-                            <div className="h-auto md:h-[65%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !bg-[#56ab91] shadow-lg">
+                            <div className="h-auto md:h-[65%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-lg">
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="slide_image h-40 md:h-64 !object-contain mb-14"
+                                    className="slide_image h-[260px] -[90%] md:h64 !object-fill b-14"
                                 />
-
-                                <H4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center text-white font-semibold mt-3 p-1">
+                            </div>
+                            <div className=" bg-gray-200 h-[5%] p-2.5 box-content">
+                                <H4 className="text-xl md:text-lg !text-center text-primary font-semibold">
                                     {item?.heading}
                                 </H4>
                             </div>
-                            <div className="h-[40%] card-desc ">
+                            <div className="h-[30%] card-desc ">
                                 <ul className="text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
                                     {item?.list?.map((item, i) => {
                                         return (

@@ -1,15 +1,15 @@
 import React from "react";
+import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { Link, useNavigate } from "react-router-dom";
-import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+
 import {
     GGCSPolicy,
     menuService,
     services,
     socialMedias,
 } from "../../db/dummy";
-
-import { H5, H6 } from "../../components/Typography";
+import { H4, H5, H6 } from "../../components/Typography";
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -34,12 +34,12 @@ export default function Footer() {
     return (
         <div className="bg-gray-100">
             <div className="max-w-screen-md px-3 pb-20 mx-auto sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16">
                     <div className="mb-3 lg:mb-0 ">
                         <div className="mb-4">
-                            <H5 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                            <H4 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
                                 Global Garner Consultancy Services
-                            </H5>
+                            </H4>
                             {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}
                         </div>
                         <div className="my-5">
@@ -64,60 +64,46 @@ export default function Footer() {
                                     </div>
                                 ))}
                             </div>
-                            {/* <p className="font-normal text-gray-500 ">
-                                Empower Your Business With The Digital Marketing
-                                Landscape Through Innovative Strategies and
-                                Data-Driven Insights
-                            </p> */}
                         </div>
-                        {/* <div className="">
-                            <PrimaryBtn
-                                size="px-8 py-2"
-                                bgColor="bg-primaryBtn"
-                                className="border-2 rounded-full border-primaryBtn"
-                            >
-                                Grow Traffic
-                            </PrimaryBtn>
-                        </div> */}
                     </div>
-                    <div className="lg:pl-10">
-                        <H6 className="mb-5">Information Quick Links</H6>
+                    <div className="lg:pl-6">
+                        <H5 className="mb-5">Information Quick Links</H5>
                         <div className="pl-4">
                             <ul className="list-disc">
                                 {menuService?.map((item, i) => (
-                                    <li
-                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
-                                        key={i}
-                                        onClick={() => {
-                                            navigate(item?.link);
-                                        }}
-                                    >
-                                        {/* {item.label === "Home" ? (
-                                            <a href="#">{item.label}</a>
-                                        ) : ( */}
-                                        <Link>{item.label}</Link>
-                                        {/* )} */}
+                                    <li key={i} className="mb-2">
+                                        <Link
+                                            onClick={() => {
+                                                navigate(item?.link);
+                                            }}
+                                        >
+                                            <H6 className="hover:text-gray-900">
+                                                {item.label}
+                                            </H6>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
                     <div>
-                        <H6 className="mb-5">Services</H6>
+                        <H5 className="mb-5">Services</H5>
                         <div className="pl-4">
                             <ul className="list-disc">
                                 {services?.map((item, i) => (
-                                    <li
-                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
-                                        key={i}
-                                        onClick={() =>
-                                            window.open(
-                                                `/service/${item?.slug}`,
-                                                "_blank"
-                                            )
-                                        }
-                                    >
-                                        {item?.label}
+                                    <li key={i} className="mb-2">
+                                        <Link
+                                            onClick={() =>
+                                                window.open(
+                                                    `/service/${item?.slug}`,
+                                                    "_blank"
+                                                )
+                                            }
+                                        >
+                                            <H6 className="hover:text-gray-900">
+                                                {item.label}
+                                            </H6>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -127,65 +113,30 @@ export default function Footer() {
                         <ul className="pl-4 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
                                 return (
-                                    <li
-                                        key={i}
-                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer"
-                                        onClick={() =>
-                                            window.open(
-                                                `${item?.slug}`,
-                                                "_blank"
-                                            )
-                                        }
-                                    >
-                                        {item?.label}
+                                    <li key={i} className="mb-2">
+                                        <Link
+                                            onClick={() =>
+                                                window.open(
+                                                    `${item?.slug}`,
+                                                    "_blank"
+                                                )
+                                            }
+                                        >
+                                            <H6 className="hover:text-gray-900">
+                                                {item.label}
+                                            </H6>
+                                        </Link>
                                     </li>
                                 );
                             })}
                         </ul>
-                        {/* <hr className='border-[1px]' /> */}
                         <H5 className="mb-4">Subscribe</H5>
-                        {/* <p className='font-normal text-gray-500 '>Only valuable resource</p> */}
                         <div className="mb-8">
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
-                        {/* <div className="flex gap-8">
-                            {socialMedias?.map((item, i) => (
-                                <div
-                                    className=""
-                                    key={i}
-                                    onClick={() =>
-                                        window.open(
-                                            item?.link,
-                                            "_blank",
-                                            "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                        )
-                                    }
-                                >
-                                    <img
-                                        src={item?.icon}
-                                        alt={item?.name}
-                                        className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
-                                    />
-                                </div>
-                            ))}
-                        </div> */}
                     </div>
                 </div>
                 <div className="pt-5 text-center">
-                    {/* <div className='flex items-center justify-center'>
-                        <ul className='flex items-center justify-center mb-3 '>
-                            {["Privacy Policy", "Terms and Condition", "Help", "Legal Info"]?.map((item, i) => {
-                                return (
-                                    <li
-                                        key={i}
-                                        className="px-4 py-2 mx-3 font-semibold bg-white border border-blue-500 rounded-full w-fit text-primaryBtn"
-                                    >
-                                        <p className="">{item}</p>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div> */}
                     <address>
                         <b>Global Garner </b>
                         5th floor, Grand Emporio, Motera Stadium Road,
@@ -195,7 +146,7 @@ export default function Footer() {
                 <div className="pt-5">
                     <div className="flex justify-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
                         <p className="text-gray-400">
-                            <b>© 2023</b>
+                            <b>© 2024</b>
                             <a href="/" className="">
                                 <b className="mx-1">GGCS</b>
                             </a>
@@ -204,7 +155,7 @@ export default function Footer() {
                                 href="https://beta.globalgarner.com"
                                 target="_blank"
                             >
-                                <b className="ml-2 text-transparent bg-gradient-to-r from-g1 to-g1 t-g3 bg-clip-text">
+                                <b className="ml-2 text-transparent bg-gradient-to-r from-primary to-primary bg-clip-text">
                                     Global Garner.
                                 </b>
                             </a>

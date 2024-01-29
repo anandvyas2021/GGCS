@@ -33,7 +33,7 @@ import business1 from "../assets/services/business1.webp";
 import business2 from "../assets/services/business2.webp";
 import business3 from "../assets/services/business3.webp";
 
-import seo from "../assets/home/services/carousel/seo.svg";
+import seo from "../assets/home/services/carousel/seo.png";
 import smm from "../assets/home/services/carousel/smm.svg";
 import analytics from "../assets/home/services/carousel/analytics.svg";
 import chatBot from "../assets/home/services/carousel/chatBot.svg";

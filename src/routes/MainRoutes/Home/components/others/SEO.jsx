@@ -9,8 +9,12 @@ import InputImg from "../../../../assets/SEO/optimize-shape-2.webp";
 
 import { useNavigate } from "react-router-dom";
 
-import { PrimaryBtn } from "../../../../components/Button";
-import { H1Animate, TextAnimate, H6 } from "../../../../components/Typography";
+import { PrimaryBtn } from "../../../../../components/Button";
+import {
+    H1Animate,
+    TextAnimate,
+    H6,
+} from "../../../../../components/Typography";
 
 export default function SEO() {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ourAlumni } from "./dummyData";
-import { H2, H4 } from "../../../components/Typography";
+import { ourAlumni } from "../dummyData";
+import { H2, H4 } from "../../../../components/Typography";
 
 function OurAlumni() {
     return (

@@ -8,18 +8,18 @@ import business2 from "../../../../assets/about/vision/business2.svg";
 import business3 from "../../../../assets/about/vision/business3.webp";
 import floatIcon1 from "../../../../assets/about/vision/floatIcon1.png";
 
-import { H5, P } from "../../../../components/Typography";
 import { Container } from "../../../../components/Layout";
+import { H3, H5, P } from "../../../../components/Typography";
 
 const counterData = [
     {
         Icon: counter1,
         num: "1 +",
         label: (
-            <p className="pl-3 text-base">
+            <H5 className="pl-3">
                 Years <br />
                 Of Experience
-            </p>
+            </H5>
         ),
     },
 
@@ -27,10 +27,10 @@ const counterData = [
         Icon: counter2,
         num: "10 +",
         label: (
-            <p className="pl-3 text-base">
+            <H5 className="pl-3">
                 Project <br />
                 Complete
-            </p>
+            </H5>
         ),
     },
 
@@ -38,14 +38,14 @@ const counterData = [
         Icon: counter3,
         num: "10 +",
         label: (
-            <p className="pl-3 text-base">
+            <H5 className="pl-3">
                 Satisfied Clients On <br />
                 India
-            </p>
+            </H5>
         ),
     },
 ];
-function Vision() {
+export default function Vision() {
     return (
         <div>
             <Container>
@@ -57,7 +57,7 @@ function Vision() {
                                     GGCS: Your Go-To Tech Team for fuel your
                                     business growth !
                                 </H5>
-                                <P className="!text-gray-700">
+                                <P>
                                     {/* GGCS or Global Garner Consultancy Services,
                                     stands out as a leading digital marketing
                                     company utilizing advanced technology and a
@@ -84,7 +84,7 @@ function Vision() {
                             />
                         </div>
                     </div>
-                    <div className="md:flex">
+                    <div className="sm:flex">
                         <div className="hidden md:w-2/5 md:block">
                             <div className="relative flex">
                                 <img
@@ -97,7 +97,7 @@ function Vision() {
                         <div className="relative md:w-3/5">
                             <div className="px-3 py-8 bg-green-100 rounded-lg sm:px-6 md:px-14 md:py-14 ">
                                 <H5 className="mb-2">Our Journey</H5>
-                                <P className="!text-gray-700">
+                                <P>
                                     {/* The genesis of GGCS traces back to the
                                     firsthand challenges faced by Global Garner
                                     Sales Services Limited in 2016. They needed
@@ -132,7 +132,7 @@ function Vision() {
                                 <H5 className="mb-2 text-xl">
                                     What Distinguishes Us
                                 </H5>
-                                <P className="!text-gray-700">
+                                <P>
                                     {/* At GGCS, our primary goal is to ensure
                                     brands and businesses appear on platforms
                                     like Google and experience significant
@@ -184,7 +184,7 @@ function Vision() {
                         </div>
                         <div className="relative md:w-3/5">
                             <div className="px-3 py-8 bg-green-100 rounded-lg sm:px-6 md:px-14 md:py-14 ">
-                                <P className="!text-gray-700">
+                                <P>
                                     {/* However, GGCS is not merely a provider of
                                     digital marketing services. We consider
                                     ourselves a digital partner, taking the time
@@ -223,9 +223,9 @@ function Vision() {
                                     <img src={item?.Icon} alt="counter" />
                                 </div>
                                 <div className="flex ml-10">
-                                    <h3 className="text-5xl font-bold text-blue-500">
+                                    <H3 className="text-blue-500 ">
                                         {item?.num}
-                                    </h3>
+                                    </H3>
                                     {item?.label}
                                 </div>
                             </div>
@@ -236,5 +236,3 @@ function Vision() {
         </div>
     );
 }
-
-export default Vision;

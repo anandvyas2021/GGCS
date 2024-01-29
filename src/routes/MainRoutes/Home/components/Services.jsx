@@ -7,20 +7,20 @@ import { servicesData } from "../../../../db/dummy";
 import { rocket, services } from "../../../../db/assets";
 
 import SwiperCarousel from "../../../../components/Carousel/Swiper";
-import {
-    H1Animate,
-    SubHeading,
-    TextAnimate,
-} from "../../../../components/Typography";
+import { H1Animate, SubHeading } from "../../../../components/Typography";
 
 export default function Services(props) {
     return (
-        <section className="relative bg-white md:py-20 py-8">
-            <img src={lines} alt="dot-svg" className="md:flex hidden absolute left-10" />
+        <section className="relative py-8 bg-blue-00 md:py-20">
+            <img
+                src={lines}
+                alt="dot-svg"
+                className="absolute hidden md:flex left-10"
+            />
             <img
                 src={dots}
                 alt="dot-svg"
-                className="md:flex hidden absolute bottom-0 right-0"
+                className="absolute bottom-0 right-0 hidden md:flex"
             />
             <div className="max-w-screen-xl mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
@@ -42,9 +42,7 @@ export default function Services(props) {
                                 />
                             </div>
                             <div className="sm:flex">
-                                <p className="block">
-                                    You can also find our
-                                </p>
+                                <p className="block">You can also find our</p>
                                 <Link
                                     to={"services"}
                                     className="relative block mx-2 text-primary"

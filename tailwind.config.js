@@ -1,19 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-        "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
-        "node_modules/flowbite-react/lib/esm/**/*.js",
-    ],
+    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
             colors: {
                 primary: "#775AFC",
-                mainDark: "#0a9396",
-                mainLight: "#94d2bd",
-                mainLight2: "#F2F1FD",
-                mainHeading: "#4ade80",
-                mainHeading2: "#2dc653",
+                secondary: "#A44CEE",
+                tertiary: "#FF847F",
                 main3: "#2d6a4f",
                 white1: "#ffffff",
                 white2: "#DDE2FF",
@@ -32,9 +25,8 @@ export default {
                 blue1: "#4260FF",
                 blue2: "#1A9FBD",
                 blue3: "#3470E4",
+                blue4: "#F2F1FD",
                 primaryBtn: "#775AFC",
-                // primaryBtn: "#FF847F",
-                // primaryBtn: "#3ecd5e",
                 darkBlue: "#1E2B8A",
                 card1: "#4c49ea",
                 card2: "#3ecd5e",
@@ -66,22 +58,10 @@ export default {
                 silverPlan: "",
             },
             fontFamily: {
-                axiforma: "Axiforma",
-                primary: "axiformaRegular",
-                secondary: "axiformaSemiBold",
-                tertiary: "axiformaBold",
-                fourth: "proximaRegular",
-                fifth: "proximaSemiBold",
-                sixth: "proximaBold",
-                poet: "poet",
-                // jakarta: "Plus Jakarta Sans, sans-serif",
-                // serif: "DM Serif Display, serif",
-                // sans: '"DM Sans",sans-serif',
-                // agbalumo: "Agbalumo, serif",
-                // tangerine: "Tangerine, cursive",
-                // neuton: '"Neuton", serif',
-                // roboto: '"Roboto", sans-serif',
-                // Ubuntu: "'Ubuntu', sans-serif",
+                axiforma: "axiformaRegular",
+                axiMedium: "axiformaMedium",
+                axiSemiBold: "axiformaSemiBold",
+                axiBold: "axiformaBold",
             },
             backgroundImage: (theme) => ({
                 silverPlan: "linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%)",
@@ -94,7 +74,7 @@ export default {
             }),
             borderRadius: { processImg: "51% 49% 77% 23%/65% 50% 50% 35%" },
             boxShadow: {
-                header: "0px 10px 30px rgba(1,15,28,0.1)",
+                header: "0px 2px 10px 5px rgba(1,15,28,0.1)",
                 services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
                 contact:
                     "linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%)",
