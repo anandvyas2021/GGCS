@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRightIcon, ForwardIcon } from "@heroicons/react/24/outline";
 
-import { Desc, H4 } from "../Typography";
+import { Desc, H4, H5, H6, P } from "../Typography";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 
 const SwiperCarousel = ({ carouselData }) => {
@@ -58,32 +58,32 @@ const SwiperCarousel = ({ carouselData }) => {
                             }
                             className="cursor-pointer"
                         >
-                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-lg">
+                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-md">
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="slide_image h-[260px] -[90%] md:h64 !object-fill b-14"
+                                    className="slide_image !w-[98%] !h-[98%] !object-fill b-14"
                                 />
                             </div>
                             <div className=" bg-gray-200 h-[5%] p-2.5 box-content">
-                                <H4 className="text-xl md:text-lg !text-center text-primary font-semibold">
+                                <H5 className="text-xl md:text-lg !text-center text-primary">
                                     {item?.heading}
-                                </H4>
+                                </H5>
                             </div>
-                            <div className="h-[30%] card-desc ">
-                                <ul className="text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
+                            <div className="h-[30%] card-desc">
+                                <ul className="flex box-content justify-start flex-wrap gap-x-2 text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
                                     {item?.list?.map((item, i) => {
                                         return (
                                             <li
                                                 key={i}
-                                                className="flex items-start gap-2 mb-2"
+                                                className="flex items-start gap-2 mb-2 border-2 w-fit px-2 rounded-full"
                                             >
-                                                <img
+                                                {/* <img
                                                     src={arrow}
                                                     alt="services"
                                                     className="w-5 h-5 animate-flipArrow"
-                                                />
-                                                <Desc className="!text-lg">{item?.subHeading}</Desc>
+                                                /> */}
+                                                <H6>{item?.subHeading}</H6>
                                             </li>
                                         );
                                     })}
