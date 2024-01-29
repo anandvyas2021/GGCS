@@ -7,11 +7,9 @@ import { contactBg } from "../../db/assets";
 import {
     Desc,
     H1Animate,
-    H3,
-    H4,
+    H5,
     H6,
     Mail,
-    P,
     SubHeading,
     Telephone,
 } from "../Typography";
@@ -33,14 +31,14 @@ function ContactUs() {
                             <SubHeading className="w-fit">
                                 Get In Touch with us !
                             </SubHeading>
-                            <H1Animate className="mt-1 sm:!leading-[3.5rem] !justify-start">
+                            <H1Animate className="!justify-start">
                                 Let's Work Together
                             </H1Animate>
                             <Desc className="mb-4">
                                 Just tell us your requirements, and we will
                                 assist you!
                             </Desc>
-                            <div className="flex flex-col gap-1">
+                            <div className="flex flex-col gap-1 md:mt-14">
                                 <Telephone>+91 6354917511</Telephone>
                                 <Mail>ggcs@globalgarner.com</Mail>
                             </div>
@@ -61,7 +59,7 @@ function ContactUs() {
                         </div>
                     </div>
                     <div className="px-3 py-10 bg-white md:w-1/2 rounded-3xl sm:px-6 lg::px-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
-                        <div className="grid sm:grid-cols-2 grid-cols-1 lg:gap-5 gap-4">
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
                             <div className="w-full">
                                 <Input
                                     placeholder={"Fill Name "}
@@ -92,7 +90,7 @@ function ContactUs() {
                                 className="col-span-2 w-full border-[1px] border-gray-200 relative rounded-xl h-40 px-5 outline-none  bg-gray-100"
                             />
                         </div>
-                        <div className="w-full lg:mt-4 mt-3">
+                        <div className="w-full mt-3 lg:mt-4">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -107,12 +105,10 @@ function ContactUs() {
                         <div key={item?.id} className="w-full">
                             <address className="h-full w-fit lg:px-10 px-3 py-4 not-italic rounded-3xl bg-slate-200 !backdrop-blur-3xl">
                                 <main>
-                                    <H4 className="!text-2xl mb-3 !font-medium text-primary ">
+                                    <H5 className="mb-3 text-primary">
                                         {item?.title}
-                                    </H4>
-                                    <P className="font-semibold">
-                                        {item?.address}
-                                    </P>
+                                    </H5>
+                                    <H6 className="">{item?.address}</H6>
                                 </main>
                             </address>
                         </div>

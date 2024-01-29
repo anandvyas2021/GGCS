@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Tabs from "../UI/Tabs";
 import { pricing } from "./dummyData";
 import { PrimaryBtn } from "../Button";
+import { H2, H3, H4, H5, H6, P } from "../Typography";
 
 const fadeInAnimationVariants = {
     initial: {
@@ -94,7 +95,7 @@ function Pricing() {
                 {state?.plans?.map((item, index) => (
                     <div
                         key={index}
-                        className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow"
+                        className="flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow-md"
                     >
                         <div>
                             {item?.icon ? (
@@ -106,19 +107,15 @@ function Pricing() {
                                     />
                                 </div>
                             ) : null}
-                            <h3 className="mb-1 text-2xl font-semibold">
-                                {item?.title}
-                            </h3>
-                            <p className="text-gray-500">{item?.desc}</p>
+                            <H4 className="mb-1 ">{item?.title}</H4>
+                            <P className="text-gray-500">{item?.desc}</P>
                             <hr className="my-2 border-2 border-[#caf0f8]" />
                             {item?.price ? (
                                 <div className="flex items-baseline justify-center mt-8">
-                                    <span className="mr-1 text-4xl font-bold text-[#023e8a]">
+                                    <H3 className="mr-1 text-[#023e8a]">
                                         {item?.price}
-                                    </span>
-                                    <span className="font-medium text-gray-500">
-                                        /month
-                                    </span>
+                                    </H3>
+                                    <P className="text-gray-500">/month</P>
                                 </div>
                             ) : null}
                             <ul
@@ -148,46 +145,36 @@ function Pricing() {
                                                 fillRule="evenodd"
                                                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                                 clipRule="evenodd"
-                                            ></path>
+                                            />
                                         </svg>
-                                        <span className="text-[17px]">
+                                        <P className="gap-1 flx">
                                             {desc?.label}
-                                            <span className="font-semibold">
+                                            <p className="font-axiSemiBold">
                                                 {desc?.time}
-                                            </span>
-                                        </span>
+                                            </p>
+                                        </P>
                                     </motion.li>
                                 ))}
                             </ul>
                         </div>
                         <PrimaryBtn
+                            className="mb-4 w-full !rounded-xl !bg-card2 !border-2 hover:!border-card2 text-white"
                             onClick={() => {
                                 navigate("/plans", { state: item });
                             }}
-                            size="px-8 py-2"
-                            bgColor="bg-card2"
-                            className="mb-4 w-full !rounded-xl !bg-card2 !border-2 hover:!border-card2 text-white"
                         >
                             View Details
                         </PrimaryBtn>
                         <PrimaryBtn
+                            className="w-full rounded-xl bg-white !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-tertiary via-secondary to-tertiary hover:bg-[length:200%] hover:animate-gradientBg"
                             onClick={() => {
                                 navigate("/contact");
                             }}
-                            size="px-8 py-2"
-                            // bgColor="bg-primaryBtn"
-                            className="w-full rounded-xl bg-white !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
                         >
                             {currentTab === "it_services"
                                 ? "Send Enquiry"
                                 : "Join this Plan"}
                         </PrimaryBtn>
-                        {/* <div
-
-                            className="text-white bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500"
-                        >
-                            Join this Plan
-                        </div> */}
                     </div>
                 ))}
             </Slider>

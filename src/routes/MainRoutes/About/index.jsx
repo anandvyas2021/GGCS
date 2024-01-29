@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import HOS from "./components/HOS";
 import Vision from "./components/Vision";
 import AboutHero from "./components/AboutHero";
-// import Team from './Team'
+// import Team from "./components/Team";
 
 function About(props) {
     useEffect(() => {

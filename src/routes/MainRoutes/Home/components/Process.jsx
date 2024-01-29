@@ -10,6 +10,8 @@ import {
     SubHeading,
     P,
     H5,
+    H4,
+    H6,
 } from "../../../../components/Typography";
 import { Container } from "../../../../components/Layout";
 import { Line1, Line2 } from "../../../../components/UI/ProcessDash";
@@ -38,12 +40,12 @@ export default function Process(props) {
 
     return (
         <Container className="px-3 md:!py-20 py-10 sm:px-8 lg:px-12">
-            <div className="grid md:grid-cols-2">
+            <div className="grid md:grid-cols-[0.8fr_1fr]">
                 <div className="relative flex items-center">
                     <img
                         src={image1}
                         alt="process"
-                    // className="opacity-1 animate-imgBorder rounded-processImg"
+                        // className="opacity-1 animate-imgBorder rounded-processImg"
                     />
                     {/* <div className="">
                         <div className="absolute bottom-14 -left-10 -z-[1]">
@@ -57,7 +59,7 @@ export default function Process(props) {
                         </div>
                     </div> */}
                 </div>
-                <div className="md:pl-16">
+                <div className="md:pl-12">
                     <div className="flex flex-col mb-10 items-left">
                         <SubHeading className="text-center">
                             Let us do the work
@@ -69,12 +71,13 @@ export default function Process(props) {
 
                     <ul>
                         {processData?.map((item) => (
-                            <li className="mb-8" key={item?.id}>
+                            <li className="mb-10" key={item?.id}>
                                 <div
-                                    className={`flex relative ${item?.id % 2 === 0
+                                    className={`flex relative ${
+                                        item?.id % 2 === 0
                                             ? "justify-center"
                                             : "justify-start"
-                                        }`}
+                                    }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">
@@ -91,11 +94,9 @@ export default function Process(props) {
                                             <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
                                         </div>
                                     </div>
-                                    <div className="w-8/12">
-                                        <H5 className="">{item?.label}</H5>
-                                        <P className="text-base">
-                                            {item?.desc}
-                                        </P>
+                                    <div className="w-9/12">
+                                        <H5>{item?.label}</H5>
+                                        <H6>{item?.desc}</H6>
                                     </div>
                                     {item?.id < processData?.length ? (
                                         <>

@@ -4,10 +4,9 @@ export function RadientBtn({ children, className, onClick, hideEffect }) {
     return (
         <div className="relative group">
             <button
-                className={`relative z-10 flex items-center justify-center gap-1 p-3 px-4 text-lg font-bold text-black bg-white1 shadow-2xl border-4 rounded-xl bg-clip-padding border-200/60 ${className}`}
+                className={`relative z-10 flex items-center justify-center gap-1 p-3 px-4 text-lg font-axiBold text-black bg-white1 shadow-2xl border-4 rounded-xl bg-clip-padding border-200/60 ${className}`}
                 onClick={onClick}
             >
-                {/* <p className=""></p> */}
                 {children}
                 <figure className="invisible group-hover:visible group-hover:animate-arrowFadeIn">
                     <svg
@@ -33,7 +32,7 @@ export function RadientBtn({ children, className, onClick, hideEffect }) {
                     <div
                         className={`w-full h-full bg-gradient-to-tr ${
                             hideEffect
-                                ? "from-gray-400 to-gray-500"
+                                ? "group-hover:from-gray-400 group-hover:to-300"
                                 : "from-amber-600 to-teal-600"
                         } group-hover:animate-spin`}
                     />

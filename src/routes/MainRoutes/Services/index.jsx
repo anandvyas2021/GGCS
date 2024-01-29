@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Modal } from "antd";
-
+import React, { useEffect } from "react";
 import banner from "../../../assets/services/banner1.gif";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,52 +10,37 @@ import {
     otherServices,
 } from "../../../db/dummy";
 import Pricing from "../../../components/Pricing";
+import { Container } from "../../../components/Layout";
 import SwiperCarousel from "../../../components/Carousel/Swiper";
-import { Desc, H1Animate, H4, H5, H6 } from "../../../components/Typography";
+import { Desc, H1Animate, H5, H6, P } from "../../../components/Typography";
 
 export default function Services(props) {
-    const [state, setState] = useState({
-        0: false,
-        openDialog: false,
-        dialogData: {},
-    });
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const readMoreModal = (open, data) => {
-        console.log(open, data);
-        setState((prev) => {
-            return { ...prev, openDialog: open, dialogData: data };
-        });
-    };
-
     return (
-        <div className="font-roboto">
-            {/* /pricing section */}
-            <section className="py-10 sm:py-20 bg-grey5">
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                    <div className="flex mb-16 md:justify-center">
-                        <div className="text-center md:w-8/12">
-                            <H1Animate className="mb-3 text-black2">
-                                {/* How can a perth social media help grow my
+        <>
+            <Container className="px-3 py-10 sm:px-8 md:px-12 sm:py-20">
+                <div className="flex mb-16 md:justify-center">
+                    <div className="text-center md:w-8/12">
+                        <H1Animate>
+                            {/* How can a perth social media help grow my
                                 business? */}
-                                Packages for everyone
-                            </H1Animate>
-                            <Desc>
-                                Here at GGCS we focus on markets where
-                                technology, innovation, and capital can unlock
-                                long-term value and drive economic growth.
-                            </Desc>
-                        </div>
-                    </div>
-                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <Pricing />
+                            Packages for everyone
+                        </H1Animate>
+                        <Desc>
+                            Here at GGCS we focus on markets where technology,
+                            innovation, and capital can unlock long-term value
+                            and drive economic growth.
+                        </Desc>
                     </div>
                 </div>
-            </section>
-            <section className="max-w-screen-xl px-3 pt-12 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-20">
+                <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                    <Pricing />
+                </div>
+            </Container>
+            <Container className="px-3 py-12 sm:px-8 md:px-12 md:py-20">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
                         <ul>
@@ -75,34 +58,25 @@ export default function Services(props) {
                                         }`}
                                     >
                                         <div className="mr-5">
-                                            <div className="relative">
+                                            <figure className="relative">
                                                 <img
                                                     src={item?.icon}
                                                     alt={item?.label}
                                                 />
-                                                <b className="absolute left-0 right-0 font-medium text-center -translate-y-1/2 top-1/2 text-white1">
+                                                <b className="absolute left-0 right-0 text-center -translate-y-1/2 top-1/2 text-white1">
                                                     0{item?.id}
                                                 </b>
                                                 <span className="absolute top-0 left-0 h-2 w-2 border rounded-full border-[#021d3580]" />
                                                 <span className="absolute top-1 left-3 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
                                                 <span className="absolute bottom-1.5 -right-1.5 h-1.5 w-1.5 rounded-full bg-[#021d3580]" />
                                                 <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
-                                            </div>
+                                            </figure>
                                         </div>
                                         <div className="w-10/12">
                                             <H5>{item?.label}</H5>
-                                            <p className="text-grey4">
+                                            <H6 className="text-grey4">
                                                 {item?.desc}
-                                                {/* {item?.desc?.slice(0, 60)}... */}
-                                            </p>
-                                            {/* <p
-                                                className="font-semibold text-pink-500 cursor-pointer"
-                                                onClick={() =>
-                                                    readMoreModal(true, item)
-                                                }
-                                            >
-                                                {"Read More..."}
-                                            </p> */}
+                                            </H6>
                                         </div>
                                         {/* {item?.id < processData?.length ? (
                                             <>
@@ -129,156 +103,38 @@ export default function Services(props) {
                             ))}
                         </ul>
                     </div>
-                    {/* <div className="relative"> */}
+
                     <section className="w-full md:py-0">
-                        {/* <section className="relative hidden lg:flex"> */}
                         <img src={banner} className="w-full h-full" />
-                        {/* </section> */}
                     </section>
-                    {/* <img src={socialTree} alt="services" className="" />
-                        <div className="">
-                            <div
-                                className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1"
-                                onClick={() =>
-                                    window.open(
-                                        "https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/"
-                                    )
-                                }
-                            >
-                                <img src={serPint} alt="shape1" />
-                            </div>
-                            <div
-                                className="absolute top-[5%] left-[45%] z-[1] animate-blinkTransform2"
-                                onClick={() =>
-                                    window.open(
-                                        "#",
-                                        "_blank",
-                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                    )
-                                }
-                            >
-                                <img src={serFB} alt="shape2" />
-                            </div>
-                            <div
-                                className="absolute -top-[15%] right-[13%] z-[1] animate-blinkTransform1"
-                                onClick={() =>
-                                    window.open(
-                                        "#",
-                                        "_blank",
-                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                    )
-                                }
-                            >
-                                <img src={serInsta} alt="shape3" />
-                            </div>
-                            <div
-                                className="absolute top-[19%] right-[1%] z-[1] animate-blinkTransform2"
-                                onClick={() =>
-                                    window.open(
-                                        "#",
-                                        "_blank",
-                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
-                                    )
-                                }
-                            >
-                                <img src={serLinkedin} alt="shape3" />
-                            </div>
-                        </div> */}
-                    {/* </div> */}
                 </div>
-            </section>
-
-            {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
-                <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
-                    <img
-                        src={bgMain}
-                        alt="social-marketing"
-                        className="object-cover w-full h-full"
-                    />
-                    <div>
-                        <img
-                            src={design1}
-                            alt="social-marketing"
-                            className="absolute -top-[12%] right-[11%] animate-servicesSwing origin-bottom-left"
-                        />
-                        <img
-                            src={design2}
-                            alt="social-marketing"
-                            className="absolute bottom-[2%] 1left-[2%] animate-servicesSwing origin-bottom-left"
-                        />
-                        <img
-                            src={design3}
-                            alt="social-marketing"
-                            className="absolute bottom-[48%] left-[14%] animate-servicesStar1"
-                        />
-                        <img
-                            src={design4}
-                            alt="social-marketing"
-                            className="absolute bottom-[42%] left-[15.5%] animate-servicesStar2"
-                        />
-                        <img
-                            src={design5}
-                            alt="social-marketing"
-                            className="absolute bottom-[48%] left-[16.3%] animate-servicesStar3"
-                        />
-                        <img
-                            src={design6}
-                            alt="social-marketing"
-                            className="absolute top-[14%] right-[15%] animate-servicesStar4"
-                        />
-                    </div>
-                </div>
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-14">
-                    <div className="lg:w-10/12">
-                        <p className="mb-4 text-lg font-medium text-white2">
-                            Social Media Marketing
-                        </p>
-                        <h1 className="text-7xl font-bold -space-[0.03em] text-white">
-                            Enabling your brand’s Success via social media
-                        </h1>
-                    </div>
-                </div>
-            </section> */}
-            {/* <div className="flex justify-center max-w-screen-xl mx-auto">
-                <div className="relative z-10 -mt-64">
-                    <img
-                        src={banner}
-                        alt="social-media-marketing"
-                        className="rounded-3xl"
-                    />
-                </div>
-            </div> */}
-
-            <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 mt-20 mb-40">
+            </Container>
+            <Container className="px-3 py-12 sm:px-8 md:px-12 md:py-20">
                 <SwiperCarousel carouselData={servicesData} />
-            </section>
+            </Container>
 
-            <section className="max-w-screen-xl px-3 mx-auto">
-                <div className="text-center mb-12">
-                    <H1Animate className="mb-3 text-black2">
-                        Our Other Services
-                    </H1Animate>
-                    <H4 className="!text-gray-400 !font-bold">
-                        * Price on Request
-                    </H4>
+            <Container className="px-3 py-12 md:py-20">
+                <div className="!mb-12 text-center">
+                    <H1Animate className="mb-3">Our Other Services</H1Animate>
+                    <H5 className="!text-gray-500">* Price on Request</H5>
                 </div>
-                <div className="grid grid-cols-3 lg:grid-cols-5 gap-5 mb-8">
+                <div className="grid grid-cols-3 gap-5 mb-8 lg:grid-cols-5">
                     {otherServices?.map((item) => (
                         <div
                             key={item?.id}
-                            className="flex items-center justify-center text-center p-2 h-16 rounded-xl shadow-inner bg-green-400 hover:scale-105 transition-all "
+                            className="flex items-center justify-center h-16 p-2 text-center transition-all bg-green-400 shadow-inner rounded-xl hover:scale-105"
                         >
-                            <H6 className="text-white">{item?.label}</H6>
+                            <P className="text-white">{item?.label}</P>
                         </div>
                     ))}
                 </div>
-                <H6>
+                <P>
                     *Budget Charges Extra(Add-on charges as per applicable or
                     the discretion of the company)
-                </H6>
-            </section>
+                </P>
+            </Container>
 
-            <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12 my-14 sm:my-28">
+            <Container className="px-3 py-12 sm:px-8 md:px-12 md:py-20">
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10">
                     {serviceSocial?.map((item) => (
                         <div
@@ -290,7 +146,7 @@ export default function Services(props) {
                                 )
                             }
                             key={item?.id}
-                            className={`flex items-center justify-between group border p-7 rounded-xl cursor-pointer transition-all duration-[400ms] ${item?.class} hover:text-white1 hover:scale-110`}
+                            className={`group flex items-center justify-between group border p-7 rounded-xl cursor-pointer transition-all duration-[400ms] ${item?.class} hover:scale-110`}
                         >
                             <div className="flex items-center gap-3">
                                 <span>
@@ -301,29 +157,17 @@ export default function Services(props) {
                                         className="group-hover:text-white1"
                                     />
                                 </span>
-                                <h4>{item?.label}</h4>
+                                <H6 className="group-hover:!text-white1">
+                                    {item?.label}
+                                </H6>
                             </div>
                             <div className="invisible group-hover:visible">
-                                <ArrowRightIcon className="w-4 h-4 text-white" />
+                                <ArrowRightIcon className="w-4 h-4 text-white1" />
                             </div>
                         </div>
                     ))}
                 </div>
-            </section>
-            <Modal
-                title={
-                    <h2 className="text-xl font-bold text-center">
-                        {state?.dialogData?.label}
-                        <hr className="my-1 border-gray-300 border-1" />
-                    </h2>
-                }
-                open={state?.openDialog}
-                onOk={() => readMoreModal(false, {})}
-                onCancel={() => readMoreModal(false, {})}
-                footer={false}
-            >
-                <h3 className="p-4 text-lg">{state?.dialogData?.desc}</h3>
-            </Modal>
-        </div>
+            </Container>
+        </>
     );
 }

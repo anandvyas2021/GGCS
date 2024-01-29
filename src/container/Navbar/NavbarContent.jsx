@@ -7,6 +7,7 @@ import Menu from "../../assets/Navbar/menu.svg";
 
 import { navMenu } from "../../db/dummy";
 import { PrimaryBtn, RadientBtn } from "../../components/Button";
+import { H4, H5 } from "../../components/Typography";
 
 export default function NavbarContent() {
     const location = useLocation();
@@ -31,11 +32,9 @@ export default function NavbarContent() {
         }
     };
     const onScroll = () => {
-        // console.log(scrollRef.current);
         let ele = document.querySelector(".header");
-        // console.log(ele.attributes);
-        // fixed top-5 animate-fadeInDown
     };
+
     const handleOpenMenu = (data = true) => {
         setState((prev) => {
             return { ...prev, showMenu: data };
@@ -76,10 +75,10 @@ export default function NavbarContent() {
                         />
                     </div>
                     <div className="flex">
-                        <div className="items-center hidden lg:flex">
+                        <ul className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
-                                <div
-                                    className={`relative flex items-center  mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
+                                <li
+                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${
                                         item?.slug === location?.pathname
                                             ? "text-primary !border-primary"
                                             : ""
@@ -87,24 +86,17 @@ export default function NavbarContent() {
                                     key={item?.id}
                                     onClick={() => navigate(item?.slug)}
                                 >
-                                    <a>{item?.label}</a>
+                                    <H5 className="!text-lg">
+                                        <a>{item?.label}</a>
+                                    </H5>
                                     {/* {item?.slug === location?.pathname ? (
                                         <figure className="absolute bottom-0 w-0 h-0 transition-all duration-200 border-b-[5px] border-l-[5px] border-transparent border-r-[5px] left-[45%] border-b-primary" />
                                     ) : null} */}
-                                </div>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
                         <div className="relative flex items-center justify-between">
                             <span className="hidden lg:block">
-                                {/* <PrimaryBtn
-                                    bgColor="bg-primaryBtn"
-                                    className="border-primaryBtn"
-                                    // onClick={() => navigate("/contact")}
-                                    onClick={() => navigate("/hire-us")}
-                                >
-                                    Hire Us
-                                </PrimaryBtn> */}
-
                                 {location?.pathname === "/" ? (
                                     <RadientBtn
                                         className="!rounded-full !py-2.5"
@@ -117,7 +109,6 @@ export default function NavbarContent() {
                                     <PrimaryBtn
                                         bgColor="bg-primaryBtn"
                                         className="border-primaryBtn"
-                                        // onClick={() => navigate("/contact")}
                                         onClick={() => navigate("/hire-us")}
                                     >
                                         Hire Us

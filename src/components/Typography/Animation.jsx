@@ -20,20 +20,22 @@ export function H1Animate({ className, children, effect = true }) {
     };
     return (
         <motion.h1
-            className={`flex flex-wrap gap-4 items-center justify-center md:!text-5xl text-4xl leading-7 font-bold mb-2.5 ${className}`}
+            className={`flex flex-wrap gap-3 items-center justify-center md:!text-[45px] text-3xl leading-[3.5rem] font-axiBold mb-3 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-            // custom={index}
         >
-            {/* {children} */}
             {res?.map((item, i) => (
                 <p
                     className={`${
-                        i < res?.length / 2 ? "" : !effect ? "" : "text-g3"
+                        i < res?.length / 2
+                            ? ""
+                            : !effect
+                            ? ""
+                            : "text-tertiary"
                     }`}
                 >
                     {item}
@@ -42,6 +44,7 @@ export function H1Animate({ className, children, effect = true }) {
         </motion.h1>
     );
 }
+
 export function TextAnimate({ className, children }) {
     const fadeInAnimationVariants = {
         initial: {
@@ -59,7 +62,7 @@ export function TextAnimate({ className, children }) {
     };
     return (
         <motion.p
-            className={`!text-xl font-neutn font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r fro-g1 va-g2 t-g3 bg-clip-text !bg-[#7d7c83] ${className} `}
+            className={`!text-xl font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r fro-g1 va-g2 t-g3 bg-clip-text !bg-[#7d7c83] ${className} `}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -73,7 +76,7 @@ export function TextAnimate({ className, children }) {
     );
 }
 
-export function SubHeading({ className, children }) {
+export const SubHeading = ({ className, children }) => {
     const fadeInAnimationVariants = {
         initial: {
             opacity: 0,
@@ -90,21 +93,20 @@ export function SubHeading({ className, children }) {
     };
     return (
         <motion.p
-            className={`sm:text-xl text-lg font-medium [letter-spacing:0.4px] text-zinc-600 ${className}`}
+            className={`sm:text-[20px] text-lg font-axiMedium mb-1 [letter-spacing:0.4px] text-gray-400 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-            // custom={index}
         >
             {children}
         </motion.p>
     );
-}
+};
 
-export function Desc({ className, children }) {
+export const Desc = ({ className, children }) => {
     const fadeInAnimationVariants = {
         initial: {
             opacity: 0,
@@ -121,19 +123,18 @@ export function Desc({ className, children }) {
     };
     return (
         <motion.p
-            className={`lg:text-[22px] text-lg  [line-height:1.9rem] [letter-spacing:0.1px] text-gray-600 ${className}`}
+            className={`max-w-screen-lg mx-auto lg:text-[19px] text-lg font-axiMedium text-gray-600 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-            // custom={index}
         >
             {children}
         </motion.p>
     );
-}
+};
 
 export function P({ className, children }) {
     const fadeInAnimationVariants = {

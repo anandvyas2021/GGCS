@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 
-import { faq } from "./dummyData";
-import { Container } from "../../../components/Layout";
-import { Desc, H2, H5 } from "../../../components/Typography";
+import { faq } from "../dummyData";
+import { Container } from "../../../../components/Layout";
+import { H3, H5, H6 } from "../../../../components/Typography";
 
-function FAQ() {
+export default function FAQ() {
     const [state, setState] = useState({
         active: null,
     });
     const { active } = state;
     return (
-        <Container>
-            <div className="pb-10 md:pt-20 pt-14">
-                <H2 className="text-center">{faq?.title}</H2>
-            </div>
+        <Container className="py-12 md:py-20">
+            <H3 className="!mb-10 text-center">{faq?.title}</H3>
             <div className="pb-20">
                 {faq?.list?.map((item) => (
                     <div key={item?.id} className="mb-2">
                         <div
-                            className={`flex justify-between py-5 px-5 rounded-lg hover:bg-red-50 cursor-pointer  ${
+                            className={`flex justify-between p-5 rounded-lg hover:bg-red-50 cursor-pointer ${
                                 active === item?.id ? "bg-red-50" : ""
                             }`}
                             onClick={() => {
@@ -33,7 +31,7 @@ function FAQ() {
                                 });
                             }}
                         >
-                            <H5 className="font-semibold">{item?.que}</H5>
+                            <H5>{item?.que}</H5>
                             {active === item?.id ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -68,13 +66,13 @@ function FAQ() {
                         </div>
                         {active === item?.id ? (
                             <div
-                                className={`py-5 px-5  overflow-hidden transition-all duration-300 ease-in-out ${
+                                className={`p-5 overflow-hidden transition-all duration-300 ease-in-out ${
                                     active === item?.id
                                         ? "opacity-100"
                                         : "opacity-0"
                                 }`}
                             >
-                                <p>{item?.ans}</p>
+                                <H6>{item?.ans}</H6>
                             </div>
                         ) : null}
                     </div>
@@ -83,5 +81,3 @@ function FAQ() {
         </Container>
     );
 }
-
-export default FAQ;
