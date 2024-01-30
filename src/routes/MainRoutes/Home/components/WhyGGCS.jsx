@@ -17,7 +17,7 @@ export default function WhyGGCS() {
                     {/* sdihunigsdtgkjdnhoigjlsdbhvsdlfiukgbsjrdkhyiuserihyofiejhbgviusrgkjerkhjgvjlsdbhvsdlfiukgbsjrdkhyiuserihyofiej
                     hbgviusrgkjerkhjgvieuhtjlsdbhvsdlfiukgbsjrdkhyiuserihyofiejhbgviusrgkjerkhjgvieuhtieuhtgkietyigesigsu */}
                 </Desc>
-                <div className="grid grid-cols-1 gap-20 pt-20">
+                <div className="grid grid-cols-1 gap-10 pt-20">
                     {whyGGCSData?.desc?.map((item, i) => (
                         <div
                             key={item?.id}

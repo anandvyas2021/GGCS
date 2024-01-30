@@ -32,8 +32,8 @@ const Input = ({ text, placeholder, className }) => {
 export default function Footer() {
     const navigate = useNavigate();
     return (
-        <div className="bg-gray-100">
-            <div className="max-w-screen-md px-3 pb-20 mx-auto sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
+        <div className="bg-gray-100 ">
+            <div className="max-w-screen-md px-3 pb-20 mx-auto border-t-2 border-gray-300 sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16">
                     <div className="mb-3 lg:mb-0 ">
                         <div className="mb-4">

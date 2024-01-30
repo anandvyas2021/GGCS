@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 import { Container } from "../../../components/Layout";
 import { RadientBtn } from "../../../components/Button";
-import { H1Animate } from "../../../components/Typography";
+import { H1Animate, H4, H6, P } from "../../../components/Typography";
 import BackNavigate from "../../../components/UI/BackNavigate";
 
 export default function OtherServices({ data, samePage }) {
     let navigate = useNavigate();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     });
 
     return (
@@ -25,9 +25,9 @@ export default function OtherServices({ data, samePage }) {
                     </H1Animate>
                 </Container>
             </div>
-            <section className="bg-gray-100 opacity-100">
+            <section className="py-10 bg-gray-100 opacity-100">
                 <Container>
-                    <div className="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 ">
+                    <div className="grid grid-cols-1 gap-8 p-6 md:grid-cols-2">
                         {data?.list?.map((item, i) => {
                             return (
                                 <div className="w-full card" key={i}>
@@ -42,12 +42,12 @@ export default function OtherServices({ data, samePage }) {
                                                 className="object-cover w-full h-full"
                                             />
                                         </figure>
-                                        <p className="mt-5 text-3xl [letter-spacing:-0.02em] font-semibold pb-2">
+                                        <H4 className="mt-5 [letter-spacing:-0.02em] pb-2">
                                             {item?.subHeading}
-                                        </p>
-                                        <p className="text-lg font-semibold max-w-[470px] text-gray-600">
+                                        </H4>
+                                        <P className="text-gray-600">
                                             {item?.description}
-                                        </p>
+                                        </P>
                                     </div>
                                 </div>
                             );
@@ -62,12 +62,6 @@ export default function OtherServices({ data, samePage }) {
                     >
                         Hire Us
                     </RadientBtn>
-                    {/* <PrimaryBtn
-                        className="!px-14 !py-3 text-lg !bg-green-600 !border-0"
-                        onClick={() => navigate("/hire-us")}
-                    >
-                        Hire Us
-                    </PrimaryBtn> */}
                 </div>
             </section>
         </div>

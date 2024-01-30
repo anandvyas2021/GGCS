@@ -24,13 +24,13 @@ export default function Routes(props) {
     ]);
     return (
         <main className={`${location?.pathname === "/" ? "" : "lg:mt-20"}`}>
-            <div className="fixed  md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-mainDark to-mainDark border rounded-b-xl  text-white cursor-pointer">
+            <div className="fixed md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-b-xl text-white cursor-pointer">
                 <a
                     download
                     onClick={() => {
                         window.open(ppt, "_blank", "fullscreen=yes");
                     }}
-                    className="font-bold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
+                    className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
                     aria-current="page"
                 >
                     DOWNLOAD PPT
