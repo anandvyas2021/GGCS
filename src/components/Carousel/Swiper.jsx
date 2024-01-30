@@ -18,7 +18,7 @@ const SwiperCarousel = ({ carouselData }) => {
     return (
         <div className="relative mt-5">
             <Swiper
-                // effect="coverflow"
+                effect="coverflow"
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
@@ -26,7 +26,7 @@ const SwiperCarousel = ({ carouselData }) => {
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 100,
+                    depth: 50,
                     modifier: 2.5,
                 }}
                 // pagination={{
@@ -44,7 +44,7 @@ const SwiperCarousel = ({ carouselData }) => {
                     prevEl: ".swiper-button-prev ",
                     clickable: true,
                 }}
-                // modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+                modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
                 className="swiper_container"
             >
                 {carouselData?.map((item, i) => {
@@ -62,13 +62,13 @@ const SwiperCarousel = ({ carouselData }) => {
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="slide_image !w-[98%] !h-[98%] !object-fill b-14"
+                                    className="slide_image !w-full h-[99%] !object-fill  b-14"
                                 />
                             </div>
-                            <div className=" bg-gray-200 h-[5%] p-2.5 box-content">
-                                <H5 className="text-xl md:text-lg !text-center text-primary">
+                            <div className=" bg-gray-200 h-[5%] p-2.5 box-content whitespace-nowrap">
+                                <H6 className="text-lg md:text-lg !text-center text-primary">
                                     {item?.heading}
-                                </H5>
+                                </H6>
                             </div>
                             <div className="h-[30%] card-desc">
                                 <ul className="flex box-content justify-start flex-wrap gap-x-2 text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
@@ -76,7 +76,7 @@ const SwiperCarousel = ({ carouselData }) => {
                                         return (
                                             <li
                                                 key={i}
-                                                className="flex items-start gap-2 mb-2 border-2 w-fit px-2 rounded-full"
+                                                className="flex items-start gap-2 px-2 mb-2 border-2 rounded-full w-fit"
                                             >
                                                 {/* <img
                                                     src={arrow}
