@@ -115,42 +115,47 @@ export default function HeroSection() {
                         </div> */}
                     </div>
                 </div>
-                <div className="">
-                    <div className="lg:block hidden absolute top-0 right-0 w-[700px] z-[5]">
-                        <Slider {...settings}>
-                            {[
-                                digitalMarketingBanner,
-                                socialMediaBanner,
-                                ITBanner,
-                            ]?.map((item, i) => (
+                <div className="relative">
+                    <Slider {...settings}>
+                        {[
+                            digitalMarketingBanner,
+                            socialMediaBanner,
+                            ITBanner,
+                        ]?.map((item, i) => (
+                            <div className="lg:block hidden absolute top-0 right-0 w-[700px] z-[5]">
                                 <img
                                     key={i}
                                     src={item}
                                     alt="hero"
                                     className="w-[700px] opacity-100"
                                 />
-                            ))}
-                        </Slider>
-                    </div>
-                    <div className="lg:flex hidden absolute top-0 right-0 z-[4]">
-                        <img src={banner1} alt="" className="w-[700px]" />
-                    </div>
-                    <div className="lg:flex hidden absolute top-0 right-0 z-[3]">
-                        <img src={banner2} alt="" className="w-[700px]" />
-                    </div>
-                    <div className="lg:flex hidden absolute top-0 left-0 z-[1]">
-                        <img src={banner3} alt="" className="invert-[0.2]" />
-                    </div>
+                            </div>
+                        ))}
+                        <div className="lg:flex hidden absolute top-0 right-0 z-[4]">
+                            <img src={banner1} alt="" className="w-[700px]" />
+                        </div>
+                        <div className="lg:flex hidden absolute top-0 right-0 z-[3]">
+                            <img src={banner2} alt="" className="w-[700px]" />
+                        </div>
+                        <div className="lg:flex hidden absolute top-0 left-0 z-[1]">
+                            <img
+                                src={banner3}
+                                alt=""
+                                className="invert-[0.2]"
+                            />
+                        </div>
+                    </Slider>
+
                     <div className="absolute left-40 bottom-9 z-[1] animate-upslide">
                         <img src={shape1} alt="" />
                     </div>
-                    <div className="absolute md:left-[660px] top-[345px] z-[1] animate-shape2">
+                    <div className="absolute lg:left-[660px] top-[35px] z-[1] animate-shape2">
                         <img src={shape2} alt="" />
                     </div>
                     <div className="absolute lg:left-[750px] bottom-[280px] z-[1] animate-shape3">
                         <img src={shape3} alt="" />
                     </div>
-                    <div className="absolute lg:right-[610px] bottom-[90px] animate-shape4">
+                    <div className="absolute lg:right-[610px] bottom-[0px] animate-shape4">
                         <img src={shape4} alt="" />
                     </div>
                 </div>
