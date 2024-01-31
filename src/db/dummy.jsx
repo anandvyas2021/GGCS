@@ -7,9 +7,9 @@ import {
     smlinkedin,
     smInsta,
     smX,
-    ContentCreation,
-    CCM,
-    Post,
+    content,
+    ccm,
+    post,
     list1,
     list2,
     list3,
@@ -49,7 +49,7 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { Organic } from "./assets";
+import { organic } from "./assets";
 import {
     onPageSeo,
     offPageSeo,
@@ -711,30 +711,6 @@ export const businessData = [
     },
 ];
 
-export const otherServices = [
-    { id: 1, label: "Flyer" },
-    { id: 2, label: "Poster" },
-    { id: 3, label: "Documents" },
-    { id: 4, label: "Certificates" },
-    { id: 5, label: "Resume" },
-    { id: 6, label: "Instagram Post" },
-    { id: 7, label: "Instagram Reels" },
-    { id: 8, label: "Instagram Story" },
-    { id: 9, label: "Facebook Post" },
-    { id: 10, label: "Youtube Story" },
-    { id: 11, label: "Youtube Thumbnail" },
-    { id: 12, label: "Documents A4 Portrait" },
-    { id: 13, label: "Photo Collage" },
-    { id: 14, label: "White Board" },
-    { id: 15, label: "Responsive Documents" },
-    { id: 16, label: "Presentation" },
-    { id: 17, label: "Website" },
-    { id: 18, label: "Logo" },
-    { id: 19, label: "Mobile Video" },
-    { id: 20, label: "Video" },
-    { id: 21, label: "E-commerce Portal" },
-];
-
 export const galleryData = [
     { id: 1, platform: "Flyer", image: flyer },
     { id: 2, platform: "Instagram", image: instagram },
@@ -750,19 +726,19 @@ export const uposDetails = {
     list: [
         {
             label: "Organic Traffic on Social Media Handles ",
-            icon: Organic,
+            icon: organic,
         },
         {
-            label: "Creative Posts, Videos,PromotionVideos,Promotion ",
-            icon: Post,
+            label: "Creative Posts, Videos, PromotionVideos, Promotion ",
+            icon: post,
         },
         {
             label: "Content Creation Guide by GGCS",
-            icon: CCM,
+            icon: ccm,
         },
         {
             label: "Cross-Channel Promotion ",
-            icon: ContentCreation,
+            icon: content,
         },
     ],
     label: "Exclusive Discounted Price",

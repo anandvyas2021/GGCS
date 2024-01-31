@@ -20,7 +20,7 @@ export default function CoursesDetails() {
     let routeData = location?.state?.course;
 
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
 
         let courseData = courses?.filter((item) => {
             return item?.slug === routeData;

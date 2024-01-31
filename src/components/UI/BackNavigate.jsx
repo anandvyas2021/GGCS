@@ -3,11 +3,14 @@ import backIcon from "../../assets/icons/backBtn.svg";
 
 import { useNavigate } from "react-router-dom";
 
+import { Container } from "../Layout";
+import { H4 } from "../Typography";
+
 export default function BackNavigate({ backLabel, backLink, className }) {
     let navigate = useNavigate();
     return (
-        <div
-            className={`flex items-center max-w-screen-xl gap-3 px-3 pt-24 mx-auto lg:pt-5 text-primary ${className}`}
+        <Container
+            className={`flex items-center gap-3 px-3 pt-24 lg:pt-5 text-primary ${className}`}
         >
             <img
                 src={backIcon}
@@ -15,9 +18,7 @@ export default function BackNavigate({ backLabel, backLink, className }) {
                 className="w-5 transition-all duration-200 cursor-pointer sm:w-7 hover:scale-110"
                 onClick={() => navigate(backLink ?? "/")}
             />
-            {backLabel ? (
-                <h5 className="text-xl font-bold sm:text-2xl">{backLabel}</h5>
-            ) : null}
-        </div>
+            {backLabel ? <H4>{backLabel}</H4> : null}
+        </Container>
     );
 }

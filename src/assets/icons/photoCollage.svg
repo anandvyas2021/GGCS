@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path1918" d="M0-682.665H50v50H0Z" transform="translate(0 682.665)"/>
+    </clipPath>
+  </defs>
+  <g id="g1908" transform="translate(0 682.665)">
+    <g id="g1910" transform="translate(7.422 -672.802)">
+      <path id="path1912" d="M0-75.376v-5.957H35.156V-51.06H29.2" transform="translate(0 81.333)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g id="g1914" transform="translate(0 -682.665)">
+      <g id="g1916" clip-path="url(#clip-path)">
+        <g id="g1922" transform="translate(13.379 3.906)">
+          <path id="path1924" d="M0-75.376v-5.957H35.156V-51.06H29.2" transform="translate(0 81.333)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <path id="path1926" d="M20-466.666H55.156v30.273H20Z" transform="translate(-18.535 482.486)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+    <path id="path1928" d="M123.437-368.111H100v-18.555h23.437Z" transform="translate(-92.676 -274.32)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <g id="g1930" transform="translate(7.324 -651.22)">
+      <path id="path1932" d="M0-74.14v2.93H12.37L5.208-80Z" transform="translate(0 80)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g id="g1934" transform="translate(17.546 -654.149)">
+      <path id="path1936" d="M-93.636,0l-7.4,9.082,2.148,2.637H-87.82V6.543Z" transform="translate(101.036)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g id="g1938" transform="translate(0 -682.665)">
+      <g id="g1940" clip-path="url(#clip-path)">
+        <g id="g1946" transform="translate(16.113 26.074)">
+          <path id="path1948" d="M-37.07-18.535a1.465,1.465,0,0,1-1.465,1.465A1.465,1.465,0,0,1-40-18.535,1.465,1.465,0,0,1-38.535-20a1.465,1.465,0,0,1,1.465,1.465" transform="translate(40 20)" fill="#672bb2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

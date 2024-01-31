@@ -3,12 +3,10 @@ import banner from "../../../assets/services/banner1.gif";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-    servicesData,
-    serviceSocial,
-    processData,
-    otherServices,
-} from "../../../db/dummy";
+import { Link } from "react-router-dom";
+
+import { servicesData, serviceSocial, processData } from "../../../db/dummy";
+import { otherServices } from "./dummyData";
 import Pricing from "../../../components/Pricing";
 import { Container } from "../../../components/Layout";
 import SwiperCarousel from "../../../components/Carousel/Swiper";
@@ -42,7 +40,7 @@ export default function Services(props) {
             </Container>
             <Container className="px-3 py-12 sm:px-8 md:px-12 md:py-20">
                 <div className="grid md:grid-cols-2">
-                    <div className="lg:pl-16">
+                    <div className="lg:pl-8">
                         <ul>
                             {processData?.map((item) => (
                                 <li className="mb-8" key={item?.id}>
@@ -112,20 +110,25 @@ export default function Services(props) {
             <Container className="px-3 py-12 sm:px-8 md:px-12 md:py-20">
                 <SwiperCarousel carouselData={servicesData} />
             </Container>
-
             <Container className="px-3 py-12 md:py-20">
                 <div className="!mb-12 text-center">
                     <H1Animate className="mb-3">Our Other Services</H1Animate>
                     <H5 className="!text-gray-500">* Price on Request</H5>
                 </div>
-                <div className="grid grid-cols-3 gap-5 mb-8 lg:grid-cols-5">
+                <div className="grid grid-cols-1 gap-5 mb-8 sm:grid-cols-2 lg:grid-cols-5 sm:gap-8">
                     {otherServices?.map((item) => (
-                        <div
+                        <Link
+                            to="/contact"
                             key={item?.id}
-                            className="flex items-center justify-center h-16 p-2 text-center transition-all bg-green-400 shadow-inner rounded-xl hover:scale-105"
+                            className="flex flex-col items-center justify-center p-2 transition-all border-2 border-gray-200 shadow-lg bg-blue4 bg-gray-20 rounded-xl hover:scale-105"
                         >
-                            <P className="text-white">{item?.label}</P>
-                        </div>
+                            <img
+                                src={item?.icon}
+                                alt={item?.label}
+                                className="w-8 h-8 mb-4"
+                            />
+                            <P className="text-">{item?.label}</P>
+                        </Link>
                     ))}
                 </div>
                 <P>
@@ -133,7 +136,6 @@ export default function Services(props) {
                     the discretion of the company)
                 </P>
             </Container>
-
             <Container className="px-3 py-12 sm:px-8 md:px-12 md:py-20">
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10">
                     {serviceSocial?.map((item) => (

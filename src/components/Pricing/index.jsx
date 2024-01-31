@@ -147,7 +147,7 @@ function Pricing() {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                        <P className="gap-1 flx">
+                                        <P>
                                             {desc?.label}
                                             <p className="font-axiSemiBold">
                                                 {desc?.time}
@@ -158,7 +158,7 @@ function Pricing() {
                             </ul>
                         </div>
                         <PrimaryBtn
-                            className="mb-4 w-full !rounded-xl !bg-card2 !border-2 hover:!border-card2 text-white"
+                            className="mb-4 w-full !rounded-xl !bg-primary !border-2 hover:!border-card2 text-white"
                             onClick={() => {
                                 navigate("/plans", { state: item });
                             }}
