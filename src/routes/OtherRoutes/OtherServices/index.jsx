@@ -5,18 +5,18 @@ import { useNavigate } from "react-router-dom";
 
 import { Container } from "../../../components/Layout";
 import { RadientBtn } from "../../../components/Button";
-import { H1Animate, H4, H6, P } from "../../../components/Typography";
 import BackNavigate from "../../../components/UI/BackNavigate";
+import { H1Animate, H4, P } from "../../../components/Typography";
 
 export default function OtherServices({ data, samePage }) {
     let navigate = useNavigate();
 
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     });
 
     return (
-        <div className="bg-green-50">
+        <div className="!bg-[#E4E3FF]">
             {samePage ? <BackNavigate backLabel={data?.heading} /> : null}
             <div className={`py-20 sm:py-32 border-b border-green-200`}>
                 <Container>

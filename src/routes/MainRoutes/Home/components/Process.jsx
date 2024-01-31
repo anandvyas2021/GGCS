@@ -47,21 +47,21 @@ export default function Process(props) {
                     <img
                         src={image1}
                         alt="process"
-                        className="!h-[75%] !w-[85%] opacity-1 object-fill animate-imgBorder rounded-processImg"
+                        className="!h-[85%]  opacity-1 object-cover animate-imgBorder rounded-processImg"
                     />
                     <div className="">
-                        <div className="absolute bottom-14 -left-10 -z-[1]">
+                        <div className="absolute bottom-5 left-10 -z-[1]">
                             <img src={shape1} alt="shape1" />
                         </div>
-                        <div className="absolute bottom-14 right-10 -z-[1]">
+                        <div className="absolute -bottom-5 right-1 -z-[1]">
                             <img src={shape2} alt="shape2" />
                         </div>
-                        <div className="absolute top-9 left-9 -z-[1]">
+                        <div className="absolute -top-5 left-20 -z-[1]">
                             <img src={shape3} alt="shape3" />
                         </div>
                     </div>
                 </div>
-                <div className="md:pl-12">
+                <div className="md:pl-16">
                     <div className="flex flex-col mb-10 items-left">
                         <SubHeading className="text-center">
                             Let us do the work

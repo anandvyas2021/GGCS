@@ -438,7 +438,7 @@ export const pricing = [
 export const colors = [
     "bg-[#eb5e28]",
     "bg-[#3a6ea5]",
-    "bg-mainDark",
+    "bg-tertiary",
     "bg-[#00cecb]",
     "bg-[#ff5e5b]",
     "bg-[#324a5f]",
@@ -455,10 +455,8 @@ export const colors = [
     "bg-[#94d1be]",
     "bg-[#a1a499]",
     "bg-[#1b9aaa]",
-
     "bg-[#eb5e28]",
     "bg-[#3a6ea5]",
-    "bg-mainDark",
     "bg-[#00cecb]",
     "bg-[#ff5e5b]",
     "bg-[#324a5f]",
@@ -475,4 +473,10 @@ export const colors = [
     "bg-[#94d1be]",
     "bg-[#a1a499]",
     "bg-[#1b9aaa]",
+    "bg-[#725ac1]",
+    "bg-[#bb9bb0]",
+    "bg-[#94d1be]",
+    "bg-[#a1a499]",
+    "bg-[#1b9aaa]",
+    "bg-[#eb5e28]",
 ];

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="certificate" transform="translate(-14 -14)">
+    <path id="Path_65319" data-name="Path 65319" d="M207.8,362.757v13.926l5-5,5,5V362.757" transform="translate(-172.8 -311.683)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <circle id="Ellipse_3983" data-name="Ellipse 3983" cx="6.667" cy="6.667" r="6.667" transform="translate(33.333 40)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_65320" data-name="Path 65320" d="M410.6,288.133a10,10,0,0,0-10,10h10Z" transform="translate(-345.6 -244.8)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_65321" data-name="Path 65321" d="M410.6,25a10,10,0,0,1-10-10h10Z" transform="translate(-345.6)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_65322" data-name="Path 65322" d="M15,288.133a10,10,0,0,1,10,10H15Z" transform="translate(0 -244.8)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_65323" data-name="Path 65323" d="M15,25A10,10,0,0,0,25,15H15Z" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1036" data-name="Line 1036" x1="10" transform="translate(45 53.333)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1037" data-name="Line 1037" x2="10" transform="translate(25 53.333)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1038" data-name="Line 1038" y2="18.333" transform="translate(15 25)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1039" data-name="Line 1039" y2="18.333" transform="translate(65 25)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1040" data-name="Line 1040" x2="30" transform="translate(25 15)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1041" data-name="Line 1041" x2="13.333" transform="translate(33.333 33.333)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_1042" data-name="Line 1042" x2="23.333" transform="translate(28.333 26.667)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

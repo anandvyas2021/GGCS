@@ -67,16 +67,12 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="lg:pl-6">
-                        <H5 className="mb-5">Information Quick Links</H5>
+                        <H5 className="mb-5">Quick Links</H5>
                         <div className="pl-4">
                             <ul className="list-disc">
                                 {menuService?.map((item, i) => (
                                     <li key={i} className="mb-2">
-                                        <Link
-                                            onClick={() => {
-                                                navigate(item?.link);
-                                            }}
-                                        >
+                                        <Link to={item?.link}>
                                             <H6 className="hover:text-gray-900">
                                                 {item.label}
                                             </H6>

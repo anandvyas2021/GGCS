@@ -15,6 +15,7 @@ const otherFeatures = [
 
 export default function Training(props) {
     let navigate = useNavigate();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path240" d="M0-682.665H50v50H0Z" transform="translate(0 682.665)"/>
+    </clipPath>
+  </defs>
+  <g id="g234" transform="translate(0 682.665)">
+    <g id="g236" transform="translate(0 -682.665)">
+      <g id="g238" clip-path="url(#clip-path)">
+        <g id="g244" transform="translate(5.469 1.465)">
+          <path id="path246" d="M-345.989-446.078v8.887a2.93,2.93,0,0,1-2.93,2.93H-370.4a2.93,2.93,0,0,1-2.93-2.93V-478.4a2.93,2.93,0,0,1,2.93-2.93h21.484a2.93,2.93,0,0,1,2.93,2.93v8.887" transform="translate(373.332 481.332)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="g248" transform="translate(13.281 1.465)">
+          <path id="path250" d="M-123.567-74.14h-7.812L-133.333-80h11.719Z" transform="translate(133.333 80)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="g252" transform="translate(16.211 42.676)">
+          <path id="path254" d="M-74.14,0H-80" transform="translate(80)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="g256" transform="translate(21.094 13.281)">
+          <path id="path258" d="M-148.281-296.562A11.732,11.732,0,0,1-160-308.28,11.732,11.732,0,0,1-148.281-320a11.732,11.732,0,0,1,11.719,11.719A11.732,11.732,0,0,1-148.281-296.562Z" transform="translate(160 319.999)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+        <g id="g260" transform="translate(29.883 20.605)">
+          <path id="path262" d="M0-111.211V-120l7.812,4.395Z" transform="translate(0 120)" fill="none" stroke="#672bb2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -62,10 +62,10 @@ import website from "../assets/gallery/website.png";
 import facebook from "../assets/gallery/facebook.png";
 
 //upos
-import Organic from "../assets/Upos/Organic.jpg";
-import Post from "../assets/Upos/Post.jpg";
-import CCM from "../assets/Upos/Cross-Channel-Marketing.webp";
-import ContentCreation from "../assets/Upos/Content-Creation.png";
+import organic from "../assets/Upos/organic.jpg";
+import post from "../assets/Upos/post.jpg";
+import ccm from "../assets/Upos/ccm.jpg";
+import content from "../assets/Upos/contentCreation.png";
 
 import servicesBanner from "../assets/animation/servicesBanner.gif";
 
@@ -164,7 +164,7 @@ export {
     servicesBanner,
 };
 export { flyer, instagram, newsletter, thumbnail, website, facebook };
-export { Organic, Post, CCM, ContentCreation };
+export { organic, post, ccm, content };
 export {
     onPageSeo,
     offPageSeo,

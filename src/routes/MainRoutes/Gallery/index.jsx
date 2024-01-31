@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import checkbox from "../../../assets/icons/checkbox.webp";
 
 import { galleryData } from "../../../db/dummy";
-import { H4 } from "../../../components/Typography";
+import { H5, P } from "../../../components/Typography";
+import { Container } from "../../../components/Layout";
 
 export default function Gallery(props) {
     const [state, setState] = useState({
@@ -14,20 +15,20 @@ export default function Gallery(props) {
     }, []);
 
     return (
-        <div className="max-w-screen-xl py-10 mx-auto">
+        <Container className="py-10">
             <div className="grid grid-cols-[0.3fr_1fr] gap-6">
                 <aside className="bg-gray-">
                     <div className="overflow-hidden border-2 border-grey7 rounded-xl">
-                        <H4 className="p-3 bg-gray-200 text-primary">
+                        <H5 className="p-3 bg-gray-200 text-primary">
                             Filters
-                        </H4>
+                        </H5>
                         <hr className="mb-5" />
                         <section className="p-3">
                             <ul>
                                 {galleryData?.map((item) => (
                                     <li
                                         key={item?.id}
-                                        className={`flex gap-4 my-3 text-lg text-grey2 font-semibold cursor-pointer transition-all duration-200 ${
+                                        className={`flex gap-4 my-3 text-lg text-grey2 font-axiMedium cursor-pointer transition-all duration-200 ${
                                             state?.currentPlatform?.platform ===
                                             item?.platform
                                                 ? "grayscale-1 !text-blue-600"
@@ -46,15 +47,15 @@ export default function Gallery(props) {
                                             src={checkbox}
                                             className="w-6 h-6"
                                         />
-                                        <p>{item?.platform}</p>
+                                        <P>{item?.platform}</P>
                                     </li>
                                 ))}
                             </ul>
                         </section>
                     </div>
                 </aside>
-                <main className="">
-                    <section className="p-3 mb-4 text-xl font-bold bg-gray-200 border-2 text-primary rounded-xl border-grey7">
+                <main>
+                    <section className="p-3 mb-4 text-xl bg-gray-200 border-2 font-axiSemiBold text-primary rounded-xl border-grey7">
                         Header Filters
                     </section>
                     <section className="grid grid-cols-1 overflow-hidden border-2 border-grey7 rounded-3xl bg-red-50">
@@ -64,7 +65,7 @@ export default function Gallery(props) {
                     </section>
                 </main>
             </div>
-        </div>
+        </Container>
     );
 }
 
