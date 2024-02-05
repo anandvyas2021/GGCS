@@ -12,25 +12,14 @@ import { H4, H5 } from "../../components/Typography";
 export default function NavbarContent() {
     const location = useLocation();
     const [state, setState] = useState({
-        showMenu: false,
+        showMenu: true,
     });
     let navigate = useNavigate();
     let scrollRef = useRef();
     const menuInfoBlockRef = useRef();
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.addEventListener("mousedown", handleClickOutside);
-        };
     }, []);
-    const handleClickOutside = (event) => {
-        if (!menuInfoBlockRef.current?.contains(event.target)) {
-            setState((prev) => {
-                return { ...prev, showMenu: false };
-            });
-        }
-    };
     const onScroll = () => {
         let ele = document.querySelector(".header");
     };
@@ -42,28 +31,23 @@ export default function NavbarContent() {
     };
     const { showMenu } = state;
     return (
-        <section
-            className={`left-0 right-0 z-[1000] ${
-                location?.pathname === "/"
-                    ? "max-w-screen-xl mx-auto mt-1 "
-                    : "fixed w-full"
+        <section className={`left-0 right-0 z-[1000] ${location?.pathname === "/"
+            ? "max-w-screen-xl mx-auto mt-1 "
+            : "fixed w-full"
             }`}
         >
             <div
                 className={`header px-4 shadow-header !bg-white 
-                ${
-                    location?.pathname === "/"
+                ${location?.pathname === "/"
                         ? "py-1 border rounded-full border-white bg-transparent backdrop-blur"
                         : "fixed w-full"
-                }`}
+                    }`}
                 ref={scrollRef}
             >
-                <div
-                    className={`relative flex justify-between items-center 
-                    ${
-                        location?.pathname === "/"
-                            ? "max-w-full"
-                            : "max-w-screen-xl mx-auto"
+                <div className={`relative flex justify-between items-center 
+                    ${location?.pathname === "/"
+                        ? "max-w-full"
+                        : "max-w-screen-xl mx-auto"
                     }`}
                 >
                     <div className="flex items-center h-[80px]">
@@ -78,11 +62,10 @@ export default function NavbarContent() {
                         <ul className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
                                 <li
-                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${
-                                        item?.slug === location?.pathname
-                                            ? "text-primary !border-primary"
-                                            : ""
-                                    }`}
+                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname
+                                        ? "text-primary !border-primary"
+                                        : ""
+                                        }`}
                                     key={item?.id}
                                     onClick={() => navigate(item?.slug)}
                                 >
@@ -95,7 +78,7 @@ export default function NavbarContent() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="relative flex items-center justify-between">
+                        <div className=" flex items-center justify-between z-[240]">
                             <span className="hidden lg:block">
                                 {location?.pathname === "/" ? (
                                     <RadientBtn
@@ -116,11 +99,10 @@ export default function NavbarContent() {
                                 )}
                             </span>
 
-                            <span
-                                ref={menuInfoBlockRef}
+                            <button
                                 className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"
                                 onClick={(e) => {
-                                    e.stopPropagation();
+                                    // e.stopPropagation();
                                     setState((prev) => {
                                         return {
                                             ...prev,
@@ -134,58 +116,50 @@ export default function NavbarContent() {
                                     alt=""
                                     className="w-full h-full"
                                 />
+                            </button>
+                            <div className={`block lg:hidden absolute right-0 top-full w-full rounded-b-lg z-50 bg-white md:static md:flex md:w-full md:max-w-full px-5 md:px-0 py-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
+                                <ul className="flex flex-col mt-4 r">
+                                    {navMenu?.map((item) => (
+                                        <li
+                                            className="py-2 text-black font-semibold"
+                                            key={item?.id}
+                                            onClick={() => {
+                                                setState((prev) => {
+                                                    return {
+                                                        ...prev,
+                                                        showMenu: false,
+                                                    };
+                                                });
+                                                if (item?.label2 === "download") {
+                                                    return;
+                                                } else {
+                                                    navigate(item?.slug);
+                                                }
+                                            }}
+                                        >
+                                            {item.label2 === "download" ? (
+                                                <a
+                                                    download
+                                                    onClick={() => {
+                                                        window.open(
+                                                            ppt,
+                                                            "_blank",
+                                                            "fullscreen=yes"
+                                                        );
+                                                    }}
+                                                    className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                                                    aria-current="page"
+                                                >
+                                                    {item?.label}
+                                                </a>
+                                            ) : (
+                                                <a>{item?.label}</a>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
 
-                                <div
-                                    className={`absolute top-10 right-0 md:top-20 lg:hidden lg:w-auto ${
-                                        showMenu ? "w-64 !z-[250]" : "hidden"
-                                    } `}
-                                    id="navbar-default"
-                                >
-                                    <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0">
-                                        {navMenu?.map((item) => (
-                                            <li
-                                                className="py-1 text-black"
-                                                key={item?.id}
-                                                onClick={() => {
-                                                    setState((prev) => {
-                                                        return {
-                                                            ...prev,
-                                                            showMenu: false,
-                                                        };
-                                                    });
-                                                    if (
-                                                        item?.label2 ===
-                                                        "download"
-                                                    ) {
-                                                        return;
-                                                    } else {
-                                                        navigate(item?.slug);
-                                                    }
-                                                }}
-                                            >
-                                                {item.label2 === "download" ? (
-                                                    <a
-                                                        download
-                                                        onClick={() => {
-                                                            window.open(
-                                                                ppt,
-                                                                "_blank",
-                                                                "fullscreen=yes"
-                                                            );
-                                                        }}
-                                                        className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                                                        aria-current="page"
-                                                    >
-                                                        {item?.label}
-                                                    </a>
-                                                ) : (
-                                                    <a>{item?.label}</a>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </span>
                         </div>
                     </div>
                 </div>

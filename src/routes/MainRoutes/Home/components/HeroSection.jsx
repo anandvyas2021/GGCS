@@ -55,7 +55,7 @@ export default function HeroSection() {
     return (
         <div className="!max-h-fit bg-white !text-black">
             <div className="max-w-screen-xl mx-auto px-3 sm:px-12 sm:pt-[250px] pt-[200px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
-                <div className="sm:w-4/6 relative z-[200]">
+                <div className="sm:w-4/6 relative z-[10]">
                     <div className="">
                         <motion.div
                             className="text-5xl font-bold md:text-7xl"
