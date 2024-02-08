@@ -11,7 +11,7 @@ export default function HireUs() {
     return (
         <main>
             <Hero />
-            <HireUsForm />
+            {/* <HireUsForm /> */}
         </main>
     );
 }

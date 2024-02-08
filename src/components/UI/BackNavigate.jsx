@@ -9,8 +9,8 @@ import { H4 } from "../Typography";
 export default function BackNavigate({ backLabel, backLink, className }) {
     let navigate = useNavigate();
     return (
-        <Container
-            className={`flex items-center gap-3 px-3 pt-24 lg:pt-5 text-primary ${className}`}
+        <section
+            className={`max-w-screen-lg lg:max-w-screen-xl mx-auto flex items-center gap-3 pt-24 lg:pt-5 text-primary ${className}`}
         >
             <img
                 src={backIcon}
@@ -19,6 +19,6 @@ export default function BackNavigate({ backLabel, backLink, className }) {
                 onClick={() => navigate(backLink ?? "/")}
             />
             {backLabel ? <H4>{backLabel}</H4> : null}
-        </Container>
+        </section>
     );
 }
