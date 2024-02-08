@@ -130,27 +130,39 @@ export default function HeroSection() {
                                     className="w-[700px] opacity-100"
                                 />
                             ))}
-                        </Slider>{" "}
+                        </Slider>
                     </div>
                     <div className="lg:flex hidden absolute top-0 right-0 z-[4]">
-                        <img src={banner1} alt="" className="w-[700px]" />
+                        <img
+                            src={banner1}
+                            alt="hero-icon"
+                            className="w-[700px]"
+                        />
                     </div>
                     <div className="lg:flex hidden absolute top-0 right-0 z-[3]">
-                        <img src={banner2} alt="" className="w-[700px]" />
+                        <img
+                            src={banner2}
+                            alt="hero-icon"
+                            className="w-[700px]"
+                        />
                     </div>
                     <div className="lg:flex hidden absolute top-0 left-0 z-[1]">
-                        <img src={banner3} alt="" className="invert-[0.2]" />
+                        <img
+                            src={banner3}
+                            alt="hero-icon"
+                            className="invert-[0.2]"
+                        />
                     </div>
-                    <div className="absolute left-40 bottom-9 z-[1] animate-upslide">
+                    <div className="absolute left-40  z-[1] animate-upslide">
                         <img src={shape1} alt="" />
                     </div>
-                    <div className="absolute lg:left-[660px] top-[35px] z-[1] animate-shape2">
+                    <div className="absolute lg:left-[600px] top-[350px] z-[1] animate-shape2">
                         <img src={shape2} alt="" />
                     </div>
-                    <div className="absolute lg:left-[750px] bottom-[280px] z-[1] animate-shape3">
+                    <div className="absolute lg:left-[750px] top-[600px] z-[1] animate-shape3">
                         <img src={shape3} alt="" />
                     </div>
-                    <div className="absolute lg:right-[610px] bottom-[0px] animate-shape4">
+                    <div className="absolute lg:right-[610px] animate-shape4">
                         <img src={shape4} alt="" />
                     </div>
                 </div>

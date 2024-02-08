@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Input } from "../UI/Input";
+import { Input, Textarea } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
 import { addresses } from "../../db/dummy";
 import { contactBg } from "../../db/assets";
@@ -15,6 +15,91 @@ import {
 } from "../Typography";
 
 function ContactUs() {
+    const [state, setState] = useState({
+        name: "",
+        email: "",
+        number: "",
+        website: "",
+        message: "",
+        errMessage: {
+            name: "",
+            email: "",
+            number: "",
+            website: "",
+            message: ""
+        }
+    })
+    const regExp = RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
+    const handleContactUs = (e) => {
+        e.preventDefault();
+        if (formValid(state)) {
+            setState((prev) => {
+                return {
+                    ...prev,
+                    errMessage: {
+                        name: !state?.name ? "Required" : "",
+                        email: !state?.email ? "Required" : "",
+                        number: !state?.number ? "Required" : "",
+                        website: !state?.website ? "Required" : "",
+                        message: !state?.message ? "Required" : ""
+                    }
+                }
+            });
+        }
+    }
+    const formValid = ({ errMessage, ...rest }) => {
+        let isValid = false;
+        Object.values(errMessage).forEach((val) => {
+            if (val.length > 0) {
+                isValid = false;
+            } else {
+                isValid = true;
+            }
+        });
+        Object.values(rest).forEach((val) => {
+            if (val === null) {
+                isValid = false;
+            } else {
+                isValid = true;
+            }
+        });
+        return isValid;
+
+    }
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        let errMessage = { ...state.errMessage };
+        switch (name) {
+            case "name":
+                errMessage.name = value.length < 2 ? "Enter your name" : "";
+                break;
+            case "email":
+                errMessage.email = regExp.test(value) ? "" : "Email address is invalid";
+                break;
+            case "number":
+                errMessage.number =
+                    value.length <= 10 ? "Valid mobile number required" : "";
+                break;
+            case "website":
+                errMessage.website =
+                    value.length <= 6 ? "Valid website" : "";
+                break;
+            case "message":
+                errMessage.message =
+                    value.length < 10 ? "Valid message" : "";
+                break;
+            default:
+                break;
+        }
+        setState((prev) => {
+            return {
+                ...prev,
+                errMessage,
+                [name]: value,
+            }
+        });
+    }
+    const { name, email, number, website, message, errMessage } = state
     return (
         <section className="relative z-[1] md:py-20 py-10 xl:px-8 md:px-6 px-3">
             <div className="hidden sm:block">
@@ -58,46 +143,88 @@ function ContactUs() {
                             </div>
                         </div>
                     </div>
-                    <div className="px-3 py-10 bg-white md:w-1/2 rounded-3xl sm:px-6 lg::px-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
-                            <div className="w-full">
-                                <Input
-                                    placeholder={"Fill Name "}
-                                    type={"mail"}
-                                />
+                    <div className="px-3 py-10 bg-white md:w-1/2 rounded-3xl sm:px-6 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
+                        <form action="" onSubmit={(e) => { handleContactUs(e) }}>
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
+                                <div className="w-full">
+                                    <Input
+                                        value={name}
+                                        name="name"
+                                        placeholder={"Fill Name "}
+                                        type={"mail"}
+                                        errMsg={errMessage?.name}
+                                        onChange={(e) => handleChange(e)}
+                                    />
+                                </div>
+                                <div className="w-full">
+                                    <Input
+                                        value={email}
+                                        name="email"
+                                        placeholder={"Email Address"}
+                                        type={"mail"}
+                                        errMsg={errMessage?.email}
+                                        onChange={(e) => {
+                                            handleChange(e)
+                                        }}
+                                    />
+                                </div>
+                                <div className="w-full">
+                                    <Input
+                                        value={number}
+                                        name="number"
+                                        placeholder={"Phone Number"}
+                                        type={"mail"}
+                                        onChange={(e) => {
+                                            handleChange(e)
+                                        }}
+                                        errMsg={errMessage?.number}
+                                    />
+                                </div>
+                                <div className="w-full">
+                                    <Input
+                                        value={website}
+                                        name="website"
+                                        placeholder={"Website"}
+                                        type={"text"}
+                                        onChange={(e) => {
+                                            handleChange(e)
+                                        }}
+                                        errMsg={errMessage?.website}
+                                    />
+                                </div>
+                                <div className="col-span-2 w-full">
+                                    <Textarea
+                                        value={message}
+                                        name="message"
+                                        placeholder="Message"
+                                        onChange={(e) => {
+                                            handleChange(e)
+                                        }}
+                                        errMsg={errMessage?.message} />
+                                </div>
+                                {/* <textarea
+                                    name="textarea"
+                                    placeholder="Message"
+                                    id=""
+                                    cols="30"
+                                    rows="10"
+                                    onChange={(e) => {
+                                        handleChange(e)
+                                    }}
+                                    errMsg={errMessage?.website}
+                                    className="col-span-2 w-full border-[1px] border-gray-200 relative rounded-xl h-40 px-5 outline-none  bg-gray-100"
+                                /> */}
                             </div>
-                            <div className="w-full">
-                                <Input
-                                    placeholder={"Email Address"}
-                                    type={"mail"}
-                                />
+                            <div className="w-full mt-3 lg:mt-4">
+                                <PrimaryBtn
+                                    size="px-8 py-3"
+                                    bgColor="bg-primaryBtn"
+                                    type="submit"
+                                >
+                                    Send Message
+                                </PrimaryBtn>
                             </div>
-                            <div className="w-full">
-                                <Input
-                                    placeholder={"Phone Number"}
-                                    type={"mail"}
-                                />
-                            </div>
-                            <div className="w-full">
-                                <Input placeholder={"Website"} type={"mail"} />
-                            </div>
-                            <textarea
-                                name=""
-                                placeholder="Message"
-                                id=""
-                                cols="30"
-                                rows="10"
-                                className="col-span-2 w-full border-[1px] border-gray-200 relative rounded-xl h-40 px-5 outline-none  bg-gray-100"
-                            />
-                        </div>
-                        <div className="w-full mt-3 lg:mt-4">
-                            <PrimaryBtn
-                                size="px-8 py-3"
-                                bgColor="bg-primaryBtn"
-                            >
-                                Send Message
-                            </PrimaryBtn>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <section className="grid grid-cols-1 gap-10 mb-10 sm:grid-cols-2 lg:gap-20 lg:mb-auto">

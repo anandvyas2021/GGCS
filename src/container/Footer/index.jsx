@@ -38,7 +38,7 @@ export default function Footer() {
                     <div className="mb-3 lg:mb-0 ">
                         <div className="mb-4">
                             <H4 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
-                                Global Garner Consultancy Services
+                                Global Garner Consultancy Services Pvt Ltd
                             </H4>
                             {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}
                         </div>
