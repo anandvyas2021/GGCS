@@ -278,7 +278,7 @@ export default {
             },
         },
     },
-    plugins: [require("flowbite/plugin")],
+    // plugins: [require("flowbite/plugin")],
 };
 
 // linear-gradient(to bottom, #4b90a3, #305966)
