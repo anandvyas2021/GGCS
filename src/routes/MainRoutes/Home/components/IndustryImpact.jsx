@@ -16,11 +16,11 @@ export default function IndustryImpact(props) {
                     industries, including:
                 </Desc>
             </section>
-            <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+            <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 px-2=1 md:p-0 sm:gap-8">
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}
-                        className="flex flex-col items-center md:p-4 p-2 text-center transition-all duration-200 rounded-xl hover:shadow-header hover:scale-105 bg-blue4"
+                        className="flex flex-col items-center p-4 text-center transition-all duration-200 rounded-xl hover:shadow-header hover:scale-105 bg-blue4"
                     >
                         <img
                             src={item?.icon}
