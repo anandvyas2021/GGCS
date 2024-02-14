@@ -70,8 +70,8 @@ import content from "../assets/Upos/contentCreation.png";
 import servicesBanner from "../assets/animation/servicesBanner.gif";
 
 //other services
-import onPageSeo from "../assets/otherServices/jpg/onPageSeo.jpg";
-import offPageSeo from "../assets/otherServices/jpg/offPageSeo.jpg";
+import onPageSeo from "../assets/otherServices/jpg/onPageSEO.jpg";
+import offPageSeo from "../assets/otherServices/jpg/offPageSEO.jpg";
 import keywordResearch from "../assets/otherServices/jpg/keywordResearch.jpg";
 import blog from "../assets/otherServices/jpg/blog.jpg";
 import collaboration from "../assets/otherServices/jpg/collaboration.jpg";
