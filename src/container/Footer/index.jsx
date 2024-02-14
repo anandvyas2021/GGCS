@@ -9,7 +9,7 @@ import {
     services,
     socialMedias,
 } from "../../db/dummy";
-import { H4, H5, H6 } from "../../components/Typography";
+import { H4, H5, H6, P } from "../../components/Typography";
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -34,12 +34,16 @@ export default function Footer() {
     return (
         <div className="bg-gray-100 ">
             <div className="max-w-screen-md px-3 pb-20 mx-auto border-t-2 border-gray-300 sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16">
-                    <div className="mb-3 lg:mb-0 ">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
+                    <div className="mb-3 lg:mb-0">
                         <div className="mb-4">
                             <H4 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
                                 Global Garner Consultancy Services Pvt Ltd
                             </H4>
+                            <div className="p-2 mt-2 rounded-lg flex items-center gap-2 text-left border border-gray-300 bg-gray-200">
+                                <H5>CIN-</H5>
+                                <H6>U74900GJ2016PTC086043</H6>
+                            </div>
                             {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}
                         </div>
                         <div className="my-5">
@@ -66,7 +70,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:pl-6">
+                    <div className="lg:pl-8">
                         <H5 className="mb-5">Quick Links</H5>
                         <div className="pl-4">
                             <ul className="list-disc">
@@ -106,7 +110,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <ul className="pl-4 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
+                        <ul className="pl-8 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
                                 return (
                                     <li key={i} className="mb-2">

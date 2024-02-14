@@ -5,7 +5,8 @@ import brand3 from "../../../../assets/about/home/samachar.png";
 import brand4 from "../../../../assets/about/home/quikcraker.png";
 import switchIcon from "../../../../assets/about/home/switch.svg";
 import innerHand from "../../../../assets/about/home/inner-hand-1.webp";
-import aboutInner from "../../../../assets/about/home/about-inner-1.webp";
+// import aboutInner from "../../../../assets/about/home/about-inner-1.webp";
+import aboutHero from "../../../../assets/about/home/aboutHero.jpg";
 import innerShape1 from "../../../../assets/about/home/about-inner-shape-1.webp";
 import innerShape2 from "../../../../assets/about/home/about-inner-shape-2.webp";
 
@@ -74,7 +75,7 @@ export default function AboutHero() {
                         <div className="relative">
                             <figure className="absolute object-cover -left-10 right-40">
                                 <img
-                                    src={aboutInner}
+                                    src={aboutHero}
                                     alt=""
                                     className="rounded-xl"
                                 />
@@ -83,7 +84,8 @@ export default function AboutHero() {
                     </div>
                     <div className="md:w-1/2">
                         <H1Animate className="leading-[3rem] !justify-start">
-                            Working Hard to Make Digital World Easy Together
+                            {/* Working Hard to Make Digital World Easy Together */}
+                            Your one-stop IT and Digital Services Provider
                         </H1Animate>
                         <Desc className="my-3 md:my-0">
                             {/* Welcome to GGCS, where digital meets
