@@ -1,5 +1,5 @@
 import React from "react";
-import formBg from "../../../assets/hireUs/formBg.svg";
+// import formBg from "../../../assets/hireUs/formBg.svg";
 import hireUsHero from "../../../assets/hireUs/hireUsHero.svg";
 
 import { Form, Select } from "antd";
