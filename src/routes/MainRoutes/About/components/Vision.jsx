@@ -5,7 +5,7 @@ import counter1 from "../../../../assets/about/vision/trophy.webp";
 import counter2 from "../../../../assets/about/vision/multiuser.webp";
 import counter3 from "../../../../assets/about/vision/counter3.webp";
 import business2 from "../../../../assets/about/vision/business2.svg";
-import business3 from "../../../../assets/about/vision/business3.webp";
+import distinguishUs from "../../../../assets/about/vision/distinguishUs.svg";
 import floatIcon1 from "../../../../assets/about/vision/floatIcon1.png";
 
 import { Container } from "../../../../components/Layout";
@@ -185,8 +185,12 @@ export default function Vision() {
                                 </P>
                             </div>
                         </div>
-                        <div className="hidden md:block">
-                            <img src={business3} alt="ggcs" />
+                        <div className="relative hidden md:block">
+                            <img
+                                src={distinguishUs}
+                                alt="ggcs"
+                                className="w-60 h-60"
+                            />
                         </div>
                     </div>
                     <div className="md:flex">
