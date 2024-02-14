@@ -73,7 +73,7 @@ export default function AboutHero() {
                 <div className="relative flex items-center md:justify-center">
                     <div className="md:w-1/2 -mt-72">
                         <div className="relative">
-                            <figure className="absolute object-cover -left-10 right-40">
+                            <figure className="absolute object-cover -left-10 right-40 -top-10">
                                 <img
                                     src={aboutHero}
                                     alt=""
@@ -105,7 +105,7 @@ export default function AboutHero() {
                 </div>
             </Container>
             <div className="flex">
-                <div className="w-1/5 xl:ml-[32rem]">
+                <div className="hidden sm:block sm:w-1/5 xl:ml-[32rem]">
                     <div className="relative z-20 px-2 py-5 rounded-r-lg bg-blue1 sm:p-6">
                         <H5 className="text-white">
                             Scroll down <br /> to explore more

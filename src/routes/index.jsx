@@ -24,7 +24,7 @@ export default function Routes(props) {
     ]);
     return (
         <main className={`${location?.pathname === "/" ? "" : "lg:mt-20"}`}>
-            <div className="fixed hidden md:block md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-b-xl text-white cursor-pointer">
+            <div className="lg:fixed hidden lg:block md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-b-xl text-white cursor-pointer">
                 <a
                     download
                     onClick={() => {
