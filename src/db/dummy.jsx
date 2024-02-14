@@ -549,7 +549,7 @@ export const whyGGCSData = {
     desc: [
         {
             id: 1,
-            label: "Data-Driven Precision",
+            label: "Detailed Data Analysis",
             desc: "Smart Choices Drive Our Strategy. We Use Data Analysis to Make Sure Every Step Leads to Your Online Success.",
             // bg: "bg-[#4c49ea]",
             image: dataPrecision,
@@ -558,7 +558,7 @@ export const whyGGCSData = {
         },
         {
             id: 2,
-            label: "Tailored Strategies",
+            label: "Tailored Solutions",
             desc: "We know every business is different. That's why we create personalized plans that match your needs—no generic solutions here!",
             // bg: "bg-[#3ecd5e]",
             image: strategies,
