@@ -26,18 +26,14 @@ export const H4 = ({ children, className }) => {
 };
 export const H5 = ({ children, className }) => {
     return (
-        <h5
-            className={`text-base md:text-[20px] font-axiSemiBold  ${className}`}
-        >
+        <h5 className={`text-[20px] font-axiSemiBold  ${className}`}>
             {children}
         </h5>
     );
 };
 export const H6 = ({ children, className }) => {
     return (
-        <h6
-            className={`text-sm md:text-[16px] font-axiMedium text-gray-600 ${className}`}
-        >
+        <h6 className={`text-[16px] font-axiMedium text-gray-600 ${className}`}>
             {children}
         </h6>
     );
