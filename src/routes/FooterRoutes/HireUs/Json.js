@@ -1,15 +1,15 @@
-import UxIcon from "../../../assets/hireUs/ux.jpg";
-import ReactIcon from "../../../assets/hireUs/react.jpg";
-import MongodbIcon from "../../../assets/hireUs/mongodb.jpg";
-import HTMLIcon from "../../../assets/hireUs/html.jpg";
-import CssIcon from "../../../assets/hireUs/css.jpg";
-import JsIcon from "../../../assets/hireUs/js.jpg";
-import NodeJsIcon from "../../../assets/hireUs/nodejs.jpg";
-import JavaIcon from "../../../assets/hireUs/java.jpg";
-import PhpIcon from "../../../assets/hireUs/php.jpg";
-import FlutterIcon from "../../../assets/hireUs/flutter.jpg";
-import AndroidIcon from "../../../assets/hireUs/android.jpg";
-import PythonIcon from "../../../assets/hireUs/python.jpg";
+import UxIcon from "../../../assets/HireUs/ux.jpg";
+import ReactIcon from "../../../assets/HireUs/react.jpg";
+import MongodbIcon from "../../../assets/HireUs/mongodb.jpg";
+import HTMLIcon from "../../../assets/HireUs/html.jpg";
+import CssIcon from "../../../assets/HireUs/css.jpg";
+import JsIcon from "../../../assets/HireUs/js.jpg";
+import NodeJsIcon from "../../../assets/HireUs/nodejs.jpg";
+import JavaIcon from "../../../assets/HireUs/java.jpg";
+import PhpIcon from "../../../assets/HireUs/php.jpg";
+import FlutterIcon from "../../../assets/HireUs/flutter.jpg";
+import AndroidIcon from "../../../assets/HireUs/android.jpg";
+import PythonIcon from "../../../assets/HireUs/python.jpg";
 
 export const hireUs = {
     label: "Hire Us",

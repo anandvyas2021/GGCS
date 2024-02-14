@@ -1,6 +1,6 @@
 import React from "react";
-// import formBg from "../../../assets/hireUs/formBg.svg";
-import hireUsHero from "../../../assets/hireUs/hireUsHero.svg";
+import formBg from "../../../assets/HireUs/formBg.svg";
+import hireUsHero from "../../../assets/HireUs/hireUsHero.svg";
 
 import { Form, Select } from "antd";
 import { Input } from "../../../components/UI/Input";
