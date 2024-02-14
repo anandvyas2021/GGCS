@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 import { uposDetails } from "../../../db/dummy";
 import { Container } from "../../../components/Layout";
 import BackNavigate from "../../../components/UI/BackNavigate";
@@ -46,6 +48,19 @@ function UposPackage() {
                     <H3 className="!text-4xl my-3 text-blue-500 font-sbold">
                         {uposDetails?.price}
                     </H3>
+                </div>
+                <div className="flex justify-center mt-5">
+                    <Link
+                        onClick={() =>
+                            window.open(
+                                `https://beta.globalgarner.com/upos`,
+                                "_blank"
+                            )
+                        }
+                        className="px-5 md:px-8 py-2 md:py-2.5 flex align-middle justify-center text-base font-semibold bg-primaryBtn text-white1 border-2 rounded-full hover:scale-105 transition-all duration-300"
+                    >
+                        Know more about UPOS
+                    </Link>
                 </div>
             </div>
         </Container>

@@ -43,7 +43,7 @@ export default function Process(props) {
     return (
         <Container className="px-3 md:!py-20 py-10 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-[0.8fr_1fr]">
-                <div className="relative flex items-center">
+                <div className="relative sm:flex items-center hidden">
                     <img
                         src={image1}
                         alt="process"
@@ -75,11 +75,10 @@ export default function Process(props) {
                         {processData?.map((item) => (
                             <li className="mb-10" key={item?.id}>
                                 <div
-                                    className={`flex relative ${
-                                        item?.id % 2 === 0
+                                    className={`flex relative ${item?.id % 2 === 0
                                             ? "justify-center"
                                             : "justify-start"
-                                    }`}
+                                        }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">
