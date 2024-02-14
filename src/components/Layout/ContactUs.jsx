@@ -111,36 +111,34 @@ function ContactUs() {
             </div>
             <div className="max-w-screen-lg mx-auto lg:max-w-screen-xl">
                 <div className="md:flex py-0 sm:!py-10">
-                    <div className="md:w-1/2">
-                        <div className="my-10">
-                            <SubHeading className="w-fit">
-                                Get In Touch with us !
-                            </SubHeading>
-                            <H1Animate className="!justify-start">
-                                Let's Work Together
-                            </H1Animate>
-                            <Desc className="mb-4">
-                                Just tell us your requirements, and we will
-                                assist you!
-                            </Desc>
-                            <div className="flex flex-col gap-1 md:mt-14">
-                                <Telephone>+91 6354917511</Telephone>
-                                <Mail>ggcs@globalgarner.com</Mail>
-                            </div>
-                            <div className="mt-5">
-                                <PrimaryBtn
-                                    size="px-8 py-2"
-                                    bgColor="bg-primaryBtn"
-                                    className="border-2 rounded-full border-primaryBtn bg-0"
+                    <div className="md:w-1/2 my-10">
+                        <SubHeading className="w-fit">
+                            Get In Touch with us !
+                        </SubHeading>
+                        <H1Animate className="md:!justify-start">
+                            Let's Work Together
+                        </H1Animate>
+                        <Desc className="mb-4">
+                            Just tell us your requirements, and we will assist
+                            you!
+                        </Desc>
+                        <div className="flex flex-col gap-1 md:mt-14">
+                            <Telephone>+91 6354917511</Telephone>
+                            <Mail>ggcs@globalgarner.com</Mail>
+                        </div>
+                        <div className="mt-5">
+                            <PrimaryBtn
+                                size="px-8 py-2"
+                                bgColor="bg-primaryBtn"
+                                className="border-2 rounded-full border-primaryBtn bg-0"
+                            >
+                                <a
+                                    href="tel:+91 6354917511"
+                                    data-rel="external"
                                 >
-                                    <a
-                                        href="tel:+91 6354917511"
-                                        data-rel="external"
-                                    >
-                                        Call Us Now
-                                    </a>
-                                </PrimaryBtn>
-                            </div>
+                                    Call Us Now
+                                </a>
+                            </PrimaryBtn>
                         </div>
                     </div>
                     <div className="px-3 py-10 bg-white md:w-1/2 rounded-3xl sm:px-6 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
@@ -236,7 +234,7 @@ function ContactUs() {
                 <section className="grid grid-cols-1 gap-10 mb-10 sm:grid-cols-2 lg:gap-20 lg:mb-auto">
                     {addresses?.map((item) => (
                         <div key={item?.id} className="w-full">
-                            <address className="h-full w-fit lg:px-10 px-3 py-4 not-italic rounded-3xl bg-slate-200 !backdrop-blur-3xl">
+                            <address className="h-full w-fit md:px-10 px-3 py-4 not-italic rounded-3xl bg-slate-200 !backdrop-blur-3xl">
                                 <main>
                                     <H5 className="mb-3 text-primary">
                                         {item?.title}

@@ -33,7 +33,7 @@ export const H5 = ({ children, className }) => {
 };
 export const H6 = ({ children, className }) => {
     return (
-        <h6 className={`text-[16px] font-axiMedium text-gray-600 ${className}`}>
+        <h6 className={`text-[16px] font-axiMedium text-gray-500 ${className}`}>
             {children}
         </h6>
     );
@@ -42,7 +42,7 @@ export const H6 = ({ children, className }) => {
 export const Mail = ({ children, className }) => {
     return (
         <a
-            className={`text-2xl font-axiMedium text-primary ${className}`}
+            className={`text-xl md:text-2xl font-axiMedium text-primary ${className}`}
             href="mailto:ggcs@globalgarner.com"
         >
             {children}
@@ -52,7 +52,7 @@ export const Mail = ({ children, className }) => {
 export const Telephone = ({ children, className }) => {
     return (
         <a
-            className={`text-2xl font-axiMedium text-primar ${className}`}
+            className={`text-xl md:text-2xl font-axiMedium text-primar ${className}`}
             href="tel:+916354917511"
         >
             {children}
