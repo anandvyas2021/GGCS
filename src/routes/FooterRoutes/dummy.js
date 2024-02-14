@@ -1,5 +1,5 @@
 import dme from "../../assets/Footer/career/dme.png";
-import bdm from "../../assets/footer/career/bdm.jpg";
+import bdm from "../../assets/Footer/career/bdm.jpg";
 import sme from "../../assets/Footer/career/sme.png";
 import reactIcon from "../../assets/HireUs/react.jpg";
 import laravel from "../../assets/Footer/career/laravel.png";
