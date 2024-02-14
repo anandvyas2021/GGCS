@@ -73,14 +73,19 @@ export default function Process(props) {
 
                     <ul>
                         {processData?.map((item) => (
-                            <li className="mb-10" key={item?.id}>
+                            <li
+                                className="mb-10"
+                                key={item?.id}
+                                // dir={item?.id % 2 ? "ltr" : "rtl"}
+                            >
                                 <div
-                                    className={`flex relative ${item?.id % 2 === 0
-                                            ? "justify-center"
+                                    className={`flex relative gap-4 md:gap-7 md:flex-row items-start ${
+                                        item?.id % 2 === 0
+                                            ? "justify-center flex-row-reverse"
                                             : "justify-start"
-                                        }`}
+                                    }`}
                                 >
-                                    <div className="mr-7">
+                                    <div className="">
                                         <div className="relative">
                                             <img
                                                 src={item?.icon}
@@ -95,14 +100,20 @@ export default function Process(props) {
                                             <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
                                         </div>
                                     </div>
-                                    <div className="w-9/12">
-                                        <H5>{item?.label}</H5>
+                                    <div
+                                        className={`w-9/12 flex flex-col gap-2 ${
+                                            item?.id % 2 ? "" : ""
+                                        }`}
+                                    >
+                                        <H5 className="mb-1 md:m-0">
+                                            {item?.label}
+                                        </H5>
                                         <H6>{item?.desc}</H6>
                                     </div>
                                     {item?.id < processData?.length ? (
                                         <>
                                             {item?.id === 1 ? (
-                                                <div className="absolute right-0 top-14">
+                                                <div className="hidden md:block absolute right-0 top-14">
                                                     <Line1 />
                                                 </div>
                                             ) : (
