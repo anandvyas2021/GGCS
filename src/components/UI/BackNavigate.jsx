@@ -10,7 +10,7 @@ export default function BackNavigate({ backLabel, backLink, className }) {
     let navigate = useNavigate();
     return (
         <section
-            className={`max-w-screen-lg lg:max-w-screen-xl mx-auto flex items-center gap-3 pt-24 lg:pt-5 text-primary ${className}`}
+            className={`max-w-screen-lg lg:max-w-screen-xl mx-auto flex items-center gap-3 pt-24 lg:pt-5 text-primary px-2 ${className}`}
         >
             <img
                 src={backIcon}
