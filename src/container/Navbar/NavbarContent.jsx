@@ -8,6 +8,8 @@ import Menu from "../../assets/Navbar/menu.svg";
 import { navMenu } from "../../db/dummy";
 import { PrimaryBtn, RadientBtn } from "../../components/Button";
 import { H4, H5 } from "../../components/Typography";
+import StatusContainer from "./StatusContainer";
+import PackageContainer from "./PackageContainer";
 
 export default function NavbarContent() {
     const location = useLocation();
@@ -32,7 +34,7 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <section className={`left-0 right-0 z-[1000] ${location?.pathname === "/"
-            ? "max-w-screen-xl mx-auto mt-1 "
+            ? "max-w-screen-xl mx-auto mt-5 "
             : "fixed w-full"
             }`}
         >
@@ -47,7 +49,7 @@ export default function NavbarContent() {
                         ? "max-w-full"
                         : "max-w-screen-xl mx-auto"
                     }`}>
-                    <div className="flex items-center h-[80px]">
+                    <div className="flex items-center h-[70px] sm:h-[80px]">
                         <img
                             src={logo}
                             alt="ggcs"
@@ -113,65 +115,79 @@ export default function NavbarContent() {
                                     className="w-full h-full"
                                 />
                             </button>
-                            <div className={`block lg:hidden absolute right-0 top-full w-full rounded-b-lg z-50 bg-gray-50 md:flex md:w-full md:max-w-full px-5 md:px-0 pt-3 pb-14 md:pb-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
-                                <ul className="flex flex-col mt-4 r">
-                                    {navMenu?.map((item) => (
-                                        <li
-                                            className="py-2 text-black font-semibold"
-                                            key={item?.id}
-                                            onClick={() => {
-                                                setState((prev) => {
-                                                    return {
-                                                        ...prev,
-                                                        showMenu: !state?.showMenu,
-                                                    };
-                                                });
-                                                if (item?.label2 === "download") {
-                                                    return;
-                                                } else {
-                                                    navigate(item?.slug);
-                                                }
-                                            }}
-                                        >
-                                            {item.label2 === "download" ? (
-                                                <a
-                                                    download
-                                                    onClick={() => {
-                                                        window.open(
-                                                            ppt,
-                                                            "_blank",
-                                                            "fullscreen=yes"
-                                                        );
-                                                    }}
-                                                    className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                                                    aria-current="page"
-                                                >
-                                                    {item?.label}
-                                                </a>
-                                            ) : (
-                                                <a>{item?.label}</a>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="fixed md:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
-                                    <a
-                                        download
-                                        onClick={() => {
-                                            window.open(ppt, "_blank", "fullscreen=yes");
-                                        }}
-                                        className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
-                                        aria-current="page"
-                                    >
-                                        DOWNLOAD PPT
-                                    </a>
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
                 </div>
             </div>
+            {
+                !showMenu ? <>
+                    <div>
+                        clo
+                    </div>
+                    <div className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 md:px-0 pt-3 pb-14 md:pb-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
+                        <ul className="flex flex-col mt-4 r">
+                            {navMenu?.map((item) => (
+                                <li
+                                    className="text-lg py-2 text-black font-semibold"
+                                    key={item?.id}
+                                    onClick={() => {
+                                        setState((prev) => {
+                                            return {
+                                                ...prev,
+                                                showMenu: !state?.showMenu,
+                                            };
+                                        });
+                                        if (item?.label2 === "download") {
+                                            return;
+                                        } else {
+                                            navigate(item?.slug);
+                                        }
+                                    }}
+                                >
+                                    {item.label2 === "download" ? (
+                                        <a
+                                            download
+                                            onClick={() => {
+                                                window.open(
+                                                    ppt,
+                                                    "_blank",
+                                                    "fullscreen=yes"
+                                                );
+                                            }}
+                                            className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                                            aria-current="page"
+                                        >
+                                            {item?.label}
+                                        </a>
+                                    ) : (
+                                        <a>{item?.label}</a>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
+                            <a
+                                download
+                                onClick={() => {
+                                    window.open(ppt, "_blank", "fullscreen=yes");
+                                }}
+                                className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
+                                aria-current="page"
+                            >
+                                DOWNLOAD PPT
+                            </a>
+                        </div>
+
+                        <div className="block lg:hidden mt-5">
+                            <PackageContainer />
+                        </div>
+                        <div className="absolute lg:hidden bottom-8">
+                            <StatusContainer />
+                        </div>
+                    </div></> : null
+            }
         </section>
     );
 }
