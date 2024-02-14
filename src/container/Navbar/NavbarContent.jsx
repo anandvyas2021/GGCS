@@ -36,20 +36,17 @@ export default function NavbarContent() {
             : "fixed w-full"
             }`}
         >
-            <div
-                className={`header px-4 shadow-header !bg-white 
+            <div className={`header px-4 shadow-header !bg-white 
                 ${location?.pathname === "/"
-                        ? "py-1 border rounded-full border-white bg-transparent backdrop-blur"
-                        : "fixed w-full"
-                    }`}
-                ref={scrollRef}
-            >
+                    ? "py-1 border rounded-full border-white bg-transparent backdrop-blur"
+                    : "fixed w-full"
+                }`}
+                ref={scrollRef}>
                 <div className={`relative flex justify-between items-center 
                     ${location?.pathname === "/"
                         ? "max-w-full"
                         : "max-w-screen-xl mx-auto"
-                    }`}
-                >
+                    }`}>
                     <div className="flex items-center h-[80px]">
                         <img
                             src={logo}
@@ -78,7 +75,7 @@ export default function NavbarContent() {
                                 </li>
                             ))}
                         </ul>
-                        <div className=" flex items-center justify-between z-[240]">
+                        <div className="flex items-center justify-between z-[240]">
                             <span className="hidden lg:block">
                                 {location?.pathname === "/" ? (
                                     <RadientBtn
@@ -98,7 +95,6 @@ export default function NavbarContent() {
                                     </PrimaryBtn>
                                 )}
                             </span>
-
                             <button
                                 className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"
                                 onClick={(e) => {
@@ -117,7 +113,7 @@ export default function NavbarContent() {
                                     className="w-full h-full"
                                 />
                             </button>
-                            <div className={`block lg:hidden absolute right-0 top-full w-full rounded-b-lg z-50 bg-white md:static md:flex md:w-full md:max-w-full px-5 md:px-0 py-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
+                            <div className={`block lg:hidden absolute right-0 top-full w-full rounded-b-lg z-50 bg-gray-50 md:flex md:w-full md:max-w-full px-5 md:px-0 pt-3 pb-14 md:pb-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
                                 <ul className="flex flex-col mt-4 r">
                                     {navMenu?.map((item) => (
                                         <li
@@ -127,7 +123,7 @@ export default function NavbarContent() {
                                                 setState((prev) => {
                                                     return {
                                                         ...prev,
-                                                        showMenu: false,
+                                                        showMenu: !state?.showMenu,
                                                     };
                                                 });
                                                 if (item?.label2 === "download") {
@@ -158,6 +154,18 @@ export default function NavbarContent() {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="fixed md:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
+                                    <a
+                                        download
+                                        onClick={() => {
+                                            window.open(ppt, "_blank", "fullscreen=yes");
+                                        }}
+                                        className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
+                                        aria-current="page"
+                                    >
+                                        DOWNLOAD PPT
+                                    </a>
+                                </div>
                             </div>
 
                         </div>

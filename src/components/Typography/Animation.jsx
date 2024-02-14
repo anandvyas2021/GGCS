@@ -21,7 +21,7 @@ export function H1Animate({ className, children, effect = true }) {
     return (
         <motion.h1
             className={`flex flex-wrap gap-3 items-center justify-center md:!text-[45px] text-3xl leading-[3.5rem] font-axiBold mb-3 ${className}`}
-            variants={fadeInAnimationVariants}
+            // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
@@ -30,13 +30,12 @@ export function H1Animate({ className, children, effect = true }) {
         >
             {res?.map((item, i) => (
                 <p
-                    className={`${
-                        i < res?.length / 2
+                    className={`${i < res?.length / 2
                             ? ""
                             : !effect
-                            ? ""
-                            : "text-tertiary"
-                    }`}
+                                ? ""
+                                : "text-tertiary"
+                        }`}
                 >
                     {item}
                 </p>
@@ -63,13 +62,13 @@ export function TextAnimate({ className, children }) {
     return (
         <motion.p
             className={`!text-xl font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r fro-g1 va-g2 t-g3 bg-clip-text !bg-[#7d7c83] ${className} `}
-            variants={fadeInAnimationVariants}
+            // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-            // custom={index}
+        // custom={index}
         >
             {children}
         </motion.p>
@@ -94,7 +93,7 @@ export const SubHeading = ({ className, children }) => {
     return (
         <motion.p
             className={`sm:text-[20px] text-lg font-axiMedium mb-1 [letter-spacing:0.4px] text-gray-400 ${className}`}
-            variants={fadeInAnimationVariants}
+            // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
@@ -124,7 +123,7 @@ export const Desc = ({ className, children }) => {
     return (
         <motion.p
             className={`max-w-screen-lg mx-auto lg:text-[19px] text-lg font-axiMedium text-gray-600 ${className}`}
-            variants={fadeInAnimationVariants}
+            // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
@@ -154,7 +153,7 @@ export function P({ className, children }) {
     return (
         <motion.p
             className={`lg:text-[17px] text-[15px] [letter-spacing:0.1px] text-[#252525] ${className}`}
-            variants={fadeInAnimationVariants}
+            // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
