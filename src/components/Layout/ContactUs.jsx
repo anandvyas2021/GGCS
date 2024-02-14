@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { Input, Textarea } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
 import { addresses } from "../../db/dummy";
 import { contactBg } from "../../db/assets";
+import { Input, Textarea } from "../UI/Input";
 import {
     Desc,
     H1Animate,
@@ -26,9 +26,9 @@ function ContactUs() {
             email: "",
             number: "",
             website: "",
-            message: ""
-        }
-    })
+            message: "",
+        },
+    });
     const regExp = RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
     const handleContactUs = (e) => {
         e.preventDefault();
@@ -41,12 +41,12 @@ function ContactUs() {
                         email: !state?.email ? "Required" : "",
                         number: !state?.number ? "Required" : "",
                         website: !state?.website ? "Required" : "",
-                        message: !state?.message ? "Required" : ""
-                    }
-                }
+                        message: !state?.message ? "Required" : "",
+                    },
+                };
             });
         }
-    }
+    };
     const formValid = ({ errMessage, ...rest }) => {
         let isValid = false;
         Object.values(errMessage).forEach((val) => {
@@ -64,8 +64,7 @@ function ContactUs() {
             }
         });
         return isValid;
-
-    }
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
         let errMessage = { ...state.errMessage };
@@ -74,19 +73,19 @@ function ContactUs() {
                 errMessage.name = value.length < 2 ? "Enter your name" : "";
                 break;
             case "email":
-                errMessage.email = regExp.test(value) ? "" : "Email address is invalid";
+                errMessage.email = regExp.test(value)
+                    ? ""
+                    : "Email address is invalid";
                 break;
             case "number":
                 errMessage.number =
                     value.length <= 10 ? "Valid mobile number required" : "";
                 break;
             case "website":
-                errMessage.website =
-                    value.length <= 6 ? "Valid website" : "";
+                errMessage.website = value.length <= 6 ? "Valid website" : "";
                 break;
             case "message":
-                errMessage.message =
-                    value.length < 10 ? "Valid message" : "";
+                errMessage.message = value.length < 10 ? "Valid message" : "";
                 break;
             default:
                 break;
@@ -96,10 +95,11 @@ function ContactUs() {
                 ...prev,
                 errMessage,
                 [name]: value,
-            }
+            };
         });
-    }
-    const { name, email, number, website, message, errMessage } = state
+    };
+
+    const { name, email, number, website, message, errMessage } = state;
     return (
         <section className="relative z-[1] md:py-20 py-10 xl:px-8 md:px-6 px-3">
             <div className="hidden sm:block">
@@ -144,7 +144,12 @@ function ContactUs() {
                         </div>
                     </div>
                     <div className="px-3 py-10 bg-white md:w-1/2 rounded-3xl sm:px-6 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
-                        <form action="" onSubmit={(e) => { handleContactUs(e) }}>
+                        <form
+                            action=""
+                            onSubmit={(e) => {
+                                handleContactUs(e);
+                            }}
+                        >
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div className="w-full">
                                     <Input
@@ -164,7 +169,7 @@ function ContactUs() {
                                         type={"mail"}
                                         errMsg={errMessage?.email}
                                         onChange={(e) => {
-                                            handleChange(e)
+                                            handleChange(e);
                                         }}
                                     />
                                 </div>
@@ -175,7 +180,7 @@ function ContactUs() {
                                         placeholder={"Phone Number"}
                                         type={"mail"}
                                         onChange={(e) => {
-                                            handleChange(e)
+                                            handleChange(e);
                                         }}
                                         errMsg={errMessage?.number}
                                     />
@@ -187,7 +192,7 @@ function ContactUs() {
                                         placeholder={"Website"}
                                         type={"text"}
                                         onChange={(e) => {
-                                            handleChange(e)
+                                            handleChange(e);
                                         }}
                                         errMsg={errMessage?.website}
                                     />
@@ -198,9 +203,10 @@ function ContactUs() {
                                         name="message"
                                         placeholder="Message"
                                         onChange={(e) => {
-                                            handleChange(e)
+                                            handleChange(e);
                                         }}
-                                        errMsg={errMessage?.message} />
+                                        errMsg={errMessage?.message}
+                                    />
                                 </div>
                                 {/* <textarea
                                     name="textarea"
