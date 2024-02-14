@@ -20,15 +20,15 @@ export default function IndustryImpact(props) {
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}
-                        className="flex flex-col items-center p-4 text-center transition-all duration-200 rounded-xl hover:shadow-header hover:scale-105 bg-blue4"
+                        className="flex flex-col items-center md:p-4 p-2 text-center transition-all duration-200 rounded-xl hover:shadow-header hover:scale-105 bg-blue4"
                     >
                         <img
                             src={item?.icon}
                             alt={item?.label}
-                            className="w-12 h-12 mb-4"
+                            className="md:!size-12 !size-9 mb-2 md:mb-4"
                         />
-                        <H5 className="mb-2">{item?.label}</H5>
-                        <H6 className="">{item?.desc}</H6>
+                        <H5 className="mb-1 mb:md-2">{item?.label}</H5>
+                        <H6>{item?.desc}</H6>
                     </div>
                 ))}
             </section>

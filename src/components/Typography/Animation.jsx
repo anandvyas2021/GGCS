@@ -20,7 +20,7 @@ export function H1Animate({ className, children, effect = true }) {
     };
     return (
         <motion.h1
-            className={`flex flex-wrap gap-2.5 md:gap-3 items-center justify-center md:!text-[45px] text-3xl leading-[2rem] md:leading-[3.5rem] font-axiBold mb-3 ${className}`}
+            className={`flex flex-wrap gap-2 md:gap-3 items-center justify-center md:!text-[45px] text-3xl leading-[2rem] md:leading-[3.5rem] font-axiBold mb-3 ${className}`}
             // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -123,7 +123,7 @@ export const Desc = ({ className, children }) => {
     };
     return (
         <motion.p
-            className={`max-w-screen-lg mx-auto lg:text-[19px] text-lg font-axiMedium text-gray-600 ${className}`}
+            className={`max-w-screen-lg mx-auto text-[17px] md:text-[19px] font-axiMedium text-gray-600 ${className}`}
             // variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
