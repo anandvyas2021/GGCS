@@ -10,21 +10,21 @@ export default function WhyGGCS() {
     }, []);
 
     return (
-        <div className="py-12 md:py-20 bg-gray-50">
+        <div className="py-12 md:py-20 bg-gray-100">
             <Container>
                 <H1Animate>{whyGGCSData?.title}</H1Animate>
                 <Desc>
                     {/* sdihunigsdtgkjdnhoigjlsdbhvsdlfiukgbsjrdkhyiuserihyofiejhbgviusrgkjerkhjgvjlsdbhvsdlfiukgbsjrdkhyiuserihyofiej
                     hbgviusrgkjerkhjgvieuhtjlsdbhvsdlfiukgbsjrdkhyiuserihyofiejhbgviusrgkjerkhjgvieuhtieuhtgkietyigesigsu */}
                 </Desc>
-                <div className="grid grid-cols-1 gap-10 pt-20">
+                <div className="grid grid-cols-1 gap-10 pt-10 md:pt-20">
                     {whyGGCSData?.desc?.map((item, i) => (
                         <div
                             key={item?.id}
                             className={`grid md:grid-cols-[1fr_0.8fr] grid-cols-1 items-center sm:gap-5 my-5`}
                             dir={item?.id % 2 ? "ltr" : "rtl"}
                         >
-                            <div className="!text-center sm:p-5">
+                            <div className="!text-center md:p-5 mb-2">
                                 <H2>{item?.label}</H2>
                                 <H5 className="!font-axiforma text-gray-500">
                                     {item?.desc}
