@@ -16,7 +16,7 @@ export default function IndustryImpact(props) {
                     industries, including:
                 </Desc>
             </section>
-            <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+            <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 px-2=1 md:p-0 sm:gap-8">
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}
@@ -25,10 +25,10 @@ export default function IndustryImpact(props) {
                         <img
                             src={item?.icon}
                             alt={item?.label}
-                            className="w-12 h-12 mb-4"
+                            className="md:!size-12 !size-9 mb-2 md:mb-4"
                         />
-                        <H5 className="mb-2">{item?.label}</H5>
-                        <H6 className="">{item?.desc}</H6>
+                        <H5 className="mb-1 mb:md-2">{item?.label}</H5>
+                        <H6>{item?.desc}</H6>
                     </div>
                 ))}
             </section>
