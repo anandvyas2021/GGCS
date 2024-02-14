@@ -34,13 +34,13 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <section className={`left-0 right-0 z-[1000] ${location?.pathname === "/"
-            ? "max-w-screen-xl mx-auto mt-5 "
+            ? "max-w-screen-xl mx-auto sm:mt-5 "
             : "fixed w-full"
             }`}
         >
-            <div className={`header px-4 shadow-header !bg-white 
+            <div className={`header sm:px-4 shadow-header !bg-white 
                 ${location?.pathname === "/"
-                    ? "py-1 border rounded-full border-white bg-transparent backdrop-blur"
+                    ? "py-1 border sm:rounded-full border-white bg-transparent backdrop-blur"
                     : "fixed w-full"
                 }`}
                 ref={scrollRef}>
@@ -138,7 +138,7 @@ export default function NavbarContent() {
                         <ul className="flex flex-col">
                             {navMenu?.map((item) => (
                                 <li
-                                    className="text-lg py-2 text-black font-semibold"
+                                    className="text-lg text-left py-2 text-black font-semibold"
                                     key={item?.id}
                                     onClick={() => {
                                         setState((prev) => {
@@ -175,7 +175,7 @@ export default function NavbarContent() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="sm:w-1/2 mx-auto lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
+                        <div className="sm:w-1/2 mr-auto lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
                             <a
                                 download
                                 onClick={() => {
@@ -187,7 +187,7 @@ export default function NavbarContent() {
                                 DOWNLOAD PPT
                             </a>
                         </div>
-                        <div className="sm:w-1/2 mx-auto block lg:hidden mt-5">
+                        <div className="sm:w-1/2 mr-auto block lg:hidden mt-5">
                             <PackageContainer />
                         </div>
                         <div className="absolute lg:hidden bottom-8">
