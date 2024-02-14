@@ -21,7 +21,7 @@ export default function WhyGGCS() {
                     {whyGGCSData?.desc?.map((item, i) => (
                         <div
                             key={item?.id}
-                            className={`grid md:grid-cols-[1fr_0.8fr] grid-cols-1 items-center sm:gap-5 my-5`}
+                            className={`grid md:grid-cols-[1fr_0.8fr] grid-cols-1 items-center sm:gap-5 mb-0 md:my-5`}
                             dir={item?.id % 2 ? "ltr" : "rtl"}
                         >
                             <div className="!text-center md:p-5 mb-2">
