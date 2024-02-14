@@ -4,6 +4,7 @@ import { uposDetails } from "../../../db/dummy";
 import { Container } from "../../../components/Layout";
 import BackNavigate from "../../../components/UI/BackNavigate";
 import { Desc, H1Animate, H3, H6, P } from "../../../components/Typography";
+import { PrimaryBtn } from "components/Button";
 
 function UposPackage() {
     useEffect(() => {
@@ -46,6 +47,9 @@ function UposPackage() {
                     <H3 className="!text-4xl my-3 text-blue-500 font-sbold">
                         {uposDetails?.price}
                     </H3>
+                </div>
+                <div>
+                    <PrimaryBtn>Know more about UPOS</PrimaryBtn>
                 </div>
             </div>
         </Container>

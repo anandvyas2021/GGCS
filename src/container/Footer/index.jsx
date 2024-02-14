@@ -110,7 +110,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <ul className="pl-8 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
+                        <ul className="pl-4 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
                                 return (
                                     <li key={i} className="mb-2">
@@ -144,7 +144,7 @@ export default function Footer() {
                     </address>
                 </div>
                 <div className="pt-5">
-                    <div className="flex justify-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
+                    <div className="flex justify-center text-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
                         <p className="text-gray-400">
                             <b>© 2024</b>
                             <a href="/" className="">

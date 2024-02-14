@@ -145,7 +145,7 @@ function ContactUs() {
                     </div>
                     <div className="px-3 py-10 bg-white md:w-1/2 rounded-3xl sm:px-6 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
                         <form action="" onSubmit={(e) => { handleContactUs(e) }}>
-                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div className="w-full">
                                     <Input
                                         value={name}
@@ -192,7 +192,7 @@ function ContactUs() {
                                         errMsg={errMessage?.website}
                                     />
                                 </div>
-                                <div className="col-span-2 w-full">
+                                <div className="sm:col-span-2 w-full">
                                     <Textarea
                                         value={message}
                                         name="message"
