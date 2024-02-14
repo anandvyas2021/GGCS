@@ -99,7 +99,7 @@ export default function NavbarContent() {
                             </span>
                             <button
                                 className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"
-                                onClick={(e) => {
+                                onClick={() => {
                                     // e.stopPropagation();
                                     setState((prev) => {
                                         return {
@@ -123,11 +123,19 @@ export default function NavbarContent() {
             </div>
             {
                 !showMenu ? <>
-                    <div>
-                        clo
-                    </div>
-                    <div className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 md:px-0 pt-3 pb-14 md:pb-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
-                        <ul className="flex flex-col mt-4 r">
+                    <div className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 lg:px-0 pt-3 pb-14 lg:pb-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
+                        <div className="font-semibold flex justify-end items-center">
+                            <button className="size-10 px-2 pt-1 rounded-full border hover:bg-white"
+                                onClick={
+                                    () => setState((prev) => {
+                                        return {
+                                            ...prev,
+                                            showMenu: !state?.showMenu,
+                                        };
+                                    })}>
+                                X</button>
+                        </div>
+                        <ul className="flex flex-col">
                             {navMenu?.map((item) => (
                                 <li
                                     className="text-lg py-2 text-black font-semibold"
@@ -167,20 +175,19 @@ export default function NavbarContent() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
+                        <div className="sm:w-1/2 mx-auto lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
                             <a
                                 download
                                 onClick={() => {
                                     window.open(ppt, "_blank", "fullscreen=yes");
                                 }}
-                                className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
+                                className="font-axiSemiBold block py-2 pl-3 pr-4 text-center !text-white md:p-0 dark:text-white md:dark:text-blue-500"
                                 aria-current="page"
                             >
                                 DOWNLOAD PPT
                             </a>
                         </div>
-
-                        <div className="block lg:hidden mt-5">
+                        <div className="sm:w-1/2 mx-auto block lg:hidden mt-5">
                             <PackageContainer />
                         </div>
                         <div className="absolute lg:hidden bottom-8">
@@ -188,7 +195,7 @@ export default function NavbarContent() {
                         </div>
                     </div></> : null
             }
-        </section>
+        </section >
     );
 }
 
