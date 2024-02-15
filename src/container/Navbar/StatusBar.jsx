@@ -1,10 +1,17 @@
 import React from "react";
-import StatusContainer from "./StatusContainer";
+
+import StatusContainer from "./SocialMedias";
+import PackageContainer from "./PackageContainer";
 
 export default function StatusBar() {
     return (
         <div className="hidden sm:block">
-            <StatusContainer />
+            <div className="px-0 pt-3 pb-2 sm:px-4">
+                <div className="flex items-center justify-between max-w-full">
+                    <StatusContainer />
+                    <PackageContainer />
+                </div>
+            </div>
         </div>
     );
 }
