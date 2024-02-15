@@ -1022,12 +1022,12 @@ export const GGCSPolicy = [
         slug: "privacy-policy",
     },
     {
-        label: "Terms And Conditions",
-        slug: "terms-conditions",
-    },
-    {
         label: "Disclaimer",
         slug: "disclaimer",
+    },
+    {
+        label: "Terms And Conditions",
+        slug: "terms-conditions",
     },
 ];
 
