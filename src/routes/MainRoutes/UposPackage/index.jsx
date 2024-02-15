@@ -52,10 +52,7 @@ function UposPackage() {
                 <div className="flex justify-center mt-5">
                     <Link
                         onClick={() =>
-                            window.open(
-                                `https://beta.globalgarner.com/upos`,
-                                "_blank"
-                            )
+                            window.open(`https://beta.globalgarner.com/upos`, "_blank")
                         }
                         className="px-5 md:px-8 py-2 md:py-2.5 flex align-middle justify-center text-base font-semibold bg-primaryBtn text-white1 border-2 rounded-full hover:scale-105 transition-all duration-300"
                     >
@@ -63,8 +60,33 @@ function UposPackage() {
                     </Link>
                 </div>
             </div>
+            <section className="grid grid-cols-1 gap-4 pb-10 md:grid-cols-2 xl:grid-cols-4 lg:pb-20">
+                {uposDetails?.extra?.map((item, i) => {
+                    return (
+                        <div
+                            className="h-full p-3 transition duration-300 bg-gray-100 border-2 rounded-lg hover:scale-105"
+                            key={i}
+                        >
+                            <div className="mb-5">
+                                <img
+                                    src={item?.icon}
+                                    alt={item?.label}
+                                    className="w-full rounded-lg h-60"
+                                />
+                            </div>
+                            <P>{item?.label}</P>
+                        </div>
+                    );
+                })}
+            </section>
         </Container>
     );
 }
 
 export default UposPackage;
+
+//  personalised posts every month
+//  content guide(video and promotion)
+//  cross channel promotion
+//  Facebook and insta page branding
+//  10000 reach every month

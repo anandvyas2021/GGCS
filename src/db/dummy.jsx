@@ -92,6 +92,8 @@ import {
     businessOptimization,
     locationTargeting,
     userEngagement,
+    posts21,
+    sms
 } from "./assets";
 
 import fullStack from "../assets/training/courses/fullStack.jpg";
@@ -749,6 +751,29 @@ export const uposDetails = {
     ],
     label: "Exclusive Discounted Price",
     price: "Rs.999/- + GST* per month",
+    extra: [
+        {
+            label: "21 Personalised posts every month",
+            icon: posts21,
+        },
+
+        // {
+        //     label: "Cross channel promotion",
+        //     icon: ccm,
+        // },
+        {
+            label: "Facebook and Instagram page branding",
+            icon: post,
+        },
+        {
+            label: "10000 reach every month",
+            icon: sms,
+        },
+        {
+            label: "Content guide(video and promotion)",
+            icon: post,
+        },
+    ],
 };
 
 export const addresses = [
