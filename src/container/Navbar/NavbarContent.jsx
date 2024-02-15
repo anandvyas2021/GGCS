@@ -8,8 +8,9 @@ import Menu from "../../assets/Navbar/menu.svg";
 import { navMenu } from "../../db/dummy";
 import { PrimaryBtn, RadientBtn } from "../../components/Button";
 import { H4, H5 } from "../../components/Typography";
-import StatusContainer from "./StatusContainer";
+import StatusContainer from "./SocialMedias";
 import PackageContainer from "./PackageContainer";
+import SocialMedias from "./SocialMedias";
 
 export default function NavbarContent() {
     const location = useLocation();
@@ -33,22 +34,30 @@ export default function NavbarContent() {
     };
     const { showMenu } = state;
     return (
-        <section className={`left-0 right-0 z-[1000] ${location?.pathname === "/"
-            ? "max-w-screen-xl mx-auto sm:mt-5 "
-            : "fixed w-full"
+        <section
+            className={`left-0 right-0 z-[1000] ${
+                location?.pathname === "/"
+                    ? "max-w-screen-xl mx-auto sm:mt-5 "
+                    : "fixed w-full"
             }`}
         >
-            <div className={`header sm:px-4 shadow-header !bg-white 
-                ${location?.pathname === "/"
-                    ? "py-1 border sm:rounded-full border-white bg-transparent backdrop-blur"
-                    : "fixed w-full"
+            <div
+                className={`header sm:px-4 shadow-header !bg-white 
+                ${
+                    location?.pathname === "/"
+                        ? "py-1 border sm:rounded-full border-white bg-transparent backdrop-blur"
+                        : "fixed w-full"
                 }`}
-                ref={scrollRef}>
-                <div className={`relative flex justify-between items-center 
-                    ${location?.pathname === "/"
-                        ? "max-w-full"
-                        : "max-w-screen-xl mx-auto"
-                    }`}>
+                ref={scrollRef}
+            >
+                <div
+                    className={`relative flex justify-between items-center 
+                    ${
+                        location?.pathname === "/"
+                            ? "max-w-full"
+                            : "max-w-screen-xl mx-auto"
+                    }`}
+                >
                     <div className="flex items-center h-[70px] sm:h-[80px]">
                         <img
                             src={logo}
@@ -61,10 +70,11 @@ export default function NavbarContent() {
                         <ul className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
                                 <li
-                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname
-                                        ? "text-primary !border-primary"
-                                        : ""
-                                        }`}
+                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${
+                                        item?.slug === location?.pathname
+                                            ? "text-primary !border-primary"
+                                            : ""
+                                    }`}
                                     key={item?.id}
                                     onClick={() => navigate(item?.slug)}
                                 >
@@ -115,30 +125,37 @@ export default function NavbarContent() {
                                     className="w-full h-full"
                                 />
                             </button>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-            {
-                !showMenu ? <>
-                    <div className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 lg:px-0 pt-3 pb-14 lg:pb-3 lg:py-0 ${showMenu ? "hidden" : ""}`} id="navbar-default">
-                        <div className="font-semibold flex justify-end items-center">
-                            <button className="size-10 px-2 pt-1 rounded-full border hover:bg-white"
-                                onClick={
-                                    () => setState((prev) => {
+            {!showMenu ? (
+                <>
+                    <div
+                        className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 lg:px-0 pt-3 pb-14 lg:pb-3 lg:py-0 ${
+                            showMenu ? "hidden" : ""
+                        }`}
+                        id="navbar-default"
+                    >
+                        <div className="flex items-center justify-end font-axiSemiBold">
+                            <button
+                                className="px-2 pt-1 border rounded-full size-10 hover:bg-white"
+                                onClick={() =>
+                                    setState((prev) => {
                                         return {
                                             ...prev,
                                             showMenu: !state?.showMenu,
                                         };
-                                    })}>
-                                X</button>
+                                    })
+                                }
+                            >
+                                X
+                            </button>
                         </div>
-                        <ul className="flex flex-col">
+                        <ul className="flex flex-col gap-4 mb-10">
                             {navMenu?.map((item) => (
                                 <li
-                                    className="text-lg text-left py-2 text-black font-semibold"
+                                    className="py-2 text-3xl text-left text-black font-axiBold"
                                     key={item?.id}
                                     onClick={() => {
                                         setState((prev) => {
@@ -147,55 +164,39 @@ export default function NavbarContent() {
                                                 showMenu: !state?.showMenu,
                                             };
                                         });
-                                        if (item?.label2 === "download") {
-                                            return;
-                                        } else {
-                                            navigate(item?.slug);
-                                        }
+                                        navigate(item?.slug);
                                     }}
                                 >
-                                    {item.label2 === "download" ? (
-                                        <a
-                                            download
-                                            onClick={() => {
-                                                window.open(
-                                                    ppt,
-                                                    "_blank",
-                                                    "fullscreen=yes"
-                                                );
-                                            }}
-                                            className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                                            aria-current="page"
-                                        >
-                                            {item?.label}
-                                        </a>
-                                    ) : (
-                                        <a>{item?.label}</a>
-                                    )}
+                                    <a>{item?.label}</a>
                                 </li>
                             ))}
                         </ul>
-                        <div className="sm:w-1/2 mr-auto lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
+                        <div className="z-50 px-4 py-1 mr-auto text-white border rounded-lg cursor-pointer sm:w-1/2 lg:hidden imgBorder md:py-3 bg-gradient-to-r from-primary to-secondary">
                             <a
                                 download
                                 onClick={() => {
-                                    window.open(ppt, "_blank", "fullscreen=yes");
+                                    window.open(
+                                        ppt,
+                                        "_blank",
+                                        "fullscreen=yes"
+                                    );
                                 }}
-                                className="font-axiSemiBold block py-2 pl-3 pr-4 text-center !text-white md:p-0 dark:text-white md:dark:text-blue-500"
+                                className="text-lg font-axiSemiBold block py-2 pl-3 pr-4 text-center !text-white md:p-0 dark:text-white md:dark:text-blue-500"
                                 aria-current="page"
                             >
                                 DOWNLOAD PPT
                             </a>
                         </div>
-                        <div className="sm:w-1/2 mr-auto block lg:hidden mt-5">
+                        <div className="block mt-5 mr-auto sm:w-1/2 ">
                             <PackageContainer />
                         </div>
-                        <div className="absolute lg:hidden bottom-8">
-                            <StatusContainer />
+                        <div className="absolute w-full px-10 bottom-10">
+                            <SocialMedias />
                         </div>
-                    </div></> : null
-            }
-        </section >
+                    </div>
+                </>
+            ) : null}
+        </section>
     );
 }
 
