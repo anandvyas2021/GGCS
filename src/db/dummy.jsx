@@ -49,8 +49,8 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { organic } from "./assets";
 import {
+    organic,
     onPageSeo,
     offPageSeo,
     keywordResearch,
@@ -725,20 +725,20 @@ export const uposDetails = {
     subTitle: "Get Flat Commission Discount With Add-On Cashback",
     list: [
         {
-            label: "Organic Traffic on Social Media Handles ",
+            label: "Organic Traffic on Social Media Handles",
             icon: organic,
         },
         {
-            label: "Creative Posts, Videos, PromotionVideos, Promotion ",
+            label: "Creative Posts, Videos, PromotionVideos, Promotion",
             icon: post,
         },
         {
             label: "Content Creation Guide by GGCS",
-            icon: ccm,
+            icon: content,
         },
         {
-            label: "Cross-Channel Promotion ",
-            icon: content,
+            label: "Cross-Channel Promotion",
+            icon: ccm,
         },
     ],
     label: "Exclusive Discounted Price",
