@@ -623,10 +623,6 @@ export const menuService = [
         link: "services",
     },
     {
-        label: "Contact Us",
-        link: "contact",
-    },
-    {
         label: "Hire Us",
         link: "hire-us",
     },
@@ -634,28 +630,38 @@ export const menuService = [
         label: "Career",
         link: "career",
     },
+    {
+        label: "Contact Us",
+        link: "contact",
+    },
 ];
 // footer service
 export const services = [
     {
-        label: "SEO (Search Engine Optimization)",
+        label: "Search Engine Optimization",
+        mobileLabel: "SEO",
         slug: "seo",
     },
     {
         label: "Social Media Marketing",
+        mobileLabel: "SMM",
         slug: "social-media-marketing",
     },
     {
-        label: "Content Marketing",
-        slug: "content-marketing",
+        label: "Analytics and Data Analysis",
+        mobileLabel: "Analytics",
+        slug: "data-analysis",
     },
     {
         label: "Web Design and Development",
+        mobileLabel: "Web Development",
         slug: "web-design-development",
     },
+
     {
-        label: "Analytics and Data Analysis",
-        slug: "data-analysis",
+        label: "Content Marketing",
+        mobileLabel: "Content Marketing",
+        slug: "content-marketing",
     },
 ];
 
