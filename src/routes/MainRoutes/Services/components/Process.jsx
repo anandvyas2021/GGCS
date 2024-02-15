@@ -1,9 +1,9 @@
 import React from "react";
-import banner from "../../../assets/services/banner1.gif";
+import banner from "../../../../assets/services/banner1.gif";
 
-import { processData } from "../../../db/dummy";
-import { Container } from "../../../components/Layout";
-import { H5, H6 } from "../../../components/Typography";
+import { processData } from "../../../../db/dummy";
+import { Container } from "../../../../components/Layout";
+import { H5, H6 } from "../../../../components/Typography";
 
 export default function Process() {
     return (

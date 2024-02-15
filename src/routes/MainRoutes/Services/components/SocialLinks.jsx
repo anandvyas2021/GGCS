@@ -2,9 +2,9 @@ import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { serviceSocial } from "../../../db/dummy";
-import { Container } from "../../../components/Layout";
-import { H6 } from "../../../components/Typography";
+import { serviceSocial } from "../../../../db/dummy";
+import { Container } from "../../../../components/Layout";
+import { H6 } from "../../../../components/Typography";
 
 export default function SocialLinks() {
     return (

@@ -1,8 +1,8 @@
 import React from "react";
 
-import Pricing from "../../../components/Pricing";
-import { Container } from "../../../components/Layout";
-import { Desc, H1Animate } from "../../../components/Typography";
+import Pricing from "../../../../components/Pricing";
+import { Container } from "../../../../components/Layout";
+import { Desc, H1Animate } from "../../../../components/Typography";
 
 export default function Packages() {
     return (

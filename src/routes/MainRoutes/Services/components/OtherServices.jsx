@@ -2,9 +2,9 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { otherServices } from "./dummyData";
-import { Container } from "../../../components/Layout";
-import { H1Animate, H5, P } from "../../../components/Typography";
+import { otherServices } from "../dummyData";
+import { Container } from "../../../../components/Layout";
+import { H1Animate, H5, P } from "../../../../components/Typography";
 
 export default function OtherServices() {
     return (

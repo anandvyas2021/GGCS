@@ -17,7 +17,7 @@ export default function Training(props) {
     let navigate = useNavigate();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
 
     return (
@@ -28,7 +28,7 @@ export default function Training(props) {
                 at ZERO upfront fees.
             </Desc>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {courses?.map((item) => (
                     <div
                         key={item?.id}
