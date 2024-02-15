@@ -51,7 +51,7 @@ export default function Vision() {
             <Container>
                 <div className="pt-10 pb-24">
                     <div className="sm:flex">
-                        <div className="w-full mb-5 md:w-3/5 lg:mb-0 ">
+                        <div className="w-full md:w-3/5 mb-0">
                             <div className="px-3 py-5 bg-red-200 rounded-lg rounded-r-none sm:px-6 md:px-14 md:py-10">
                                 <H5 className="mb-2">
                                     GGCS: Your Go-To Tech Team for fuel your
@@ -125,7 +125,7 @@ export default function Vision() {
                         </div>
                     </div>
                     <div className="sm:flex">
-                        <div className="w-full mb-5 md:w-3/5 lg:mb-0 ">
+                        <div className="w-full md:w-3/5 mb-0">
                             <div className="px-3 py-5 bg-red-200 rounded-lg rounded-r-none sm:px-6 md:px-14 md:py-10">
                                 <H5 className="mb-2 text-xl">
                                     What Distinguishes Us
