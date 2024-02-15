@@ -16,7 +16,7 @@ export default function FAQ() {
                 {faq?.list?.map((item) => (
                     <div key={item?.id} className="mb-2">
                         <div
-                            className={`flex justify-between p-5 rounded-lg hover:bg-red-50 cursor-pointer ${
+                            className={`flex justify-between p-5 rounded-lg border hover:bg-red-50 cursor-pointer ${
                                 active === item?.id ? "bg-red-50" : ""
                             }`}
                             onClick={() => {

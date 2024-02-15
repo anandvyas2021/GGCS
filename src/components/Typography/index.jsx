@@ -12,7 +12,9 @@ export const H2 = ({ children, className }) => {
 };
 export const H3 = ({ children, className }) => {
     return (
-        <h3 className={`text-[30px] !mb-3 font-axiSemiBold ${className}`}>
+        <h3
+            className={`text-[26px] md:text-3xl !mb-3 font-axiSemiBold ${className}`}
+        >
             {children}
         </h3>
     );

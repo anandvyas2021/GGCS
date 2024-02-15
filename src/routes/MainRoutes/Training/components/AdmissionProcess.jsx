@@ -12,8 +12,8 @@ export default function AdmissionProcess() {
         <section className="bg-red-50 py-14">
             <Container>
                 <H3 className="text-center">{admissionProcess?.title}</H3>
-                <div className="relative grid grid-cols-1 gap-8 my-10 md:grid-cols-4 sm:grid-cols-2">
-                    <div className="absolute left-0 w-full border-2 border-red-400 border-dashed top-1/2"></div>
+                <div className="relative grid grid-cols-2 gap-8 my-10 md:grid-cols-4">
+                    <div className="absolute left-0 hidden w-full border-2 border-red-400 border-dashed top-1/2 md:block" />
                     {admissionProcess?.process?.map((item) => (
                         <div
                             key={item?.id}
