@@ -80,7 +80,7 @@ export default function Vision() {
                             <img
                                 src={floatIcon1}
                                 alt="floatIcon"
-                                className="rounded-br-lg size-60"
+                                className="rounded-br-lg h-60 w-60"
                             />
                         </div>
                     </div>
@@ -89,7 +89,7 @@ export default function Vision() {
                             <img
                                 src={journey}
                                 alt="floatIcon"
-                                className="rounded-bl-lg size-60"
+                                className="rounded-bl-lg h-60 w-60"
                             />
                         </div>
                         <div className="relative md:w-3/5">
@@ -187,7 +187,7 @@ export default function Vision() {
                             <img
                                 src={distinguishUs}
                                 alt="ggcs"
-                                className="rounded-br-lg size-60"
+                                className="rounded-br-lg h-60 w-60"
                             />
                         </div>
                     </div>
@@ -196,7 +196,7 @@ export default function Vision() {
                             <img
                                 src={business2}
                                 alt="business"
-                                className="rounded-bl-lg size-60"
+                                className="rounded-bl-lg h-60 w-60"
                             />
                         </div>
                         <div className="relative md:w-3/5">
