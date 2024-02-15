@@ -152,10 +152,10 @@ export default function NavbarContent() {
                                 X
                             </button>
                         </div>
-                        <ul className="flex flex-col gap-4 mb-10">
+                        <ul className="flex flex-col gap-3 mb-10">
                             {navMenu?.map((item) => (
                                 <li
-                                    className="py-2 text-3xl text-left text-black font-axiBold"
+                                    className="py-2 text-2xl text-left text-black font-axiBold"
                                     key={item?.id}
                                     onClick={() => {
                                         setState((prev) => {
@@ -171,7 +171,7 @@ export default function NavbarContent() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="z-50 px-4 py-1 mr-auto text-white border rounded-lg cursor-pointer sm:w-1/2 lg:hidden imgBorder md:py-3 bg-gradient-to-r from-primary to-secondary">
+                        <div className="z-50 px-4 py-0 mr-auto text-white border rounded-lg cursor-pointer sm:w-1/2 lg:hidden imgBorder md:py-3 bg-gradient-to-r from-primary to-secondary">
                             <a
                                 download
                                 onClick={() => {
