@@ -70,10 +70,10 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center md:items-start lg:pl-8">
+                    <div className="flex flex-col pl-4 lg:pl-8">
                         <H5 className="md:mb-5">Quick Links</H5>
                         <hr className="block w-16 h-1 mb-5 bg-red-200 md:hidden" />
-                        <ul className="grid w-full grid-cols-2 pl-8 list-disc md:pl-4 md:grid-cols-none">
+                        <ul className="grid w-full grid-cols-2 list-disc md:grid-cols-none">
                             {menuService?.map((item, i) => (
                                 <li key={i} className="mb-2">
                                     <Link to={item?.link}>
@@ -86,10 +86,10 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col items-center my-4 md:items-start md:my-0">
+                    <div className="flex flex-col w-full pl-4 my-4 md:my-0">
                         <H5 className="md:mb-5">Services</H5>
                         <hr className="block w-16 h-1 mb-5 bg-red-200 md:hidden" />
-                        <ul className="grid w-full grid-cols-2 pl-8 list-disc md:pl-4 md:grid-cols-none">
+                        <ul className="list-disc">
                             {services?.map((item, i) => (
                                 <li key={i} className="mb-2">
                                     <Link
@@ -100,11 +100,8 @@ export default function Footer() {
                                             )
                                         }
                                     >
-                                        <H6 className="hidden md:block hover:text-gray-900">
+                                        <H6 className="hover:text-gray-900">
                                             {item?.label}
-                                        </H6>
-                                        <H6 className="block md:hidden hover:text-gray-900">
-                                            {item?.mobileLabel}
                                         </H6>
                                     </Link>
                                 </li>
@@ -113,8 +110,9 @@ export default function Footer() {
                     </div>
                     <hr className="block w-full h-[2px] bg-gray-300 md:hidden" />
                     <div>
-                        <ul className="grid grid-cols-2 mb-4 md:list-disc last:!col-span-2 md:grid-cols-none md:border-b-2 sm:pl-0 border-b-gray-300">
+                        <ul className="pl-4 list-disc mb-4 md:list-disc last:!col-span-2 md:grid-cols-none md:border-b-2 sm:pl-0 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
+                                1;
                                 return (
                                     <li key={i} className="mb-2">
                                         <Link
