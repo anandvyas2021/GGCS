@@ -111,7 +111,7 @@ function ContactUs() {
             </div>
             <div className="max-w-screen-lg mx-auto lg:max-w-screen-xl">
                 <div className="md:flex py-0 sm:!py-10">
-                    <div className="md:w-1/2 my-10">
+                    <div className="my-10 md:w-1/2">
                         <SubHeading className="w-fit">
                             Get In Touch with us !
                         </SubHeading>
@@ -148,7 +148,7 @@ function ContactUs() {
                                 handleContactUs(e);
                             }}
                         >
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                                 <div className="w-full">
                                     <Input
                                         value={name}
@@ -195,7 +195,7 @@ function ContactUs() {
                                         errMsg={errMessage?.website}
                                     />
                                 </div>
-                                <div className="sm:col-span-2 w-full">
+                                <div className="w-full sm:col-span-2">
                                     <Textarea
                                         value={message}
                                         name="message"

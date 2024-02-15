@@ -32,7 +32,7 @@ const Input = ({ text, placeholder, className }) => {
 export default function Footer() {
     const navigate = useNavigate();
     return (
-        <div className="bg-gray-100 ">
+        <div className="bg-gray-100">
             <div className="max-w-screen-md px-3 pb-20 mx-auto border-t-2 border-gray-300 sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
                     <div className="mb-3 lg:mb-0">
@@ -40,78 +40,79 @@ export default function Footer() {
                             <H4 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
                                 Global Garner Consultancy Services Pvt Ltd
                             </H4>
-                            <div className="p-2 mt-2 rounded-lg flex items-center gap-2 text-left border border-gray-300 bg-gray-200">
+                            <div className="flex items-center gap-2 p-2 mt-2 text-left bg-gray-200 border border-gray-300 rounded-lg w-fit">
                                 <H5>CIN-</H5>
                                 <H6>U74900GJ2016PTC086043</H6>
                             </div>
                             {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}
                         </div>
-                        <div className="my-5">
-                            <div className="flex gap-8">
-                                {socialMedias?.map((item, i) => (
-                                    <div
-                                        className=""
-                                        key={i}
+
+                        <div className="flex gap-8 my-5">
+                            {socialMedias?.map((item, i) => (
+                                <div
+                                    className=""
+                                    key={i}
+                                    onClick={() =>
+                                        window.open(
+                                            item?.link,
+                                            "_blank",
+                                            "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                        )
+                                    }
+                                >
+                                    <img
+                                        src={item?.icon}
+                                        alt={item?.name}
+                                        className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col pl-4 lg:pl-8">
+                        <H5 className="md:mb-5">Quick Links</H5>
+                        <hr className="block w-16 h-1 mb-5 bg-red-200 md:hidden" />
+                        <ul className="grid w-full grid-cols-2 list-disc md:grid-cols-none">
+                            {menuService?.map((item, i) => (
+                                <li key={i} className="mb-2">
+                                    <Link to={item?.link}>
+                                        <H6 className="hover:text-gray-900">
+                                            {item?.label}
+                                        </H6>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="flex flex-col w-full pl-4 my-4 md:my-0">
+                        <H5 className="md:mb-5">Services</H5>
+                        <hr className="block w-16 h-1 mb-5 bg-red-200 md:hidden" />
+                        <ul className="list-disc">
+                            {services?.map((item, i) => (
+                                <li key={i} className="mb-2">
+                                    <Link
                                         onClick={() =>
                                             window.open(
-                                                item?.link,
-                                                "_blank",
-                                                "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                                `/service/${item?.slug}`,
+                                                "_blank"
                                             )
                                         }
                                     >
-                                        <img
-                                            src={item?.icon}
-                                            alt={item?.name}
-                                            className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                                        <H6 className="hover:text-gray-900">
+                                            {item?.label}
+                                        </H6>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                    <div className="lg:pl-8">
-                        <H5 className="mb-5">Quick Links</H5>
-                        <div className="pl-4">
-                            <ul className="list-disc">
-                                {menuService?.map((item, i) => (
-                                    <li key={i} className="mb-2">
-                                        <Link to={item?.link}>
-                                            <H6 className="hover:text-gray-900">
-                                                {item.label}
-                                            </H6>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                    <hr className="block w-full h-[2px] bg-gray-300 md:hidden" />
                     <div>
-                        <H5 className="mb-5">Services</H5>
-                        <div className="pl-4">
-                            <ul className="list-disc">
-                                {services?.map((item, i) => (
-                                    <li key={i} className="mb-2">
-                                        <Link
-                                            onClick={() =>
-                                                window.open(
-                                                    `/service/${item?.slug}`,
-                                                    "_blank"
-                                                )
-                                            }
-                                        >
-                                            <H6 className="hover:text-gray-900">
-                                                {item.label}
-                                            </H6>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="">
-                        <ul className="pl-4 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
+                        <ul className="pl-4 list-disc mb-4 md:list-disc last:!col-span-2 md:grid-cols-none md:border-b-2 sm:pl-0 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
+                                1;
                                 return (
                                     <li key={i} className="mb-2">
                                         <Link
@@ -136,31 +137,26 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="pt-5 text-center">
+                <div className="pt-10 text-center">
                     <address>
                         <b>Global Garner </b>
                         5th floor, Grand Emporio, Motera Stadium Road,
                         Ahmedabad, Gujarat-380005
                     </address>
                 </div>
-                <div className="pt-5">
-                    <div className="flex justify-center text-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
-                        <p className="text-gray-400">
-                            <b>© 2024</b>
-                            <a href="/" className="">
-                                <b className="mx-1">GGCS</b>
-                            </a>
-                            All Rights Reserved. A unit of
-                            <a
-                                href="https://beta.globalgarner.com"
-                                target="_blank"
-                            >
-                                <b className="ml-2 text-transparent bg-gradient-to-r from-primary to-primary bg-clip-text">
-                                    Global Garner.
-                                </b>
-                            </a>
-                        </p>
-                    </div>
+                <div className="flex justify-center py-4 my-5 text-center bg-white border rounded-full sm:px-2 md:px-5">
+                    <p className="text-gray-400">
+                        <b>© 2024</b>
+                        <a href="/" className="">
+                            <b className="mx-1">GGCS</b>
+                        </a>
+                        All Rights Reserved. A unit of
+                        <a href="https://beta.globalgarner.com" target="_blank">
+                            <b className="ml-2 text-transparent bg-gradient-to-r from-primary to-primary bg-clip-text">
+                                Global Garner.
+                            </b>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>

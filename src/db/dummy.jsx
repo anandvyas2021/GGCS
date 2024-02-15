@@ -49,8 +49,8 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { organic } from "./assets";
 import {
+    organic,
     onPageSeo,
     offPageSeo,
     keywordResearch,
@@ -623,10 +623,6 @@ export const menuService = [
         link: "services",
     },
     {
-        label: "Contact Us",
-        link: "contact",
-    },
-    {
         label: "Hire Us",
         link: "hire-us",
     },
@@ -634,28 +630,38 @@ export const menuService = [
         label: "Career",
         link: "career",
     },
+    {
+        label: "Contact Us",
+        link: "contact",
+    },
 ];
 // footer service
 export const services = [
     {
-        label: "SEO (Search Engine Optimization)",
+        label: "Search Engine Optimization",
+        mobileLabel: "SEO",
         slug: "seo",
     },
     {
         label: "Social Media Marketing",
+        mobileLabel: "SMM",
         slug: "social-media-marketing",
     },
     {
-        label: "Content Marketing",
-        slug: "content-marketing",
+        label: "Analytics and Data Analysis",
+        mobileLabel: "Analytics",
+        slug: "data-analysis",
     },
     {
         label: "Web Design and Development",
+        mobileLabel: "Web Development",
         slug: "web-design-development",
     },
+
     {
-        label: "Analytics and Data Analysis",
-        slug: "data-analysis",
+        label: "Content Marketing",
+        mobileLabel: "Content Marketing",
+        slug: "content-marketing",
     },
 ];
 
@@ -725,20 +731,20 @@ export const uposDetails = {
     subTitle: "Get Flat Commission Discount With Add-On Cashback",
     list: [
         {
-            label: "Organic Traffic on Social Media Handles ",
+            label: "Organic Traffic on Social Media Handles",
             icon: organic,
         },
         {
-            label: "Creative Posts, Videos, PromotionVideos, Promotion ",
+            label: "Creative Posts, Videos, PromotionVideos, Promotion",
             icon: post,
         },
         {
             label: "Content Creation Guide by GGCS",
-            icon: ccm,
+            icon: content,
         },
         {
-            label: "Cross-Channel Promotion ",
-            icon: content,
+            label: "Cross-Channel Promotion",
+            icon: ccm,
         },
     ],
     label: "Exclusive Discounted Price",
@@ -1016,12 +1022,12 @@ export const GGCSPolicy = [
         slug: "privacy-policy",
     },
     {
-        label: "Terms And Conditions",
-        slug: "terms-conditions",
-    },
-    {
         label: "Disclaimer",
         slug: "disclaimer",
+    },
+    {
+        label: "Terms And Conditions",
+        slug: "terms-conditions",
     },
 ];
 
