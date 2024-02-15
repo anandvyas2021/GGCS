@@ -37,6 +37,7 @@ export function H1Animate({ className, children, effect = true }) {
                             ? ""
                             : "text-tertiary"
                     }`}
+                    key={i}
                 >
                     {item}
                 </p>
@@ -152,7 +153,7 @@ export function P({ className, children }) {
         }),
     };
     return (
-        <motion.p
+        <motion.h6
             className={`lg:text-[17px] text-[15px] [letter-spacing:0.1px] text-[#252525] ${className}`}
             // variants={fadeInAnimationVariants}
             initial="initial"
@@ -162,6 +163,6 @@ export function P({ className, children }) {
             }}
         >
             {children}
-        </motion.p>
+        </motion.h6>
     );
 }

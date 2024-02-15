@@ -51,7 +51,7 @@ export default function NavbarContent() {
                 ref={scrollRef}
             >
                 <div
-                    className={`relative flex justify-between items-center 
+                    className={`relative flex justify-between items-center px-3
                     ${
                         location?.pathname === "/"
                             ? "max-w-full"
