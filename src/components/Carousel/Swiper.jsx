@@ -58,11 +58,11 @@ const SwiperCarousel = ({ carouselData }) => {
                             }
                             className="cursor-pointer"
                         >
-                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-md">
+                            <div className="h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !b-[#56ab91] shadow-md">
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="slide_image !w-full h-[99%] !object-fill  b-14"
+                                    className="slide_image !w-full h-[99%] !object-fill b-14"
                                 />
                             </div>
                             <div className=" bg-gray-200 h-[5%] p-2.5 box-content whitespace-nowrap">
