@@ -1,6 +1,6 @@
 import React from "react";
 
-import StatusContainer from "./SocialMedias";
+import SocialMedias from "./SocialMedias";
 import PackageContainer from "./PackageContainer";
 
 export default function StatusBar() {
@@ -8,7 +8,7 @@ export default function StatusBar() {
         <div className="hidden sm:block">
             <div className="px-0 pt-3 pb-2 sm:px-4">
                 <div className="flex items-center justify-between max-w-full">
-                    <StatusContainer />
+                    <SocialMedias />
                     <PackageContainer />
                 </div>
             </div>
