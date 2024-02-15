@@ -44,7 +44,7 @@ export default function NavbarContent() {
                     : "fixed w-full"
                 }`}
                 ref={scrollRef}>
-                <div className={`relative flex justify-between items-center 
+                <div className={`relative flex justify-between items-center px-3
                     ${location?.pathname === "/"
                         ? "max-w-full"
                         : "max-w-screen-xl mx-auto"
@@ -175,7 +175,7 @@ export default function NavbarContent() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="sm:w-1/2 mr-auto lg:hidden z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
+                        <div className="sm:w-1/2 mr-auto lg:hidden z-50 imgBorder px-4 md:py-3 mt-3 bg-gradient-to-r from-primary to-secondary border rounded-lg text-white cursor-pointer">
                             <a
                                 download
                                 onClick={() => {
@@ -190,7 +190,7 @@ export default function NavbarContent() {
                         <div className="sm:w-1/2 mr-auto block lg:hidden mt-5">
                             <PackageContainer />
                         </div>
-                        <div className="absolute lg:hidden bottom-8">
+                        <div className="sm:w-1/2 mt-8 lg:hidden">
                             <StatusContainer />
                         </div>
                     </div></> : null

@@ -4,7 +4,7 @@ import { message } from "antd";
 export default function Tabs({ options, currentTab, currentTabHandler }) {
     return (
         <div className="flex justify-center w-full !mb-5">
-            <div className="flex items-center text-xl font-semibold border-2 border-gray-200 rounded-full overflow-scroll transition-all duration-150 ease-in-out whitespace-nowrap">
+            <div className="flex items-center text-xl font-semibold border-2 border-gray-200 rounded-full overflow-scroll transition-all duration-150 ease-in-out whitespace-nowrap [&::-webkit-scrollbar]:hidden">
                 {options?.map((item) => (
                     <div
                         key={item?.id}

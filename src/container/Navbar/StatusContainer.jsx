@@ -7,7 +7,7 @@ export default function StatusContainer() {
     return (
         <div className="px-0 pt-3 pb-2 sm:px-4">
             <div className="max-w-full flex justify-between items-center">
-                <div className="flex justify-center items-center sm:justify-normal gap-3 sm:!pt-3 !pt-0 !backdrop-blur">
+                <div className="flex justify-center items-center md:justify-normal gap-3 sm:!pt-3 !pt-0 !backdrop-blur">
                     {socialMedias?.map((item, i) => (
                         <div
                             className=""
@@ -28,7 +28,7 @@ export default function StatusContainer() {
                         </div>
                     ))}
                 </div>
-                <div className="flex justify-center gap-2 sm:justify-normal">
+                <div className="hidden lg:flex justify-center gap-2 sm:justify-normal">
                     {/* <span>
                     <img
                         src={rocket}
@@ -40,9 +40,7 @@ export default function StatusContainer() {
                     <p className="text-[#FF6C66] mx-1 text-sm sm:text-base">Save up to 35%</p>
                     <p className="text-sm sm:text-base"> on Tasks</p>
                 </span> */}
-                    <div className="hidden lg:block">
-                        <PackageContainer />
-                    </div>
+                    <PackageContainer />
                     {/* <section
                         className="hidden lg:block p-[1px] text-lg font-agbalumo rounded-[40px] bg-gradient-to-r from-g1 via-g2 to-g3 bg-[length:80%] cursor-pointer animate-gradientBg hover:scale-110 transition-all duration-300"
                         onClick={() =>
