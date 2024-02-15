@@ -45,15 +45,14 @@ export default function Services(props) {
                             {processData?.map((item) => (
                                 <li className="mb-8" key={item?.id}>
                                     <div
-                                        className={`flex relative ${
-                                            [
-                                                "justify-start",
-                                                "justify-center",
-                                                "justify-end",
-                                                "justify-center",
-                                                "justify-start",
-                                            ][item?.id - 1]
-                                        }`}
+                                        className={`flex relative ${[
+                                            "justify-start",
+                                            "justify-center",
+                                            "justify-end",
+                                            "justify-center",
+                                            "justify-start",
+                                        ][item?.id - 1]
+                                            }`}
                                     >
                                         <div className="mr-5">
                                             <figure className="relative">

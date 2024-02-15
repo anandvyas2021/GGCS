@@ -22,7 +22,7 @@ export default function Services(props) {
                 alt="dot-svg"
                 className="absolute bottom-0 right-0 hidden md:flex"
             />
-            <div className="max-w-screen-xl mx-auto sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl mx-auto px-3 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
                     <SubHeading>Smart Solutions for your business</SubHeading>
                     <H1Animate>Our Services</H1Animate>
