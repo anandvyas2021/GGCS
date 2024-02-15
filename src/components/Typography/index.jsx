@@ -21,7 +21,7 @@ export const H3 = ({ children, className }) => {
 };
 export const H4 = ({ children, className }) => {
     return (
-        <h4 className={`text-[25px] font-axiSemiBold ${className}`}>
+        <h4 className={`md:text-[25px] font-axiSemiBold ${className}`}>
             {children}
         </h4>
     );

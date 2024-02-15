@@ -12,21 +12,21 @@ export default function AdmissionProcess() {
         <section className="bg-red-50 py-14">
             <Container>
                 <H3 className="text-center">{admissionProcess?.title}</H3>
-                <div className="relative grid grid-cols-2 gap-8 my-10 md:grid-cols-4">
+                <div className="relative grid grid-cols-2 gap-4 my-7 md:my-10 md:gap-8 md:grid-cols-4">
                     <div className="absolute left-0 hidden w-full border-2 border-red-400 border-dashed top-1/2 md:block" />
                     {admissionProcess?.process?.map((item) => (
                         <div
                             key={item?.id}
-                            className="z-0 px-3 py-5 text-center bg-white border rounded-xl"
+                            className="z-0 p-3 text-center bg-white border md:py-5 rounded-xl"
                         >
-                            <div className="flex items-center justify-center mx-auto shadow-md bg-red-50 w-14 h-14 rounded-xl">
+                            <div className="flex items-center justify-center mx-auto shadow-md bg-red-50 size-14 rounded-xl">
                                 <img
                                     src={item?.icon}
                                     alt={item?.title}
-                                    className="w-5 h-5 mx-auto"
+                                    className="mx-auto size-7 md:size-5"
                                 />
                             </div>
-                            <H6 className="my-3">{item?.title}</H6>
+                            <H6 className="mt-2 md:my-3">{item?.title}</H6>
                         </div>
                     ))}
                 </div>

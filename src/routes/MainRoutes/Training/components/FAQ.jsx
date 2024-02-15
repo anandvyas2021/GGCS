@@ -16,7 +16,7 @@ export default function FAQ() {
                 {faq?.list?.map((item) => (
                     <div key={item?.id} className="mb-2">
                         <div
-                            className={`flex justify-between p-5 rounded-lg border hover:bg-red-50 cursor-pointer ${
+                            className={`flex items-center justify-between p-3 md:p-4 rounded-lg border hover:bg-red-50 cursor-pointer ${
                                 active === item?.id ? "bg-red-50" : ""
                             }`}
                             onClick={() => {
@@ -31,7 +31,9 @@ export default function FAQ() {
                                 });
                             }}
                         >
-                            <H5>{item?.que}</H5>
+                            <H6 className="!text-black font-axiSemiBold">
+                                {item?.que}
+                            </H6>
                             {active === item?.id ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
