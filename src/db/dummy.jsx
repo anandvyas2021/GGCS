@@ -549,7 +549,7 @@ export const whyGGCSData = {
     desc: [
         {
             id: 1,
-            label: "Detailed Data Analysis",
+            label: "Data-Driven Precision",
             desc: "Smart Choices Drive Our Strategy. We Use Data Analysis to Make Sure Every Step Leads to Your Online Success.",
             // bg: "bg-[#4c49ea]",
             image: dataPrecision,
@@ -558,7 +558,7 @@ export const whyGGCSData = {
         },
         {
             id: 2,
-            label: "Tailored Solutions",
+            label: "Tailored Strategies",
             desc: "We know every business is different. That's why we create personalized plans that match your needs—no generic solutions here!",
             // bg: "bg-[#3ecd5e]",
             image: strategies,
@@ -670,13 +670,13 @@ export const processData = [
     {
         id: 1,
         icon: list1,
-        label: "Precision Forged by Data",
+        label: "Detailed Data Analysis",
         desc: "Our strategy thrives on informed decisions. We base our methodologies on comprehensive data analysis, ensuring each step we take propels your online conquest.",
     },
     {
         id: 2,
         icon: list2,
-        label: "Tailored Triumph",
+        label: "Tailored Solutions",
         desc: " We recognize the distinct DNA of each business. Hence, we craft personalized strategies that align with your unique prerequisites, avoiding generic solutions.        ",
     },
     {
@@ -689,13 +689,13 @@ export const processData = [
         id: 4,
         icon: list1,
         label: "Holistic Services",
-        desc: " From harnessing SEO prowess and mastering content alchemy to conducting social media symphonies and weaving paid advertising wizardry, GGCS unfurls a holistic digital repertoire.",
+        desc: "We adopt a holistic approach considering the entire ecosystem including people, processes, systems and culture, not just the technical aspects. Our comprehensive methodology ensures that our IT and digital solutions align seamlessly with your organizational goals fostering operational excellence.",
     },
     {
         id: 5,
         icon: list2,
-        label: "Endorsed Excellence",
-        desc: "Our achievements speak volumes. GGCS has empowered numerous clients, catalyzing substantial advancements in online prominence, engagement, and conversions.",
+        label: "Achieving Excellence",
+        desc: "Our achievements speak volumes. GGCS has empowered numerous clients, catalyzing substantial advancements in technical enhancement, online prominence, engagement, and conversions.",
     },
 ];
 

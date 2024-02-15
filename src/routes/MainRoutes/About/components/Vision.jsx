@@ -1,11 +1,11 @@
 import React from "react";
 
-import journey from "../../../../assets/about/vision/journey.svg";
+import journey from "../../../../assets/about/vision/journey.jpg";
 import counter1 from "../../../../assets/about/vision/trophy.webp";
 import counter2 from "../../../../assets/about/vision/multiuser.webp";
 import counter3 from "../../../../assets/about/vision/counter3.webp";
-import business2 from "../../../../assets/about/vision/business2.svg";
-import distinguishUs from "../../../../assets/about/vision/distinguishUs.svg";
+import business2 from "../../../../assets/about/vision/business2.jpg";
+import distinguishUs from "../../../../assets/about/vision/distinguishUs.jpg";
 import floatIcon1 from "../../../../assets/about/vision/floatIcon1.png";
 
 import { Container } from "../../../../components/Layout";
@@ -52,7 +52,7 @@ export default function Vision() {
                 <div className="pt-10 pb-24">
                     <div className="sm:flex">
                         <div className="w-full mb-5 md:w-3/5 lg:mb-0 ">
-                            <div className="px-3 py-8 bg-red-100 rounded-lg sm:px-6 md:px-14 md:py-14">
+                            <div className="px-3 py-5 bg-red-200 rounded-lg rounded-r-none sm:px-6 md:px-14 md:py-10">
                                 <H5 className="mb-2">
                                     GGCS: Your Go-To Tech Team for fuel your
                                     business growth !
@@ -76,26 +76,24 @@ export default function Vision() {
                                 </P>
                             </div>
                         </div>
-                        <div className="hidden md:block">
+                        <div className="items-start justify-start hidden md:flex">
                             <img
                                 src={floatIcon1}
                                 alt="floatIcon"
-                                className="w-56 h-56"
+                                className="rounded-br-lg size-60"
                             />
                         </div>
                     </div>
                     <div className="sm:flex">
-                        <div className="hidden md:w-2/5 md:block">
-                            <div className="relative flex">
-                                <img
-                                    src={journey}
-                                    alt="floatIcon"
-                                    className="absolute w-56 h-56 -top-1 right-2"
-                                />
-                            </div>
+                        <div className="items-start justify-end hidden md:w-2/5 md:flex">
+                            <img
+                                src={journey}
+                                alt="floatIcon"
+                                className="rounded-bl-lg size-60"
+                            />
                         </div>
                         <div className="relative md:w-3/5">
-                            <div className="px-3 py-8 bg-green-100 rounded-lg sm:px-6 md:px-14 md:py-14 ">
+                            <div className="px-3 py-5 bg-green-200 rounded-lg rounded-l-none sm:px-6 md:px-14 md:py-10">
                                 <H5 className="mb-2">Our Journey</H5>
                                 <P>
                                     {/* The genesis of GGCS traces back to the
@@ -128,7 +126,7 @@ export default function Vision() {
                     </div>
                     <div className="sm:flex">
                         <div className="w-full mb-5 md:w-3/5 lg:mb-0 ">
-                            <div className="px-3 py-8 bg-red-100 rounded-lg sm:px-6 md:px-14 md:py-14">
+                            <div className="px-3 py-5 bg-red-200 rounded-lg rounded-r-none sm:px-6 md:px-14 md:py-10">
                                 <H5 className="mb-2 text-xl">
                                     What Distinguishes Us
                                 </H5>
@@ -185,26 +183,24 @@ export default function Vision() {
                                 </P>
                             </div>
                         </div>
-                        <div className="relative hidden md:block">
+                        <div className="relative items-start justify-end hidden md:flex">
                             <img
                                 src={distinguishUs}
                                 alt="ggcs"
-                                className="w-60 h-60"
+                                className="rounded-br-lg size-60"
                             />
                         </div>
                     </div>
                     <div className="md:flex">
-                        <div className="hidden md:w-2/5 md:block">
-                            <div className="relative flex">
-                                <img
-                                    src={business2}
-                                    alt="business"
-                                    className="w-60 h-60"
-                                />
-                            </div>
+                        <div className="relative items-start justify-end hidden md:w-2/5 md:flex">
+                            <img
+                                src={business2}
+                                alt="business"
+                                className="rounded-bl-lg size-60"
+                            />
                         </div>
                         <div className="relative md:w-3/5">
-                            <div className="px-3 py-8 bg-green-100 rounded-lg sm:px-6 md:px-14 md:py-14 ">
+                            <div className="px-3 py-5 bg-green-200 rounded-lg rounded-l-none sm:px-6 md:px-14 md:py-10">
                                 <P>
                                     {/* However, GGCS is not merely a provider of
                                     digital marketing services. We consider
