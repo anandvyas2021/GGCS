@@ -6,11 +6,10 @@ import logo from "../../assets/Navbar/logo.svg";
 import Menu from "../../assets/Navbar/menu.svg";
 
 import { navMenu } from "../../db/dummy";
-import { PrimaryBtn, RadientBtn } from "../../components/Button";
-import { H4, H5 } from "../../components/Typography";
-import StatusContainer from "./SocialMedias";
-import PackageContainer from "./PackageContainer";
 import SocialMedias from "./SocialMedias";
+import PackageContainer from "./PackageContainer";
+import { H4, H5 } from "../../components/Typography";
+import { PrimaryBtn, RadientBtn } from "../../components/Button";
 
 export default function NavbarContent() {
     const location = useLocation();
@@ -35,23 +34,29 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <section
-            className={`left-0 right-0 z-[1000] ${location?.pathname === "/"
-                ? "max-w-screen-xl mx-auto sm:mt-5 "
-                : "fixed w-full"
-                }`}
+            className={`left-0 right-0 z-[1000] ${
+                location?.pathname === "/"
+                    ? "max-w-screen-xl mx-auto sm:mt-5 "
+                    : "fixed w-full"
+            }`}
         >
             <div
                 className={`header sm:px-4 shadow-header !bg-white 
-                ${location?.pathname === "/"
+                ${
+                    location?.pathname === "/"
                         ? "py-1 border sm:rounded-full border-white bg-transparent backdrop-blur"
                         : "fixed w-full"
+                }`}
+                ref={scrollRef}
+            >
+                <div
+                    className={`relative flex justify-between items-center px-3
+                    ${
+                        location?.pathname === "/"
+                            ? "max-w-full"
+                            : "max-w-screen-xl mx-auto"
                     }`}
-                ref={scrollRef}>
-                <div className={`relative flex justify-between items-center px-3
-                    ${location?.pathname === "/"
-                        ? "max-w-full"
-                        : "max-w-screen-xl mx-auto"
-                    }`}>
+                >
                     <div className="flex items-center h-[70px] sm:h-[80px]">
                         <img
                             src={logo}
@@ -64,10 +69,11 @@ export default function NavbarContent() {
                         <ul className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
                                 <li
-                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname
-                                        ? "text-primary !border-primary"
-                                        : ""
-                                        }`}
+                                    className={`relative mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent hover:text-primary transition-all duration-200 ${
+                                        item?.slug === location?.pathname
+                                            ? "text-primary !border-primary"
+                                            : ""
+                                    }`}
                                     key={item?.id}
                                     onClick={() => navigate(item?.slug)}
                                 >
@@ -125,8 +131,9 @@ export default function NavbarContent() {
             {!showMenu ? (
                 <>
                     <div
-                        className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 lg:px-0 pt-3 pb-14 lg:pb-3 lg:py-0 ${showMenu ? "hidden" : ""
-                            }`}
+                        className={`block lg:hidden fixed left-0 top-0 h-full w-full rounded-b-lg z-50 bg-blue-50 px-5 lg:px-0 pt-3 pb-14 lg:pb-3 lg:py-0 ${
+                            showMenu ? "hidden" : ""
+                        }`}
                         id="navbar-default"
                     >
                         <div className="flex items-center justify-end font-axiSemiBold">
@@ -188,7 +195,11 @@ export default function NavbarContent() {
                             <a
                                 download
                                 onClick={() => {
-                                    window.open(ppt, "_blank", "fullscreen=yes");
+                                    window.open(
+                                        ppt,
+                                        "_blank",
+                                        "fullscreen=yes"
+                                    );
                                 }}
                                 className="font-axiSemiBold block py-2 pl-3 pr-4 text-center !text-white md:p-0 dark:text-white md:dark:text-blue-500"
                                 aria-current="page"
@@ -199,8 +210,8 @@ export default function NavbarContent() {
                         <div className="block mt-5 mr-auto sm:w-1/2 ">
                             <PackageContainer />
                         </div>
-                        <div className="sm:w-1/2 mt-8 lg:hidden">
-                            <StatusContainer />
+                        <div className="absolute bottom-10 w-full sm:w-1/2 mt-8 lg:hidden">
+                            <SocialMedias />
                         </div>
                     </div>
                 </>
