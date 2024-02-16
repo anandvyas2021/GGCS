@@ -64,7 +64,7 @@ function UposPackage() {
                         <Telephone className="!text-tertiary">
                             +91 9662726192
                         </Telephone>
-                        For more details, contact
+                        Contact for more details
                     </H6>
                 </div>
                 <div className="flex justify-center gap-5 mt-5">
