@@ -9,6 +9,7 @@ import {
     smX,
     content,
     ccm,
+    ccm2,
     post,
     list1,
     list2,
@@ -93,7 +94,7 @@ import {
     locationTargeting,
     userEngagement,
     posts21,
-    sms
+    sms,
 } from "./assets";
 
 import fullStack from "../assets/training/courses/fullStack.jpg";
@@ -116,6 +117,12 @@ import transportLogistics from "../assets/home/industryImpact/transportLogistics
 import realEstate from "../assets/home/industryImpact/realEstate.svg";
 import hospitalityTourism from "../assets/home/industryImpact/hospitalityTourism.svg";
 import govServices from "../assets/home/industryImpact/govServices.svg";
+
+import post2 from "../assets/Upos/post2.jpg";
+import reach1 from "../assets/Upos/reach1.jpg";
+import reach2 from "../assets/Upos/reach2.jpg";
+import videoContent from "../assets/Upos/videoContent.jpg";
+import contentPromotion from "../assets/Upos/contentPromotion.jpg";
 
 export const navMenu = [
     { id: 1, label: "Who we are?", slug: "/about" },
@@ -754,24 +761,23 @@ export const uposDetails = {
     extra: [
         {
             label: "21 Personalised posts every month",
-            icon: posts21,
-        },
-
-        // {
-        //     label: "Cross channel promotion",
-        //     icon: ccm,
-        // },
-        {
-            label: "Facebook and Instagram page branding",
-            icon: post,
-        },
-        {
-            label: "10000 reach every month",
-            icon: sms,
+            images: [posts21, post2],
         },
         {
             label: "Content guide(video and promotion)",
-            icon: post,
+            images: [videoContent, contentPromotion],
+        },
+        {
+            label: "Cross channel promotion",
+            images: [ccm, ccm2],
+        },
+        {
+            label: "Facebook and Instagram page branding",
+            images: [facebook, instagram],
+        },
+        {
+            label: "10000 Reach every month",
+            images: [reach1, reach2],
         },
     ],
 };

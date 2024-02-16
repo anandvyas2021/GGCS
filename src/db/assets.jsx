@@ -65,6 +65,7 @@ import facebook from "../assets/gallery/facebook.png";
 import organic from "../assets/Upos/organic.jpg";
 import post from "../assets/Upos/post.jpg";
 import ccm from "../assets/Upos/ccm.jpg";
+import ccm2 from "../assets/Upos/ccm2.jpg";
 import content from "../assets/Upos/contentCreation.png";
 import posts21 from "../assets/Upos/posts21.webp";
 import sms from "../assets/Upos/socialMediaStatistics.webp";
@@ -166,7 +167,7 @@ export {
     servicesBanner,
 };
 export { flyer, instagram, newsletter, thumbnail, website, facebook };
-export { organic, post, ccm, content, posts21, sms };
+export { organic, post, ccm, ccm2, content, posts21, sms };
 export {
     onPageSeo,
     offPageSeo,
