@@ -11,7 +11,6 @@ import {
     H2,
     H3,
     H4,
-    H5,
     H6,
     P,
     Telephone,
@@ -19,7 +18,7 @@ import {
 
 function UposPackage() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     return (
