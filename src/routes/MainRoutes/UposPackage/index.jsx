@@ -18,7 +18,7 @@ import {
 
 function UposPackage() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
 
     return (
@@ -87,13 +87,13 @@ function UposPackage() {
                         }
                         className="px-5 md:px-8 py-2 md:py-2.5 flex align-middle justify-center text-base font-semibold bg-tertiary text-white1 border-2 rounded-full hover:scale-105 transition-all duration-300"
                     >
-                        Get lead form
+                        Get your requirement form
                     </Link>
                 </div>
             </div>
             <div className="py-10 md:px-16">
-                <H2 className="!mb-10">Deliverables</H2>
-                <section className="grid grid-cols-1 gap-5 pb-10 gap-y-10 xl:grid-cols-2 lg:pb-20">
+                <H2>Deliverables</H2>
+                <section className="grid grid-cols-1 gap-5 pb-10 mt-10 gap-y-10 xl:grid-cols-2 lg:pb-20">
                     {uposDetails?.extra?.map((item, i) => (
                         <div
                             className="h-full p-3 transition duration-300 odd:bg-gray-200 border-2 border-gray-300 even:bg-gray-200 text-center rounded-lg hover:shadow-2xl hover:scale-[1.01]"

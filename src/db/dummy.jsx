@@ -756,8 +756,17 @@ export const uposDetails = {
             icon: ccm,
         },
     ],
-    label: "Exclusive Discounted Price",
-    price: "Rs.999/- + GST* per month",
+    label: "Discounted Price",
+    price: (
+        <div className="flex items-center gap-4">
+            <span className="relative !text-black  text-3xl">
+                RS.2999
+                <p className="absolute w-full h-[4px] bg-red-500 -rotate-[1deg] top-1/3" />
+                {/* <p className="absolute w-4/5 h-[3px] bg-red-400 rotate-[25deg] left-[15%] top-1/3" /> */}
+            </span>
+            Rs.999/- + GST* per month
+        </div>
+    ),
     extra: [
         {
             label: "21 Personalised posts every month",
