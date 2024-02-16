@@ -691,7 +691,7 @@ export const processData = [
     {
         id: 3,
         icon: list3,
-        label: "Transparency Forged in Trust",
+        label: "Transparency",
         desc: "Open communication is our cornerstone. Expect regular updates and detailed reports on your campaign's progress, cultivating a transparent and trustworthy partnership.",
     },
     {
