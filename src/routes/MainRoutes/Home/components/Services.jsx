@@ -22,7 +22,7 @@ export default function Services(props) {
                 alt="dot-svg"
                 className="absolute bottom-0 right-0 hidden md:flex"
             />
-            <div className="max-w-screen-xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
                     <SubHeading>Smart Solutions for your business</SubHeading>
                     <H1Animate>Our Services</H1Animate>
@@ -31,7 +31,7 @@ export default function Services(props) {
                 {/* <div className="grid grid-cols-1 gap-5 my-8 sm:grid-cols-2 md:grid-cols-3 md:gap-8 sm:my-12"> */}
                 <SwiperCarousel carouselData={servicesData} />
 
-                <div className="flex justify-center mt-5">
+                <div className="justify-center hidden mt-5 md:flex">
                     <div className="w-full p-3 text-center rounded-full shadow-xl lg:w-1/2 bg-grey3 ">
                         <div className="flex justify-center gap-2">
                             <div className="flex items-center">

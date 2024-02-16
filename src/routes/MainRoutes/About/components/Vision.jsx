@@ -1,15 +1,12 @@
 import React from "react";
 
-import journey from "../../../../assets/about/vision/journey.jpg";
 import counter1 from "../../../../assets/about/vision/trophy.webp";
 import counter2 from "../../../../assets/about/vision/multiuser.webp";
 import counter3 from "../../../../assets/about/vision/counter3.webp";
-import business2 from "../../../../assets/about/vision/business2.jpg";
-import distinguishUs from "../../../../assets/about/vision/distinguishUs.jpg";
-import floatIcon1 from "../../../../assets/about/vision/floatIcon1.png";
 
+import { visionData } from "../dummy";
 import { Container } from "../../../../components/Layout";
-import { H3, H5, P } from "../../../../components/Typography";
+import { H1Animate, H2, H3, H5 } from "../../../../components/Typography";
 
 const counterData = [
     {
@@ -50,183 +47,30 @@ export default function Vision() {
         <div>
             <Container>
                 <div className="pt-10 pb-24">
-                    <div className="sm:flex">
-                        <div className="w-full md:w-3/5 mb-0">
-                            <div className="px-3 py-5 bg-red-200 rounded-lg rounded-r-none sm:px-6 md:px-14 md:py-10">
-                                <H5 className="mb-2">
-                                    GGCS: Your Go-To Tech Team for fuel your
-                                    business growth !
-                                </H5>
-                                <P>
-                                    {/* GGCS or Global Garner Consultancy Services,
-                                    stands out as a leading digital marketing
-                                    company utilizing advanced technology and a
-                                    team of seasoned professionals to elevate
-                                    businesses' brand presence and growth. */}
-                                    GGCS stands out as a leading IT and digital
-                                    marketing solution provider, leveraging
-                                    advanced technology and a team of seasoned
-                                    professionals to enhance businesses' brand
-                                    presence and fuel growth. Alongside our
-                                    proficiency in web and software development,
-                                    we excel in talent creation through training
-                                    and placement assurance, ensuring
-                                    comprehensive support for your business's
-                                    success.
-                                </P>
+                    <H1Animate>{visionData?.title}</H1Animate>
+                    <div className="grid grid-cols-1 gap-10 pt-10 md:pt-20">
+                        {visionData?.desc?.map((item) => (
+                            <div
+                                key={item?.id}
+                                className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center sm:gap-5 mb-0 md:my-5`}
+                                dir={item?.id % 2 ? "ltr" : "rtl"}
+                            >
+                                <div className="!text-center md:p-5 mb-2">
+                                    {item?.label ? (
+                                        <H2>{item?.label}</H2>
+                                    ) : null}
+                                    <H5 className="max-md:text-lg !font-axiforma text-gray-500">
+                                        {item?.desc}
+                                    </H5>
+                                </div>
+                                <figure className="relative">
+                                    <img
+                                        src={item?.image}
+                                        className={`relative aspect-video object-fill rounded-3xl border-gray-200 z-10`}
+                                    />
+                                </figure>
                             </div>
-                        </div>
-                        <div className="items-start justify-start hidden md:flex">
-                            <img
-                                src={floatIcon1}
-                                alt="floatIcon"
-                                className="rounded-br-lg h-60 w-60"
-                            />
-                        </div>
-                    </div>
-                    <div className="sm:flex">
-                        <div className="items-start justify-end hidden md:w-2/5 md:flex">
-                            <img
-                                src={journey}
-                                alt="floatIcon"
-                                className="rounded-bl-lg h-60 w-60"
-                            />
-                        </div>
-                        <div className="relative md:w-3/5">
-                            <div className="px-3 py-5 bg-green-200 rounded-lg rounded-l-none sm:px-6 md:px-14 md:py-10">
-                                <H5 className="mb-2">Our Journey</H5>
-                                <P>
-                                    {/* The genesis of GGCS traces back to the
-                                    firsthand challenges faced by Global Garner
-                                    Sales Services Limited in 2016. They needed
-                                    help finding an effective yet affordable
-                                    digital marketing solution, so they created
-                                    GGCS. This initiative not only resolved
-                                    their issues but also became a catalyst for
-                                    numerous other businesses seeking success in
-                                    the online realm. */}
-                                    The inception of GGCS dates back to the
-                                    initial challenges encountered by Global
-                                    Garner Sales Services Limited in 2016. Faced
-                                    with the need for an efficient and
-                                    budget-friendly IT partner for software, web
-                                    development, and digital marketing
-                                    solutions, GGCS was established. This
-                                    initiative not only successfully tackled
-                                    their specific challenges but also emerged
-                                    as a growth catalyst for numerous other
-                                    businesses aspiring to thrive in the digital
-                                    landscape. GGCS stands as a testament to
-                                    effective and affordable IT solutions,
-                                    making it the ideal choice for businesses
-                                    navigating the online realm.
-                                </P>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="sm:flex">
-                        <div className="w-full md:w-3/5 mb-0">
-                            <div className="px-3 py-5 bg-red-200 rounded-lg rounded-r-none sm:px-6 md:px-14 md:py-10">
-                                <H5 className="mb-2 text-xl">
-                                    What Distinguishes Us
-                                </H5>
-                                <P>
-                                    {/* At GGCS, our primary goal is to ensure
-                                    brands and businesses appear on platforms
-                                    like Google and experience significant
-                                    growth in the digital business marketplace.
-                                    We achieve this through in-depth market
-                                    research and industry best practices. What
-                                    sets GGCS apart is our unwavering commitment
-                                    to transparency and ethical practices,
-                                    demonstrated through real-time display of
-                                    statistics for our clients using advanced
-                                    tools and industry benchmarks. */}
-                                    {/* At GGCS, our commitment to excellence sets
-                                    us apart. Our approach seamlessly merges
-                                    creativity with technology, delivering
-                                    integrated solutions tailored to your needs.
-                                    What distinguishes us is our unwavering
-                                    commitment to transparency, ethical
-                                    practices, and timely delivery, showcased
-                                    through real-time display of statistics
-                                    using advanced tools and industry
-                                    benchmarks. We take pride in innovation,
-                                    maintaining a client-centric focus, and
-                                    offering holistic technical support beyond
-                                    digital marketing – encompassing software
-                                    development and IT solutions ensuring your
-                                    success in the digital business
-                                    marketplace.. Trust us for a transformative
-                                    partnership where innovation and client
-                                    success converge. We maintain open
-                                    communication, prioritize your goals, and
-                                    adapt our strategies to ensure your
-                                    satisfaction. */}
-                                    At GGCS, our commitment to excellence sets
-                                    us apart. Our approach seamlessly merges
-                                    creativity with technology, delivering
-                                    integrated solutions tailored to your needs.
-                                    What distinguishes us is our unwavering
-                                    commitment to transparency, ethical
-                                    practices, and timely delivery, showcased
-                                    through real-time display of statistics
-                                    using advanced tools and industry
-                                    benchmarks. We take pride in innovation,
-                                    maintaining a client-centric focus, and
-                                    offering holistic technical support beyond
-                                    digital marketing – encompassing software
-                                    development and IT solutions ensuring your
-                                    business success. We prioritize your goals
-                                    and adapt our strategies to ensure your
-                                    satisfaction.
-                                </P>
-                            </div>
-                        </div>
-                        <div className="relative items-start justify-end hidden md:flex">
-                            <img
-                                src={distinguishUs}
-                                alt="ggcs"
-                                className="rounded-br-lg h-60 w-60"
-                            />
-                        </div>
-                    </div>
-                    <div className="md:flex">
-                        <div className="relative items-start justify-end hidden md:w-2/5 md:flex">
-                            <img
-                                src={business2}
-                                alt="business"
-                                className="rounded-bl-lg h-60 w-60"
-                            />
-                        </div>
-                        <div className="relative md:w-3/5">
-                            <div className="px-3 py-5 bg-green-200 rounded-lg rounded-l-none sm:px-6 md:px-14 md:py-10">
-                                <P>
-                                    {/* However, GGCS is not merely a provider of
-                                    digital marketing services. We consider
-                                    ourselves a digital partner, taking the time
-                                    to understand the intricacies of your
-                                    business and expectations. GGCS aspires to
-                                    leave a lasting mark as a trusted digital
-                                    ally in the ever-evolving digital landscape
-                                    by positioning itself as more than just a
-                                    service. */}
-                                    At GGCS, we position ourselves as your
-                                    dedicated technology and digital partner.
-                                    Going beyond mere service delivery, we
-                                    invest time in comprehending the intricacies
-                                    of your business and understanding your
-                                    expectations. Our aim is not just to offer
-                                    solutions but to leave a lasting mark as a
-                                    trusted digital ally in the dynamic digital
-                                    landscape and remain your enduring
-                                    technology partner. We aspire to be more
-                                    than a service; we strive to be a strategic
-                                    collaborator committed to your digital
-                                    success
-                                </P>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
                 <div className="grid justify-center grid-cols-1 mb-8 lg:grid-cols-3 sm:justify-between sm:mb-14">

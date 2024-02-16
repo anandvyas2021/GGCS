@@ -4,13 +4,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-import { arrow } from "../../db/assets";
 
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ArrowRightIcon, ForwardIcon } from "@heroicons/react/24/outline";
 
-import { Desc, H4, H5, H6, P } from "../Typography";
+import { H6 } from "../Typography";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 
 const SwiperCarousel = ({ carouselData }) => {

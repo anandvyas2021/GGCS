@@ -6,18 +6,15 @@ import { Desc, H1Animate, H2, H5 } from "../../../../components/Typography";
 
 export default function WhyGGCS() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     return (
-        <div className="py-12 md:py-20 bg-gray-100">
+        <div className="py-12 bg-gray-100 md:py-20">
             <Container>
                 <H1Animate>{whyGGCSData?.title}</H1Animate>
-                <Desc>
-                    {/* sdihunigsdtgkjdnhoigjlsdbhvsdlfiukgbsjrdkhyiuserihyofiejhbgviusrgkjerkhjgvjlsdbhvsdlfiukgbsjrdkhyiuserihyofiej
-                    hbgviusrgkjerkhjgvieuhtjlsdbhvsdlfiukgbsjrdkhyiuserihyofiejhbgviusrgkjerkhjgvieuhtieuhtgkietyigesigsu */}
-                </Desc>
-                <div className="grid grid-cols-1 gap-10 pt-10 md:pt-20">
+                <Desc></Desc>
+                <div className="grid grid-cols-1 pt-10 gap-14 md:gap-10 md:pt-20">
                     {whyGGCSData?.desc?.map((item, i) => (
                         <div
                             key={item?.id}
@@ -26,7 +23,7 @@ export default function WhyGGCS() {
                         >
                             <div className="!text-center md:p-5 mb-2">
                                 <H2>{item?.label}</H2>
-                                <H5 className="!font-axiforma text-gray-500">
+                                <H5 className="max-md:text-lg !font-axiforma text-gray-500">
                                     {item?.desc}
                                 </H5>
                             </div>

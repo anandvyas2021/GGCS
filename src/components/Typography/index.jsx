@@ -6,7 +6,7 @@ export const H2 = ({ children, className }) => {
             className={`flex flex-col items-center text-2xl md:text-3xl !mb-5 !font-axiSemiBold ${className}`}
         >
             {children}
-            <p className="w-24 md:w-36 h-[2px] md:h-1 bg-tertiary rounded-full md:-mt-1" />
+            <p className="w-24 md:w-36 h-[2px] md:h-1 bg-tertiary rounded-full md:mt-1" />
         </h2>
     );
 };
