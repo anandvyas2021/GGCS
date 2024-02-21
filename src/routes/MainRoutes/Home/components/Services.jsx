@@ -24,7 +24,10 @@ export default function Services(props) {
             />
             <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
-                    <SubHeading>Smart Solutions for your business</SubHeading>
+                    <SubHeading>
+                        {/* Smart Solutions for your business */}
+                        Let's Transform Your Business With Our
+                    </SubHeading>
                     <H1Animate>Our Services</H1Animate>
                 </div>
 
