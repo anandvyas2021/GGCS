@@ -23,51 +23,77 @@ export default function Process(props) {
         {
             id: 1,
             icon: list1,
-            label: "Creative Ideas",
-            desc: "At GGCS, our approach hinges on creativity that transcends boundaries. We believe in the power of innovative thinking to shape compelling strategies and deliver impactful results.",
+            label: "Discovery & Assessment",
+            desc: "First, we communicate to understand your business and what you need. No jargon, just a friendly conversation to figure out how we can help.",
         },
         {
             id: 2,
             icon: list2,
-            label: "Data Collection",
-            desc: "We understand the power of data in steering successful campaigns. Our meticulous approach to data collection empowers us to harness actionable insights, enabling us to drive strategies that resonate and deliver results.",
+            label: "Strategy Development",
+            desc: "Next, we make a plan that fits you like a glove. We'll talk about what needs to be done, how long it might take, and what you can expect along the way.",
         },
         {
             id: 3,
             icon: list3,
-            label: "Targeting",
-            desc: "We specialize in crafting targeted strategies that ensure your message resonates with the right audience at the right time. Our approach to targeting combines sophisticated techniques with deep insights, allowing us to create campaigns that drive engagement and conversions.",
+            label: "Implementation & Integration",
+            desc: "Time to roll up our sleeves and get to work. We'll put our heads down and start bringing your ideas to life, step by step.",
+        },
+        {
+            id: 4,
+            icon: list1,
+            label: "Testing & Quality Assurance",
+            desc: "Before we launch anything, we make sure it works like a charm. We'll check and double-check to catch any bugs and make sure everything runs smoothly.",
+        },
+        {
+            id: 5,
+            icon: list2,
+            label: "Training & Adoption",
+            desc: "Once everything's ready, we'll walk you through how it all works. We want you to feel confident using your new tools and systems.",
+        },
+        {
+            id: 6,
+            icon: list3,
+            label: "Monitoring & Optimization",
+            desc: "Even after everything's up and running, we're still here for you. We'll keep an eye on things and make tweaks if needed to keep everything running smoothly.",
+        },
+        {
+            id: 7,
+            icon: list1,
+            label: "Ongoing Support & Maintenance",
+            desc: "And finally, we're always here to help. Whether you have questions, need support, or just want to chat, we're just a call or click away.",
         },
     ];
 
     return (
         <Container className="px-3 md:!py-20 py-10 sm:px-8 lg:px-12">
-            <div className="grid md:grid-cols-[0.8fr_1fr]">
+            <div className="grid md:grid-cols-[0.7fr_1fr]">
                 <div className="relative sm:flex items-center hidden">
                     <img
                         src={image1}
                         alt="process"
-                        className="!h-[85%]  opacity-1 object-cover animate-imgBorder rounded-processImg"
+                        className="!h-[55%] opacity-1 object-cover animate-imgBorder rounded-processImg"
                     />
                     <div className="">
-                        <div className="absolute bottom-5 left-10 -z-[1]">
+                        <div className="absolute bottom-32 left-10 -z-[1]">
                             <img src={shape1} alt="shape1" />
                         </div>
-                        <div className="absolute -bottom-5 right-1 -z-[1]">
+                        <div className="absolute bottom-20 right-1 -z-[1]">
                             <img src={shape2} alt="shape2" />
                         </div>
-                        <div className="absolute -top-5 left-20 -z-[1]">
+                        <div className="absolute top-32 left-16 -z-[1]">
                             <img src={shape3} alt="shape3" />
                         </div>
                     </div>
                 </div>
-                <div className="md:pl-16">
-                    <div className="flex flex-col mb-10 items-left">
+                <div className="md:pl-10">
+                    <div className="flex flex-col mb-7 items-left">
                         <SubHeading className="text-center">
-                            Let us do the work
+                            {/* Let us do the work */}
+                            Your Roadmap to digital Success
                         </SubHeading>
                         <H1Animate className="text-center">
-                            How we do It
+                            {/* How we do It */}
+                            Our 7 step process
                         </H1Animate>
                     </div>
 
@@ -112,7 +138,7 @@ export default function Process(props) {
                                     </div>
                                     {item?.id < processData?.length ? (
                                         <>
-                                            {item?.id === 1 ? (
+                                            {item?.id % 2 ? (
                                                 <div className="hidden md:block absolute right-0 top-14">
                                                     <Line1 />
                                                 </div>

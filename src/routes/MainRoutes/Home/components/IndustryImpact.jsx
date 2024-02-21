@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Desc, H1Animate, H5, H6 } from "../../../../components/Typography";
+import {
+    Desc,
+    H1Animate,
+    H5,
+    H6,
+    SubHeading,
+} from "../../../../components/Typography";
 import { industryImpact } from "../../../../db/dummy";
 import { Container } from "../../../../components/Layout";
 
@@ -8,7 +14,10 @@ export default function IndustryImpact(props) {
     return (
         <Container className="px-3 py-10 sm:px-6 lg:px-0 md:py-20">
             <section className="flex flex-col items-center justify-center mb-16 text-center">
-                <H1Animate>Industry Impact</H1Animate>
+                {/* <SubHeading>
+                    Understanding the Impact of Digital Solutions
+                </SubHeading> */}
+                <H1Animate> Industry Insights</H1Animate>
                 <Desc>
                     Our skilled team delivers top-notch IT services to diverse
                     industries, tailored to their unique challenges and

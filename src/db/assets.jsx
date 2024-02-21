@@ -52,7 +52,7 @@ import rocket from "../assets/Navbar/rocket.webp";
 import services from "../assets/home/services/services.svg";
 import arrow from "../assets/home/services/carousel/arrow.png";
 import contactBg from "../assets/home/contact/contact-4-bg.webp";
-
+import continuousSupport from "../assets/home/whyGGCS/continuousSupport.jpg";
 //gallery
 import flyer from "../assets/gallery/flyer.png";
 import instagram from "../assets/gallery/instagram.png";
@@ -144,6 +144,7 @@ export {
     InputImg,
     StatImg,
     contactBg,
+    continuousSupport,
 };
 export {
     seo,

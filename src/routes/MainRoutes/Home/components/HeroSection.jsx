@@ -19,7 +19,12 @@ import { H4, H5 } from "../../../../components/Typography";
 import { PrimaryBtn } from "../../../../components/Button";
 
 const services = ["Digital Marketing", "Social Media", "IT Service"];
-
+// const services = [
+//     " Let's Make Your digital dreams A Reality with GGCS.",
+//     "Get ahead in The Digital Game With GGCS for all IT things.",
+//     "Transform Your Business Effortlessly With GGCS’ expert digital solutions.",
+//     "From Idea to Implementation GGCS has you covered",
+// ];
 export default function HeroSection() {
     const [state, setState] = useState({ service: services[0], currentTab: 0 });
     const navigate = useNavigate();

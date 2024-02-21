@@ -28,14 +28,14 @@ export default function Services(props) {
                         {/* Smart Solutions for your business */}
                         Let's Transform Your Business With Our
                     </SubHeading>
-                    <H1Animate>Our Services</H1Animate>
+                    <H1Animate>Smart Solutions</H1Animate>
                 </div>
 
                 {/* <div className="grid grid-cols-1 gap-5 my-8 sm:grid-cols-2 md:grid-cols-3 md:gap-8 sm:my-12"> */}
                 <SwiperCarousel carouselData={servicesData} />
 
                 <div className="justify-center hidden mt-5 md:flex">
-                    <div className="w-full p-3 text-center rounded-full shadow-xl lg:w-1/2 bg-grey3 ">
+                    <div className="w-full p-3 text-center rounded-full shadow-xl lg:!w-3/5 bg-grey3 ">
                         <div className="flex justify-center gap-2">
                             <div className="flex items-center">
                                 <img
@@ -45,12 +45,14 @@ export default function Services(props) {
                                 />
                             </div>
                             <div className="sm:flex">
-                                <p className="block">You can also find our</p>
+                                <p className="block">
+                                    You can explore our ready to pick
+                                </p>
                                 <Link
                                     to={"services"}
                                     className="relative block mx-2 text-primary"
                                 >
-                                    Services
+                                    “Services”
                                     <img
                                         src={services}
                                         alt="services"
@@ -58,7 +60,7 @@ export default function Services(props) {
                                     />
                                 </Link>
                                 <p className="block">
-                                    to contact for the consulting.
+                                    for your smart business transformation
                                 </p>
                             </div>
                         </div>
