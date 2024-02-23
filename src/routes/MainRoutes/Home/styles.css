@@ -8,7 +8,8 @@
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    height: 100px;
+    /* height: 100px;  */
+    height: 250px;
     max-width: max-content;
     overflow: hidden;
 }
@@ -20,8 +21,12 @@
 
 .text-animate > div > h4 {
     padding: 2rem 0.4rem;
-    height: 2.81rem;
+    height: 7.81rem;
     margin-bottom: 2.81rem;
+}
+
+.text-animate > div {
+    margin-top: 20px;
 }
 
 .text-animate div:first-child {

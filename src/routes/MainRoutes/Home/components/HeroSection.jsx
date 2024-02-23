@@ -18,23 +18,72 @@ import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { H4, H5 } from "../../../../components/Typography";
 import { PrimaryBtn } from "../../../../components/Button";
 
-const services = ["Digital Marketing", "Social Media", "IT Service"];
-// const services = [
-//     " Let's Make Your digital dreams A Reality with GGCS.",
-//     "Get ahead in The Digital Game With GGCS for all IT things.",
-//     "Transform Your Business Effortlessly With GGCS’ expert digital solutions.",
-//     "From Idea to Implementation GGCS has you covered",
-// ];
+// const services = ["Digital Marketing", "Social Media", "IT Service"];
+const services = [
+    <h1>
+        Let's Make <br />
+        <p className="text-transparent bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text">
+            Your digital dreams
+        </p>
+        A Reality with GGCS.
+    </h1>,
+    <h1>
+        Get ahead in <br />
+        <p className="text-transparent bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text">
+            The Digital Game
+        </p>
+        With GGCS for all <br />
+        IT things.
+    </h1>,
+    <h1>
+        Transform Your <br />
+        <p className="text-transparent bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text">
+            Business Effortlessly
+        </p>
+        With GGCS’ expert <br />
+        digital solutions.
+    </h1>,
+    <h1>
+        From Idea to
+        <br />
+        <p className="text-transparent bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text">
+            Implementation GGCS
+        </p>
+        has you covered.
+    </h1>,
+];
+const services1 = [
+    " Let's Make",
+    "Get ahead in",
+    "Transform Your",
+    "From Idea to",
+];
+const services2 = [
+    "A Reality with GGCS.",
+    "With GGCS for all IT things.",
+    "With GGCS’ expert digital solutions.",
+    "has you covered",
+];
 export default function HeroSection() {
     const [state, setState] = useState({ service: services[0], currentTab: 0 });
     const navigate = useNavigate();
 
-    const settings = {
+    const textSettings = {
         dots: false,
         autoplay: true,
         infinite: true,
-        speed: 3000,
         fade: true,
+        speed: 600,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    };
+    const imageSettings = {
+        dots: false,
+        autoplay: true,
+        infinite: true,
+        fade: true,
+        speed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -63,24 +112,55 @@ export default function HeroSection() {
                 <div className="sm:w-4/6 relative z-[10]">
                     <div className="">
                         <motion.div
-                            className="text-5xl font-bold md:text-7xl"
+                            className="text-5xl font-bold md:text-[57px] *:leading-[4.5rem]"
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
-                            {/* <Slider {...settings}>
-                                {[
+                            <Slider {...textSettings}>
+                                {services?.map((item, i) => (
+                                    <div key={i} className="">
+                                        {item}
+                                    </div>
+                                ))}
+                            </Slider>
+                            {/* [
                                     "Digital Marketing",
                                     "Social Media",
                                     "IT Service",
-                                ]?.map((item, i) => (
-                                    <p key={i}>{item}</p>
-                                ))}
-                            </Slider> */}
-                            {services[state?.currentTab]}
-                            <br />
+                                ] */}
+                            {/* {services1[state?.currentTab]} */}
+                            {/* <br /> */}
                             <div className="">
-                                <div className="text-animate">
+                                {/* <div className="text-animate">
                                     <div>
+                                        <h4>
+                                            Let's Make <br />
+                                            Your digital dreams <br />A Reality
+                                            with GGCS.
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <h4>
+                                            Get ahead in <br />
+                                            The Digital Game <br />
+                                            With GGCS for all IT things.
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <h4>
+                                            Transform Your <br />Business Effortlessly
+                                            <br />With GGCS’ expert digital solutions.
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <h4>
+                                            From Idea to <br />Implementation GGCS<br /> has
+                                            you covered
+                                        </h4>
+                                    </div>
+                                 
+                                </div>   */}
+                                {/* <div>
                                         <h4>agency</h4>
                                     </div>
                                     <div>
@@ -88,10 +168,10 @@ export default function HeroSection() {
                                     </div>
                                     <div>
                                         <h4>Services</h4>
-                                    </div>
-                                </div>
-                                <h5>from India</h5>
+                                    </div> */}
+                                {/* <h5>from India</h5> */}
                             </div>
+                            {/* {services2[state?.currentTab]} */}
                         </motion.div>
                         {/* <p className="text-base mb-4 text-grey2 tracking-[1.2px]">
                             Igniting Digital Growth
@@ -122,7 +202,7 @@ export default function HeroSection() {
                 </div>
                 <div className="">
                     <div className="lg:block hidden absolute top-0 right-0 w-[700px] z-[5]">
-                        <Slider {...settings}>
+                        <Slider {...imageSettings}>
                             {[
                                 digitalMarketingBanner,
                                 socialMediaBanner,
