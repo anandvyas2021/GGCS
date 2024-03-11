@@ -8,6 +8,7 @@ import CreatorPackages from "./CreatorPackages";
 import OtherServices from "./OtherServices";
 import PackageDetails from "./CreatorPackages/PackageDetails";
 import PricingDetails from "../../components/Pricing/PricingDetails";
+import Survey from "./Survey";
 
 export default function OtherRoutes(props) {
     let location = useLocation();
@@ -41,6 +42,7 @@ export default function OtherRoutes(props) {
                 { path: "*", element: <PackageDetails /> },
             ],
         },
+        { path: "/survey-form", element: <Survey {...props} /> },
         // { path: "/service/*", element: <OtherRoutes {...props} /> },
     ]);
     return <div>{routes}</div>;

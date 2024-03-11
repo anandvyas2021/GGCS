@@ -8,6 +8,7 @@ import { useRoutes, useNavigate, useLocation } from "react-router-dom";
 import MainRoutes from "./MainRoutes";
 import FooterRoutes from "./FooterRoutes";
 import OtherRoutes from "./OtherRoutes";
+import { H6 } from "../components/Typography";
 
 export default function Routes(props) {
     const navigate = useNavigate(),
@@ -43,6 +44,13 @@ export default function Routes(props) {
                 <video className="w-full h-full" autoPlay muted loop>
                     <source src={uposGTP} type="video/mp4" />
                 </video>
+            </div>
+
+            <div
+                className="fixed z-40  flex items-center overflow-hidden !bg-gray-600 border rounded-full cursor-pointer h-14 md:bottom-32 md:right-14 bottom-32 right-2"
+                onClick={() => navigate("/survey-form")}
+            >
+                <H6 className="!text-white">Survey</H6>
             </div>
             {routes}
         </main>
