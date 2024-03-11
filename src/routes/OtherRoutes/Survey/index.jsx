@@ -1,5 +1,11 @@
 import React from "react";
+import StepsForm from "./stepsForm";
 
 export default function Survey() {
-    return <div> Survey</div>;
+
+    return (
+        <div>
+            <StepsForm />
+        </div>
+    );
 }
