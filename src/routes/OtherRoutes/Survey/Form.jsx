@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Form() {
-    return <div>Form</div>;
+    const [state, setState] = useState({ inputData: {} });
+    return <div>Next</div>;
 }
