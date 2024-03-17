@@ -1,27 +1,30 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-
 import ppt from "../../assets/PDF/GGCS-PPT.pdf";
 import logo from "../../assets/Navbar/logo.png";
 import Menu from "../../assets/Navbar/menu.svg";
 
+import { useLocation, useNavigate } from "react-router-dom";
+
 import { navMenu } from "../../db/dummy";
 import SocialMedias from "./SocialMedias";
 import PackageContainer from "./PackageContainer";
-import { H4, H5 } from "../../components/Typography";
+import { H5 } from "../../components/Typography";
 import { PrimaryBtn, RadientBtn } from "../../components/Button";
 
-export default function NavbarContent() {
-    const location = useLocation();
+export default function NavbarContent(props) {
+    const location = useLocation(),
+        navigate = useNavigate();
     const [state, setState] = useState({
         showMenu: true,
     });
-    let navigate = useNavigate();
-    let scrollRef = useRef();
-    const menuInfoBlockRef = useRef();
+
+    let scrollRef = useRef(),
+        menuInfoBlockRef = useRef();
+
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
     }, []);
+
     const onScroll = () => {
         let ele = document.querySelector(".header");
     };
@@ -35,7 +38,7 @@ export default function NavbarContent() {
     return (
         <section
             className={`left-0 right-0 z-[1000] ${
-                location?.pathname === "/"
+                !props?.fullNav
                     ? "max-w-screen-xl mx-auto sm:mt-5 "
                     : "fixed w-full"
             }`}
@@ -43,7 +46,7 @@ export default function NavbarContent() {
             <div
                 className={`header sm:px-4 shadow-header !bg-white 
                 ${
-                    location?.pathname === "/"
+                    !props?.fullNav
                         ? "py-1 border sm:rounded-full border-white bg-transparent backdrop-blur"
                         : "fixed w-full"
                 }`}
@@ -52,7 +55,7 @@ export default function NavbarContent() {
                 <div
                     className={`relative flex justify-between items-center px-3
                     ${
-                        location?.pathname === "/"
+                        !props?.fullNav
                             ? "max-w-full"
                             : "max-w-screen-xl mx-auto"
                     }`}
@@ -88,7 +91,7 @@ export default function NavbarContent() {
                         </ul>
                         <div className="flex items-center justify-between z-[240]">
                             <span className="hidden lg:block">
-                                {location?.pathname === "/" ? (
+                                {props?.fullNav ? (
                                     <RadientBtn
                                         className="!rounded-full !py-2.5"
                                         onClick={() => navigate("/hire-us")}

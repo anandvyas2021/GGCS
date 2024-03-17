@@ -13,9 +13,7 @@ import digitalMarketingBanner from "../../../../assets/home/heroSection/digitalM
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-import { H4, H5 } from "../../../../components/Typography";
 import { PrimaryBtn } from "../../../../components/Button";
 
 // const services = ["Digital Marketing", "Social Media", "IT Service"];
@@ -64,7 +62,7 @@ const services2 = [
     "With GGCS’ expert digital solutions.",
     "has you covered",
 ];
-export default function HeroSection() {
+export default function HeroSection(props) {
     const [state, setState] = useState({ service: services[0], currentTab: 0 });
     const navigate = useNavigate();
 
@@ -181,7 +179,9 @@ export default function HeroSection() {
                                 size="px-8 py-3"
                                 className="border-2 rounded-full bg-[#775AFC] borer-[#775AFC]"
                                 onClick={() => {
-                                    navigate("/services");
+                                    return props?.btnHandler
+                                        ? props?.btnHandler()
+                                        : navigate("/services");
                                 }}
                             >
                                 Get Started Now

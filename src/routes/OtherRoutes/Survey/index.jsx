@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
-import StepsForm from "./stepsForm";
+
 import Form from "./Form";
+import StepsForm from "./stepsForm";
 import { surveyData } from "./dummy";
+import SuccessPage from "./SuccessPage";
+import Navbar from "../../../container/Navbar";
+import HeroSection from "../../MainRoutes/Home/components/HeroSection";
 
 export default function Survey(props) {
     const [state, setState] = useState({
         currentStep: 1,
         completed: false,
         fieldsData: [],
+        showForm: false,
     });
 
     useEffect(() => {
@@ -30,17 +35,43 @@ export default function Survey(props) {
         });
     };
 
-    const { completed, currentStep, fieldsData } = state;
+    const { completed, currentStep, fieldsData, showForm } = state;
 
     const propsData = { currentStep: currentStep, completed: completed };
     return (
         <div>
-            <StepsForm {...propsData} />
-            <Form
-                fieldsData={fieldsData}
-                {...propsData}
-                formStepHandler={formStepHandler}
-            />
+            <Navbar />
+            <main>
+                <HeroSection
+                    btnHandler={() => {
+                        return (
+                            setState((prev) => {
+                                return { ...prev, showForm: true };
+                            }),
+                            setTimeout(() => {
+                                document
+                                    .getElementById("survey-form")
+                                    .scrollIntoView({ behavior: "smooth" });
+                            }, 100)
+                        );
+                    }}
+                />
+            </main>
+
+            {showForm ? (
+                <section id="survey-form" className="mb-10">
+                    <StepsForm {...propsData} />
+                    {completed ? (
+                        <SuccessPage />
+                    ) : (
+                        <Form
+                            {...propsData}
+                            fieldsData={fieldsData}
+                            formStepHandler={formStepHandler}
+                        />
+                    )}
+                </section>
+            ) : null}
         </div>
     );
 }

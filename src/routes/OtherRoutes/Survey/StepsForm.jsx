@@ -14,21 +14,31 @@ export default function StepsForm(props) {
                         <div
                             key={item?.id}
                             className={`relative flex flex-col justify-center items-center w-36 ${
-                                currentStep === item?.id && "active"
+                                currentStep === item?.id ? "active" : ""
                             } ${
                                 item?.id < currentStep || completed
                                     ? "complete"
                                     : ""
-                            } `}
+                            }`}
                         >
                             <div
                                 className={`border-2 rounded-full p-2 ${
+                                    item?.id === currentStep
+                                        ? "!border-blue-400"
+                                        : ""
+                                } ${
                                     item?.id < currentStep || completed
                                         ? "border-green-500"
                                         : ""
                                 }`}
                             >
-                                <div className="w-10 h-10 flex items-center justify-center z-10 relative bg-slate-700 rounded-full font-semibold text-white">
+                                <div
+                                    className={`w-10 h-10 flex items-center justify-center z-10 relative rounded-full font-semibold text-white ${
+                                        item?.id === currentStep
+                                            ? "bg-blue-400"
+                                            : "bg-slate-700"
+                                    }`}
+                                >
                                     {item?.id < currentStep || completed ? (
                                         <img src={checkMark} alt="success" />
                                     ) : (
@@ -37,14 +47,18 @@ export default function StepsForm(props) {
                                 </div>
                             </div>
                             <div
-                                className={`w-[205px] h-[2px] z-0 absolute top-[30px] lg:!left-[100px] left-[80px] bg-gray-300 ${
+                                className={`w-[205px] h-[2px] z-0 absolute top-[30px] lg:!left-[100px] left-[80px] ${
+                                    item?.id === currentStep
+                                        ? "bg-blue-400"
+                                        : "bg-gray-300"
+                                } ${
                                     steps?.length === item?.id ? "hidden" : ""
                                 } ${
                                     item?.id < currentStep || completed
                                         ? "bg-green-500"
                                         : ""
                                 }`}
-                            ></div>
+                            />
                             <p className="text-gray-500 pt-2">{item?.label}</p>
                         </div>
                     ))}

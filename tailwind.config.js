@@ -272,6 +272,7 @@ export default {
                             "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
                     },
                 },
+                // successTick:{}
             },
             backgroundImage: {
                 darkBg: 'url("/funfact1.webp")',

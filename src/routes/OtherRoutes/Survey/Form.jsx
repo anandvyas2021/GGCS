@@ -4,7 +4,7 @@ import { steps } from "./dummy";
 import { Input } from "../../../components/UI/Input";
 
 export default function Form(props) {
-    const [state, setState] = useState({ inputData: {} });
+    const [state, setState] = useState({ inputData: {}, animated: false });
 
     const { currentStep, fieldsData, formStepHandler, completed } = props;
 
@@ -13,9 +13,6 @@ export default function Form(props) {
             return { ...prev, inputData: { ...prev?.inputData, [k]: v } };
         });
     };
-    // const submitHandler=()=>{
-    //     setState({})
-    // }
 
     useEffect(() => {
         for (let i in fieldsData) {
@@ -47,21 +44,51 @@ export default function Form(props) {
                     </Fragment>
                 ))}
             </section>
-            <div className="relative flex justify-center my-10">
+            <div className="relative flex justify-center my-20">
                 {!completed ? (
                     <div className="flex items-center justify-center">
                         <div
-                            className={`p-10 animate-ping rounded-full ![animation-duration:3.5s] bg-green-200`}
+                            className={`px-12 py-6 ${
+                                state?.animated
+                                    ? "animate-ping bg-green-200"
+                                    : ""
+                            } rounded-full ![animation-duration:2s]`}
                         />
                         <button
-                            className="absolute top-[5%] left-[47%] border-2 text-xl font-semibold rounded-full px-4 py-5 text-white bg-green-400"
+                            className="group flex gap-3 absolute top-[2%] left-[45%] border-2 text-xl font-semibold rounded-full px-4 py-3 text-white bg-green-400 hover:bg-green-500"
                             onClick={() => {
                                 currentStep === steps?.length
                                     ? formStepHandler(true)
                                     : formStepHandler(false);
                             }}
+                            onMouseEnter={() =>
+                                setState((prev) => {
+                                    return { ...prev, animated: true };
+                                })
+                            }
+                            onMouseLeave={() =>
+                                setState((prev) => {
+                                    return { ...prev, animated: false };
+                                })
+                            }
                         >
                             {currentStep === steps?.length ? "Finish" : "Next"}
+                            <figure className="invisible group-hover:visible group-hover:animate-arrowFadeIn">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className={`w-8 h-7`}
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                                    />
+                                </svg>
+                            </figure>
                         </button>
                     </div>
                 ) : null}
