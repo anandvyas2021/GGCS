@@ -11,48 +11,48 @@ import OtherRoutes from "./OtherRoutes";
 import { H6 } from "../components/Typography";
 
 export default function Routes(props) {
-    const navigate = useNavigate(),
-        location = useLocation();
-    const routes = useRoutes([
-        {
-            path: "/*",
-            element: [
-                <MainRoutes {...props} />,
-                <FooterRoutes {...props} />,
-                <OtherRoutes {...props} />,
-            ],
-        },
-    ]);
-    return (
-        <main className={`${location?.pathname === "/" ? "" : "lg:mt-20"}`}>
-            <div className="lg:fixed hidden lg:block md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-b-xl text-white cursor-pointer">
-                <a
-                    download
-                    onClick={() => {
-                        window.open(ppt, "_blank", "fullscreen=yes");
-                    }}
-                    className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
-                    aria-current="page"
-                >
-                    DOWNLOAD PPT
-                </a>
-            </div>
-            <div
-                className="fixed z-40 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 md:bottom-12 md:right-14 bottom-10 right-2"
-                onClick={() => navigate("/upos-details")}
-            >
-                <video className="w-full h-full" autoPlay muted loop>
-                    <source src={uposGTP} type="video/mp4" />
-                </video>
-            </div>
+  const navigate = useNavigate(),
+    location = useLocation();
+  const routes = useRoutes([
+    {
+      path: "/*",
+      element: [
+        <MainRoutes {...props} />,
+        <FooterRoutes {...props} />,
+        <OtherRoutes {...props} />,
+      ],
+    },
+  ]);
+  return (
+    <main className={`${location?.pathname === "/" ? "" : "lg:mt-20"}`}>
+      <div className="lg:fixed hidden lg:block md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-primary to-secondary border rounded-b-xl text-white cursor-pointer">
+        <a
+          download
+          onClick={() => {
+            window.open(ppt, "_blank", "fullscreen=yes");
+          }}
+          className="font-axiSemiBold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
+          aria-current="page"
+        >
+          DOWNLOAD PPT
+        </a>
+      </div>
+      <div
+        className="fixed z-40 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 md:bottom-12 md:right-14 bottom-10 right-2"
+        onClick={() => navigate("/upos-details")}
+      >
+        <video className="w-full h-full" autoPlay muted loop>
+          <source src={uposGTP} type="video/mp4" />
+        </video>
+      </div>
 
-            <div
+      {/* <div
                 className="fixed z-40  flex items-center overflow-hidden !bg-gray-600 border rounded-full cursor-pointer h-14 md:bottom-32 md:right-14 bottom-32 right-2"
                 onClick={() => navigate("/survey-form")}
             >
                 <H6 className="!text-white">Survey</H6>
-            </div>
-            {routes}
-        </main>
-    );
+            </div> */}
+      {routes}
+    </main>
+  );
 }
